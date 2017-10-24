@@ -1,0 +1,10 @@
+D:\uni\CTISchedule\CTISchedule\bin\Debug\CTISchedule.exe.config
+D:\uni\CTISchedule\CTISchedule\bin\Debug\CTISchedule.exe
+D:\uni\CTISchedule\CTISchedule\bin\Debug\CTISchedule.pdb
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.csprojResolveAssemblyReference.cache
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.Schedule.resources
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.Properties.Resources.resources
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.csproj.GenerateResource.Cache
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.exe
+D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.pdb
