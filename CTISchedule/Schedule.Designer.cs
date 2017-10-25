@@ -48,7 +48,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(-3, 94);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(761, 443);
+			this.tabControl1.Size = new System.Drawing.Size(766, 443);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabDiscipline
@@ -94,7 +94,7 @@
 			// 
 			this.tabGeneration.Location = new System.Drawing.Point(4, 22);
 			this.tabGeneration.Name = "tabGeneration";
-			this.tabGeneration.Size = new System.Drawing.Size(753, 417);
+			this.tabGeneration.Size = new System.Drawing.Size(758, 417);
 			this.tabGeneration.TabIndex = 5;
 			this.tabGeneration.Text = "Generatii";
 			this.tabGeneration.UseVisualStyleBackColor = true;
