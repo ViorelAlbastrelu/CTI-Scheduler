@@ -3,6 +3,7 @@
   <EntityContainer Name="CTIScheduleDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="C__MigrationHistory" EntityType="CTIScheduleDBModel.C__MigrationHistory" />
     <EntitySet Name="Profesors" EntityType="CTIScheduleDBModel.Profesor" />
+    <EntitySet Name="Salas" EntityType="CTIScheduleDBModel.Sala" />
   </EntityContainer>
   <EntityType Name="C__MigrationHistory">
     <Key>
@@ -23,5 +24,14 @@
     <Property Name="Prenume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Titlu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sala">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Capacitate" Type="Int32" Nullable="false" />
+    <Property Name="IdActivitate" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

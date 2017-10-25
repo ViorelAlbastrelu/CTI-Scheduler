@@ -97,6 +97,9 @@
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Profesor_Extension.cs" />
+    <Compile Include="Models\Sala.cs">
+      <DependentUpon>DbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>

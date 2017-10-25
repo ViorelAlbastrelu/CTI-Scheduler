@@ -20,8 +20,18 @@
     <Property Name="Email" Type="nvarchar(max)" />
     <Property Name="Titlu" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="Sala">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Capacitate" Type="int" Nullable="false" />
+    <Property Name="IdActivitate" Type="int" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="CTIScheduleDBModelStoreContainer">
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Profesors" EntityType="Self.Profesors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sala" EntityType="Self.Sala" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
