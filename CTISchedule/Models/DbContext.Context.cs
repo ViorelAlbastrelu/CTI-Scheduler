@@ -27,5 +27,6 @@ namespace CTISchedule.Models
     
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Profesor> Profesors { get; set; }
+        public virtual DbSet<Sala> Salas { get; set; }
     }
 }

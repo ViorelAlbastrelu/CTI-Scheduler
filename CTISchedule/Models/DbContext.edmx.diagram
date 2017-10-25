@@ -7,6 +7,7 @@
       <Diagram DiagramId="5cf07776b2164da6a09fdf98845d2bb2" Name="Diagram1">
         <EntityTypeShape EntityType="CTIScheduleDBModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="CTIScheduleDBModel.Profesor" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Sala" Width="1.5" PointX="5.125" PointY="2.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
