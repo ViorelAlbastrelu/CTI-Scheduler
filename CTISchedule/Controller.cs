@@ -20,14 +20,27 @@ namespace CTISchedule
 		/*
 		 * Profesor */
 
-		public bool AddProfesor(ProfesorReq req)
+		public Profesor AddUpdateProfesor(Profesor req)
 		{
-			_context.Profesors.Add(new Profesor(req));
-			if (_context.SaveChanges() > 0)
-			{
-				return true;
+			Profesor profesor;
+			if (req.Id != 0) {
+				profesor = _context.Profesors.First(p => p.Id == req.Id);
+				profesor.Nume = req.Nume;
+				profesor.Prenume = req.Prenume;
+				profesor.Email = req.Email;
+				profesor.Titlu = req.Titlu;
 			}
-			else return false;
+			else profesor = _context.Profesors.Add(new Profesor(req));
+			
+			_context.SaveChanges();
+			return profesor;
 		}
+
+		public void DeleteProfesor(int profesorId)
+		{
+			var profesor =_context.Profesors.Find(profesorId);
+			if(profesor != null) _context.Profesors.Remove(profesor); _context.SaveChanges();
+		}
+
 	}
 }

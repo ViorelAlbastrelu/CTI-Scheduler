@@ -1,9 +1,14 @@
 ﻿using CTISchedule.Models;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +29,8 @@ namespace CTISchedule
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			// TODO: This line of code loads data into the 'cTIScheduleDBDataSet.Profesors' table. You can move, or remove it, as needed.
+			this.profesorsTableAdapter.Fill(this.cTIScheduleDBDataSet.Profesors);
 			// TODO: This line of code loads data into the 'cTIScheduleDBProfesor.Profesor' table. You can move, or remove it, as needed.
 
 		}
@@ -38,27 +45,123 @@ namespace CTISchedule
 
 		}
 
+		private void AddProfesor()
+		{
+		}
 		private void btnSubmitProfesor_Click(object sender, EventArgs e)
 		{
-			ProfesorReq profesorReq = new ProfesorReq()
+			Console.Out.Write(txtIdProfesor.Text);
+			Console.Out.Write(int.Parse(txtIdProfesor.Text));
+			Profesor profesorReq = new Profesor()
 			{
+				Id = int.Parse(txtIdProfesor.Text),
 				Nume = txtNumeProfesor.Text,
 				Prenume = txtPrenumeProfesor.Text,
 				Email = txtEmailProfesor.Text,
 				Titlu = txtTitluProfesor.Text
 			};
-			if (_controller.AddProfesor(profesorReq))
+			var profesor = _controller.AddUpdateProfesor(profesorReq);
+			if (profesor != null)
 			{
 				txtNumeProfesor.Text = null;
 				txtPrenumeProfesor.Text = null;
 				txtEmailProfesor.Text = null;
 				txtTitluProfesor.Text = null;
-				MessageBox.Show("Success");
 			}
 			else
 			{
 				MessageBox.Show("Error");
 			}
+		}
+
+		private void btnDeleteProfesor_Click(object sender, EventArgs e)
+		{
+			_controller.DeleteProfesor(int.Parse(txtIdProfesor.Text));
+			profesorsTableAdapter.Fill(cTIScheduleDBDataSet.Profesors);
+		}
+
+		private void btnCancelProfesor_Click(object sender, EventArgs e)
+		{
+			txtNumeProfesor.Text = null;
+			txtPrenumeProfesor.Text = null;
+			txtEmailProfesor.Text = null;
+			txtTitluProfesor.Text = null;
+			txtIdProfesor.Text = "0";
+		}
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void btnCancelDataImport_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			DialogResult result = openFileDialog.ShowDialog();
+			if (result == DialogResult.OK)
+			{
+				txtDataImport.Text = openFileDialog.FileName;
+			}
+		}
+
+		private void btnSubmitDataImport_Click(object sender, EventArgs e)
+		{
+			XSSFWorkbook hssfwb;
+			using (FileStream file = new FileStream(txtDataImport.Text, FileMode.Open, FileAccess.Read))
+			{
+				hssfwb = new XSSFWorkbook(file);
+			}
+
+			ISheet sheet = hssfwb.GetSheetAt(0);
+			IRow headerRow = sheet.GetRow(0);
+			IEnumerator rows = sheet.GetRowEnumerator();
+			int colCount = headerRow.LastCellNum;
+			int rowCount = sheet.LastRowNum;
+			bool init = false;
+			while (rows.MoveNext())
+			{
+				IRow row = (XSSFRow)rows.Current;
+				if (init)
+				{
+					Profesor profesor = new Profesor();
+					for (int j = 0; j < colCount; j++)
+					{
+						ICell cell = row.GetCell(j);
+						if (cell != null)
+						{
+							string cellContent = cell.ToString();
+							switch (j) {
+								case 0:
+									profesor.Nume = cellContent;
+									break;
+								case 1:
+									profesor.Prenume = cellContent;
+									break;
+								case 2:
+									profesor.Email = cellContent;
+									break;
+								case 3:
+									profesor.Titlu = cellContent;
+									break;
+							}
+						}
+					}
+					_controller.AddUpdateProfesor(profesor);
+				}
+				init = true;
+			}
+			MessageBox.Show("Importare Finalizat");
+			txtDataImport.Text = null;
+		}
+
+		private void tabControl1_Click(object sender, EventArgs e)
+		{
+			profesorsTableAdapter.Fill(cTIScheduleDBDataSet.Profesors);
 		}
 	}
 }

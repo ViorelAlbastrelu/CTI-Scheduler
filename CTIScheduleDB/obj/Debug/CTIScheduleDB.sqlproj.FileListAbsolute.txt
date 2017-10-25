@@ -1,0 +1,9 @@
+D:\uni\CTISchedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.dacpac
+D:\uni\CTISchedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.dll
+D:\uni\CTISchedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.pdb
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\Model.xml
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\refactor.xml
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\postdeploy.sql
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\predeploy.sql
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.dll
+D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.pdb

@@ -12,3 +12,9 @@ D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.dll
 D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.dll
 D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.xml
 D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.xml
+D:\uni\CTISchedule\CTISchedule\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\NPOI.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\NPOI.OOXML.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\NPOI.OpenXml4Net.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\NPOI.xml

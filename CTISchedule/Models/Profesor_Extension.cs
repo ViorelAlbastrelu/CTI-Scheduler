@@ -9,7 +9,7 @@ namespace CTISchedule.Models
 	public partial class Profesor
 	{
 		public Profesor() { }
-		public Profesor(ProfesorReq req)
+		public Profesor(Profesor req)
 		{
 			Nume = req.Nume;
 			Prenume = req.Prenume;
@@ -18,10 +18,4 @@ namespace CTISchedule.Models
 		}
 	}
 
-	public class ProfesorReq {
-		public string Nume { get; set; }
-		public string Prenume { get; set; }
-		public string Email { get; set; }
-		public string Titlu { get; set; }
-	}
 }
