@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTISchedule", "CTISchedule\CTISchedule.csproj", "{E55ED2F1-5B85-47F3-917C-491586747B39}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CTIScheduleDB", "CTIScheduleDB\CTIScheduleDB.sqlproj", "{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{E55ED2F1-5B85-47F3-917C-491586747B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E55ED2F1-5B85-47F3-917C-491586747B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E55ED2F1-5B85-47F3-917C-491586747B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821B82D8-7B60-4BB3-B2EB-6EA6C709BA02}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

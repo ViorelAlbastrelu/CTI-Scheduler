@@ -8,3 +8,7 @@ D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.csproj.GenerateResource.Cac
 D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
 D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.exe
 D:\uni\CTISchedule\CTISchedule\obj\Debug\CTISchedule.pdb
+D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.dll
+D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.xml
+D:\uni\CTISchedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.xml

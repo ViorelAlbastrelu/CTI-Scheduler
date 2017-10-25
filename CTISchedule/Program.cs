@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CTISchedule.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,13 @@ namespace CTISchedule
 		[STAThread]
 		static void Main()
 		{
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Schedule());
+			using (var db = new CTIScheduleDBEntities())
+			{
+				Controller controller = new Controller(db);
+				Application.EnableVisualStyles();
+				Application.SetCompatibleTextRenderingDefault(false);
+				Application.Run(new Schedule(controller));
+			}
 		}
 	}
 }
