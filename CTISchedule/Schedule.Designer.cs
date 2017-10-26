@@ -39,41 +39,44 @@
 			this.tabGeneration = new System.Windows.Forms.TabPage();
 			this.tabHall = new System.Windows.Forms.TabPage();
 			this.tabProffesor = new System.Windows.Forms.TabPage();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.txtTitluProfesor = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.btnSubmitProfesor = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtEmailProfesor = new System.Windows.Forms.TextBox();
-			this.txtPrenumeProfesor = new System.Windows.Forms.TextBox();
-			this.txtNumeProfesor = new System.Windows.Forms.TextBox();
-			this.btnCancelProfesor = new System.Windows.Forms.Button();
-			this.txtIdProfesor = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.btnDeleteProfesor = new System.Windows.Forms.Button();
 			this.dgvProfesor = new System.Windows.Forms.DataGridView();
-			this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnDeleteProfesor = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.txtIdProfesor = new System.Windows.Forms.TextBox();
+			this.btnCancelProfesor = new System.Windows.Forms.Button();
+			this.txtNumeProfesor = new System.Windows.Forms.TextBox();
+			this.txtPrenumeProfesor = new System.Windows.Forms.TextBox();
+			this.txtEmailProfesor = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.btnSubmitProfesor = new System.Windows.Forms.Button();
+			this.label5 = new System.Windows.Forms.Label();
+			this.txtTitluProfesor = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			this.tabDiscipline = new System.Windows.Forms.TabPage();
 			this.tabDataImport = new System.Windows.Forms.TabPage();
-			this.button1 = new System.Windows.Forms.Button();
-			this.txtDataImport = new System.Windows.Forms.TextBox();
-			this.btnCancelDataImport = new System.Windows.Forms.Button();
 			this.btnSubmitDataImport = new System.Windows.Forms.Button();
+			this.btnCancelDataImport = new System.Windows.Forms.Button();
+			this.txtDataImport = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.importDetails = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.profesorsBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cTIScheduleDBDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
 			this.tabProffesor.SuspendLayout();
-			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).BeginInit();
+			this.panel1.SuspendLayout();
 			this.tabDataImport.SuspendLayout();
 			this.tabControl1.SuspendLayout();
+			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// profesorsBindingSource
@@ -145,6 +148,55 @@
 			this.tabProffesor.UseVisualStyleBackColor = true;
 			this.tabProffesor.Click += new System.EventHandler(this.tabPage1_Click);
 			// 
+			// dgvProfesor
+			// 
+			this.dgvProfesor.AutoGenerateColumns = false;
+			this.dgvProfesor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.dgvProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvProfesor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.numeDataGridViewTextBoxColumn,
+            this.prenumeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.titluDataGridViewTextBoxColumn});
+			this.dgvProfesor.DataSource = this.profesorsBindingSource;
+			this.dgvProfesor.Location = new System.Drawing.Point(268, 59);
+			this.dgvProfesor.MultiSelect = false;
+			this.dgvProfesor.Name = "dgvProfesor";
+			this.dgvProfesor.Size = new System.Drawing.Size(543, 267);
+			this.dgvProfesor.TabIndex = 11;
+			// 
+			// idDataGridViewTextBoxColumn
+			// 
+			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+			this.idDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// numeDataGridViewTextBoxColumn
+			// 
+			this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
+			this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+			this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+			// 
+			// prenumeDataGridViewTextBoxColumn
+			// 
+			this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
+			this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+			this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+			// 
+			// emailDataGridViewTextBoxColumn
+			// 
+			this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+			this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+			this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+			// 
+			// titluDataGridViewTextBoxColumn
+			// 
+			this.titluDataGridViewTextBoxColumn.DataPropertyName = "Titlu";
+			this.titluDataGridViewTextBoxColumn.HeaderText = "Titlu";
+			this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
+			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -167,97 +219,24 @@
 			this.panel1.TabIndex = 10;
 			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
-			// label3
+			// btnDeleteProfesor
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(124, 77);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(49, 13);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "Prenume";
+			this.btnDeleteProfesor.Location = new System.Drawing.Point(16, 231);
+			this.btnDeleteProfesor.Name = "btnDeleteProfesor";
+			this.btnDeleteProfesor.Size = new System.Drawing.Size(75, 23);
+			this.btnDeleteProfesor.TabIndex = 14;
+			this.btnDeleteProfesor.Text = "Sterge";
+			this.btnDeleteProfesor.UseVisualStyleBackColor = true;
+			this.btnDeleteProfesor.Click += new System.EventHandler(this.btnDeleteProfesor_Click);
 			// 
-			// label2
+			// label6
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 77);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(35, 13);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Nume";
-			// 
-			// txtTitluProfesor
-			// 
-			this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Titlu", true));
-			this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Titlu", true));
-			this.txtTitluProfesor.Location = new System.Drawing.Point(127, 145);
-			this.txtTitluProfesor.Name = "txtTitluProfesor";
-			this.txtTitluProfesor.Size = new System.Drawing.Size(100, 20);
-			this.txtTitluProfesor.TabIndex = 3;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(124, 129);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(27, 13);
-			this.label5.TabIndex = 7;
-			this.label5.Text = "Titlu";
-			// 
-			// btnSubmitProfesor
-			// 
-			this.btnSubmitProfesor.Location = new System.Drawing.Point(156, 231);
-			this.btnSubmitProfesor.Name = "btnSubmitProfesor";
-			this.btnSubmitProfesor.Size = new System.Drawing.Size(71, 23);
-			this.btnSubmitProfesor.TabIndex = 8;
-			this.btnSubmitProfesor.Text = "Salveaza";
-			this.btnSubmitProfesor.UseVisualStyleBackColor = true;
-			this.btnSubmitProfesor.Click += new System.EventHandler(this.btnSubmitProfesor_Click);
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(13, 129);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(32, 13);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Email";
-			// 
-			// txtEmailProfesor
-			// 
-			this.txtEmailProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Email", true));
-			this.txtEmailProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Email", true));
-			this.txtEmailProfesor.Location = new System.Drawing.Point(16, 145);
-			this.txtEmailProfesor.Name = "txtEmailProfesor";
-			this.txtEmailProfesor.Size = new System.Drawing.Size(100, 20);
-			this.txtEmailProfesor.TabIndex = 2;
-			// 
-			// txtPrenumeProfesor
-			// 
-			this.txtPrenumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Prenume", true));
-			this.txtPrenumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Prenume", true));
-			this.txtPrenumeProfesor.Location = new System.Drawing.Point(127, 93);
-			this.txtPrenumeProfesor.Name = "txtPrenumeProfesor";
-			this.txtPrenumeProfesor.Size = new System.Drawing.Size(100, 20);
-			this.txtPrenumeProfesor.TabIndex = 1;
-			// 
-			// txtNumeProfesor
-			// 
-			this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Nume", true));
-			this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Nume", true));
-			this.txtNumeProfesor.Location = new System.Drawing.Point(16, 93);
-			this.txtNumeProfesor.Name = "txtNumeProfesor";
-			this.txtNumeProfesor.Size = new System.Drawing.Size(100, 20);
-			this.txtNumeProfesor.TabIndex = 0;
-			// 
-			// btnCancelProfesor
-			// 
-			this.btnCancelProfesor.Location = new System.Drawing.Point(152, 23);
-			this.btnCancelProfesor.Name = "btnCancelProfesor";
-			this.btnCancelProfesor.Size = new System.Drawing.Size(75, 23);
-			this.btnCancelProfesor.TabIndex = 9;
-			this.btnCancelProfesor.Text = "Anuleaza";
-			this.btnCancelProfesor.UseVisualStyleBackColor = true;
-			this.btnCancelProfesor.Click += new System.EventHandler(this.btnCancelProfesor_Click);
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(13, 26);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(16, 13);
+			this.label6.TabIndex = 13;
+			this.label6.Text = "Id";
 			// 
 			// txtIdProfesor
 			// 
@@ -269,73 +248,97 @@
 			this.txtIdProfesor.Size = new System.Drawing.Size(38, 20);
 			this.txtIdProfesor.TabIndex = 12;
 			// 
-			// label6
+			// btnCancelProfesor
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(13, 26);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(16, 13);
-			this.label6.TabIndex = 13;
-			this.label6.Text = "Id";
+			this.btnCancelProfesor.Location = new System.Drawing.Point(152, 23);
+			this.btnCancelProfesor.Name = "btnCancelProfesor";
+			this.btnCancelProfesor.Size = new System.Drawing.Size(75, 23);
+			this.btnCancelProfesor.TabIndex = 9;
+			this.btnCancelProfesor.Text = "Anuleaza";
+			this.btnCancelProfesor.UseVisualStyleBackColor = true;
+			this.btnCancelProfesor.Click += new System.EventHandler(this.btnCancelProfesor_Click);
 			// 
-			// btnDeleteProfesor
+			// txtNumeProfesor
 			// 
-			this.btnDeleteProfesor.Location = new System.Drawing.Point(16, 231);
-			this.btnDeleteProfesor.Name = "btnDeleteProfesor";
-			this.btnDeleteProfesor.Size = new System.Drawing.Size(75, 23);
-			this.btnDeleteProfesor.TabIndex = 14;
-			this.btnDeleteProfesor.Text = "Sterge";
-			this.btnDeleteProfesor.UseVisualStyleBackColor = true;
-			this.btnDeleteProfesor.Click += new System.EventHandler(this.btnDeleteProfesor_Click);
+			this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Nume", true));
+			this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Nume", true));
+			this.txtNumeProfesor.Location = new System.Drawing.Point(16, 93);
+			this.txtNumeProfesor.Name = "txtNumeProfesor";
+			this.txtNumeProfesor.Size = new System.Drawing.Size(100, 20);
+			this.txtNumeProfesor.TabIndex = 0;
 			// 
-			// dgvProfesor
+			// txtPrenumeProfesor
 			// 
-			this.dgvProfesor.AutoGenerateColumns = false;
-			this.dgvProfesor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-			this.dgvProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvProfesor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.numeDataGridViewTextBoxColumn,
-            this.prenumeDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.titluDataGridViewTextBoxColumn});
-			this.dgvProfesor.DataSource = this.profesorsBindingSource;
-			this.dgvProfesor.Location = new System.Drawing.Point(268, 59);
-			this.dgvProfesor.MultiSelect = false;
-			this.dgvProfesor.Name = "dgvProfesor";
-			this.dgvProfesor.Size = new System.Drawing.Size(543, 267);
-			this.dgvProfesor.TabIndex = 11;
+			this.txtPrenumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Prenume", true));
+			this.txtPrenumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Prenume", true));
+			this.txtPrenumeProfesor.Location = new System.Drawing.Point(127, 93);
+			this.txtPrenumeProfesor.Name = "txtPrenumeProfesor";
+			this.txtPrenumeProfesor.Size = new System.Drawing.Size(100, 20);
+			this.txtPrenumeProfesor.TabIndex = 1;
 			// 
-			// titluDataGridViewTextBoxColumn
+			// txtEmailProfesor
 			// 
-			this.titluDataGridViewTextBoxColumn.DataPropertyName = "Titlu";
-			this.titluDataGridViewTextBoxColumn.HeaderText = "Titlu";
-			this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
+			this.txtEmailProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Email", true));
+			this.txtEmailProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Email", true));
+			this.txtEmailProfesor.Location = new System.Drawing.Point(16, 145);
+			this.txtEmailProfesor.Name = "txtEmailProfesor";
+			this.txtEmailProfesor.Size = new System.Drawing.Size(100, 20);
+			this.txtEmailProfesor.TabIndex = 2;
 			// 
-			// emailDataGridViewTextBoxColumn
+			// label4
 			// 
-			this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-			this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-			this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(13, 129);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(32, 13);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Email";
 			// 
-			// prenumeDataGridViewTextBoxColumn
+			// btnSubmitProfesor
 			// 
-			this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
-			this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-			this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+			this.btnSubmitProfesor.Location = new System.Drawing.Point(156, 231);
+			this.btnSubmitProfesor.Name = "btnSubmitProfesor";
+			this.btnSubmitProfesor.Size = new System.Drawing.Size(71, 23);
+			this.btnSubmitProfesor.TabIndex = 8;
+			this.btnSubmitProfesor.Text = "Salveaza";
+			this.btnSubmitProfesor.UseVisualStyleBackColor = true;
+			this.btnSubmitProfesor.Click += new System.EventHandler(this.btnSubmitProfesor_Click);
 			// 
-			// numeDataGridViewTextBoxColumn
+			// label5
 			// 
-			this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
-			this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-			this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(124, 129);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(27, 13);
+			this.label5.TabIndex = 7;
+			this.label5.Text = "Titlu";
 			// 
-			// idDataGridViewTextBoxColumn
+			// txtTitluProfesor
 			// 
-			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-			this.idDataGridViewTextBoxColumn.ReadOnly = true;
+			this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.profesorsBindingSource, "Titlu", true));
+			this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorsBindingSource, "Titlu", true));
+			this.txtTitluProfesor.Location = new System.Drawing.Point(127, 145);
+			this.txtTitluProfesor.Name = "txtTitluProfesor";
+			this.txtTitluProfesor.Size = new System.Drawing.Size(100, 20);
+			this.txtTitluProfesor.TabIndex = 3;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(13, 77);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(35, 13);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Nume";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(124, 77);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(49, 13);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Prenume";
 			// 
 			// tabDiscipline
 			// 
@@ -349,10 +352,8 @@
 			// 
 			// tabDataImport
 			// 
-			this.tabDataImport.Controls.Add(this.btnSubmitDataImport);
-			this.tabDataImport.Controls.Add(this.btnCancelDataImport);
-			this.tabDataImport.Controls.Add(this.txtDataImport);
-			this.tabDataImport.Controls.Add(this.button1);
+			this.tabDataImport.Controls.Add(this.importDetails);
+			this.tabDataImport.Controls.Add(this.panel2);
 			this.tabDataImport.Location = new System.Drawing.Point(4, 22);
 			this.tabDataImport.Name = "tabDataImport";
 			this.tabDataImport.Padding = new System.Windows.Forms.Padding(3);
@@ -361,26 +362,19 @@
 			this.tabDataImport.Text = "Import Date";
 			this.tabDataImport.UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// btnSubmitDataImport
 			// 
-			this.button1.Location = new System.Drawing.Point(479, 191);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(54, 24);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Cauta";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// txtDataImport
-			// 
-			this.txtDataImport.Location = new System.Drawing.Point(265, 194);
-			this.txtDataImport.Name = "txtDataImport";
-			this.txtDataImport.Size = new System.Drawing.Size(208, 20);
-			this.txtDataImport.TabIndex = 1;
+			this.btnSubmitDataImport.Location = new System.Drawing.Point(233, 61);
+			this.btnSubmitDataImport.Name = "btnSubmitDataImport";
+			this.btnSubmitDataImport.Size = new System.Drawing.Size(75, 23);
+			this.btnSubmitDataImport.TabIndex = 3;
+			this.btnSubmitDataImport.Text = "Import";
+			this.btnSubmitDataImport.UseVisualStyleBackColor = true;
+			this.btnSubmitDataImport.Click += new System.EventHandler(this.btnSubmitDataImport_Click);
 			// 
 			// btnCancelDataImport
 			// 
-			this.btnCancelDataImport.Location = new System.Drawing.Point(265, 221);
+			this.btnCancelDataImport.Location = new System.Drawing.Point(40, 61);
 			this.btnCancelDataImport.Name = "btnCancelDataImport";
 			this.btnCancelDataImport.Size = new System.Drawing.Size(75, 23);
 			this.btnCancelDataImport.TabIndex = 2;
@@ -388,15 +382,22 @@
 			this.btnCancelDataImport.UseVisualStyleBackColor = true;
 			this.btnCancelDataImport.Click += new System.EventHandler(this.btnCancelDataImport_Click);
 			// 
-			// btnSubmitDataImport
+			// txtDataImport
 			// 
-			this.btnSubmitDataImport.Location = new System.Drawing.Point(458, 221);
-			this.btnSubmitDataImport.Name = "btnSubmitDataImport";
-			this.btnSubmitDataImport.Size = new System.Drawing.Size(75, 23);
-			this.btnSubmitDataImport.TabIndex = 3;
-			this.btnSubmitDataImport.Text = "Import";
-			this.btnSubmitDataImport.UseVisualStyleBackColor = true;
-			this.btnSubmitDataImport.Click += new System.EventHandler(this.btnSubmitDataImport_Click);
+			this.txtDataImport.Location = new System.Drawing.Point(40, 34);
+			this.txtDataImport.Name = "txtDataImport";
+			this.txtDataImport.Size = new System.Drawing.Size(208, 20);
+			this.txtDataImport.TabIndex = 1;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(254, 31);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(54, 24);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "Cauta";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// tabControl1
 			// 
@@ -413,6 +414,27 @@
 			this.tabControl1.TabIndex = 0;
 			this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
 			// 
+			// panel2
+			// 
+			this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.panel2.Controls.Add(this.btnSubmitDataImport);
+			this.panel2.Controls.Add(this.button1);
+			this.panel2.Controls.Add(this.btnCancelDataImport);
+			this.panel2.Controls.Add(this.txtDataImport);
+			this.panel2.Location = new System.Drawing.Point(11, 59);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(361, 110);
+			this.panel2.TabIndex = 4;
+			// 
+			// importDetails
+			// 
+			this.importDetails.BackColor = System.Drawing.SystemColors.Control;
+			this.importDetails.Location = new System.Drawing.Point(476, 59);
+			this.importDetails.Multiline = true;
+			this.importDetails.Name = "importDetails";
+			this.importDetails.Size = new System.Drawing.Size(295, 319);
+			this.importDetails.TabIndex = 5;
+			// 
 			// Schedule
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,12 +449,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.cTIScheduleDBDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
 			this.tabProffesor.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).EndInit();
 			this.tabDataImport.ResumeLayout(false);
 			this.tabDataImport.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -476,6 +500,8 @@
 		private System.Windows.Forms.TextBox txtDataImport;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.TextBox importDetails;
 	}
 }
 

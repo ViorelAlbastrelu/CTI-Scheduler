@@ -96,7 +96,7 @@ namespace CTISchedule
 
 		private void btnCancelDataImport_Click(object sender, EventArgs e)
 		{
-
+			txtDataImport.Text = null;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -151,7 +151,8 @@ namespace CTISchedule
 							}
 						}
 					}
-					_controller.AddUpdateProfesor(profesor);
+					var insertedProfesor = _controller.AddUpdateProfesor(profesor);
+					importDetails.Text += "  " + insertedProfesor.Id + ". " + insertedProfesor.Nume + " " + insertedProfesor.Prenume + " - " + insertedProfesor.Email + " - " + insertedProfesor.Titlu + Environment.NewLine;
 				}
 				init = true;
 			}

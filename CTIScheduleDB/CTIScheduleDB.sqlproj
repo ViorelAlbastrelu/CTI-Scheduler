@@ -58,9 +58,18 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Tables\Nomenclatoare" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Profesor.sql" />
     <Build Include="Tables\Sala.sql" />
+    <Build Include="Tables\Disciplina.sql" />
+    <Build Include="Tables\Nomenclatoare\Zile.sql" />
+    <Build Include="Tables\Nomenclatoare\Activitate.sql" />
+    <Build Include="Tables\DisciplinaActivitate.sql" />
+    <Build Include="Tables\Generatie.sql" />
+    <Build Include="Tables\Grupa.sql" />
+    <Build Include="Tables\SubGrupa.sql" />
+    <Build Include="Tables\Modul.sql" />
   </ItemGroup>
 </Project>

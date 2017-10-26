@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Zile]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nume] NVARCHAR(50) NOT NULL
+)
