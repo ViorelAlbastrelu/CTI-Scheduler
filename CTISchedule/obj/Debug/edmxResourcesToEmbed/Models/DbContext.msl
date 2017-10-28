@@ -1,19 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CTIScheduleDBModelStoreContainer" CdmEntityContainer="CTIScheduleDBEntities">
-    <EntitySetMapping Name="C__MigrationHistory">
-      <EntityTypeMapping TypeName="CTIScheduleDBModel.C__MigrationHistory">
-        <MappingFragment StoreEntitySet="__MigrationHistory">
-          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
-          <ScalarProperty Name="Model" ColumnName="Model" />
-          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
-          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+    <EntitySetMapping Name="Salas">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Sala">
+        <MappingFragment StoreEntitySet="Sala">
+          <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
+          <ScalarProperty Name="Capacitate" ColumnName="Capacitate" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Profesors">
-      <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor">
-        <MappingFragment StoreEntitySet="Profesors">
+    <EntitySetMapping Name="Activitates">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Activitate">
+        <MappingFragment StoreEntitySet="Activitate">
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disciplinas">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Disciplina">
+        <MappingFragment StoreEntitySet="Disciplina">
+          <ScalarProperty Name="Credite" ColumnName="Credite" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="An" ColumnName="An" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generaties">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Generatie">
+        <MappingFragment StoreEntitySet="Generatie">
+          <ScalarProperty Name="AnStudiu" ColumnName="AnStudiu" />
+          <ScalarProperty Name="AnStop" ColumnName="AnStop" />
+          <ScalarProperty Name="AnStart" ColumnName="AnStart" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupas">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Grupa">
+        <MappingFragment StoreEntitySet="Grupa">
+          <ScalarProperty Name="IdGeneratie" ColumnName="IdGeneratie" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moduls">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Modul">
+        <MappingFragment StoreEntitySet="Modul">
+          <ScalarProperty Name="SaptPara" ColumnName="SaptPara" />
+          <ScalarProperty Name="OraStop" ColumnName="OraStop" />
+          <ScalarProperty Name="OraStart" ColumnName="OraStart" />
+          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
+          <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
+          <ScalarProperty Name="IdDisciplina" ColumnName="IdDisciplina" />
+          <ScalarProperty Name="IdZi" ColumnName="IdZi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesor1">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor1">
+        <MappingFragment StoreEntitySet="Profesor">
           <ScalarProperty Name="Titlu" ColumnName="Titlu" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Prenume" ColumnName="Prenume" />
@@ -22,13 +73,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Salas">
-      <EntityTypeMapping TypeName="CTIScheduleDBModel.Sala">
-        <MappingFragment StoreEntitySet="Sala">
-          <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
-          <ScalarProperty Name="Capacitate" ColumnName="Capacitate" />
+    <EntitySetMapping Name="SubGrupas">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.SubGrupa">
+        <MappingFragment StoreEntitySet="SubGrupa">
+          <ScalarProperty Name="IdGrupa" ColumnName="IdGrupa" />
           <ScalarProperty Name="Nume" ColumnName="Nume" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ziles">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.Zile">
+        <MappingFragment StoreEntitySet="Zile">
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisciplinaActivitates">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.DisciplinaActivitate">
+        <MappingFragment StoreEntitySet="DisciplinaActivitate">
+          <ScalarProperty Name="NrOre" ColumnName="NrOre" />
+          <ScalarProperty Name="Id_Activitate" ColumnName="Id_Activitate" />
+          <ScalarProperty Name="Id_Disciplina" ColumnName="Id_Disciplina" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
