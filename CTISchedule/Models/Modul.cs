@@ -25,7 +25,7 @@ namespace CTISchedule.Models
     
         public virtual Activitate Activitate { get; set; }
         public virtual Disciplina Disciplina { get; set; }
-        public virtual Profesor1 Profesor { get; set; }
+        public virtual Profesor Profesor { get; set; }
         public virtual Zile Zile { get; set; }
     }
 }

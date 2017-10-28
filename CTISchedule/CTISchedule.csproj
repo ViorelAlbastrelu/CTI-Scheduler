@@ -78,9 +78,6 @@
     <Compile Include="Models\Activitate.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>DbContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\DbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,9 +109,6 @@
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Profesor.cs">
-      <DependentUpon>DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Profesor1.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Profesor_Extension.cs" />

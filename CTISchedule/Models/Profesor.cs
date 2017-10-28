@@ -14,10 +14,19 @@ namespace CTISchedule.Models
     
     public partial class Profesor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Profesor()
+        {
+            this.Moduls = new HashSet<Modul>();
+        }
+    
         public int Id { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public string Email { get; set; }
         public string Titlu { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Modul> Moduls { get; set; }
     }
 }

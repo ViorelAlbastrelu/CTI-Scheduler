@@ -248,15 +248,13 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     <edmx:ConceptualModels>
       <Schema Namespace="CTIScheduleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="CTIScheduleDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="C__MigrationHistory" EntityType="CTIScheduleDBModel.C__MigrationHistory" />
-          <EntitySet Name="Profesors" EntityType="CTIScheduleDBModel.Profesor" />
-          <EntitySet Name="Salas" EntityType="CTIScheduleDBModel.Sala" />
           <EntitySet Name="Activitates" EntityType="CTIScheduleDBModel.Activitate" />
           <EntitySet Name="Disciplinas" EntityType="CTIScheduleDBModel.Disciplina" />
           <EntitySet Name="Generaties" EntityType="CTIScheduleDBModel.Generatie" />
           <EntitySet Name="Grupas" EntityType="CTIScheduleDBModel.Grupa" />
           <EntitySet Name="Moduls" EntityType="CTIScheduleDBModel.Modul" />
-          <EntitySet Name="Profesor1" EntityType="CTIScheduleDBModel.Profesor1" />
+          <EntitySet Name="Profesors" EntityType="CTIScheduleDBModel.Profesor" />
+          <EntitySet Name="Salas" EntityType="CTIScheduleDBModel.Sala" />
           <EntitySet Name="SubGrupas" EntityType="CTIScheduleDBModel.SubGrupa" />
           <EntitySet Name="Ziles" EntityType="CTIScheduleDBModel.Zile" />
           <EntitySet Name="DisciplinaActivitates" EntityType="CTIScheduleDBModel.DisciplinaActivitate" />
@@ -285,43 +283,14 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
             <End Role="SubGrupa" EntitySet="SubGrupas" />
           </AssociationSet>
           <AssociationSet Name="FK_Modul_Profesor" Association="CTIScheduleDBModel.FK_Modul_Profesor">
-            <End Role="Profesor1" EntitySet="Profesor1" />
+            <End Role="Profesor" EntitySet="Profesors" />
             <End Role="Modul" EntitySet="Moduls" />
           </AssociationSet>
           <AssociationSet Name="FK_Modul_ZI" Association="CTIScheduleDBModel.FK_Modul_ZI">
             <End Role="Zile" EntitySet="Ziles" />
             <End Role="Modul" EntitySet="Moduls" />
           </AssociationSet>
-          </EntityContainer>
-        <EntityType Name="C__MigrationHistory">
-          <Key>
-            <PropertyRef Name="MigrationId" />
-            <PropertyRef Name="ContextKey" />
-          </Key>
-          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Profesor">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Prenume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Titlu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Sala">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Capacitate" Type="Int32" Nullable="false" />
-          <Property Name="IdActivitate" Type="Int32" Nullable="false" />
-        </EntityType>
+        </EntityContainer>
         <EntityType Name="Activitate">
           <Key>
             <PropertyRef Name="Id" />
@@ -376,10 +345,10 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <Property Name="SaptPara" Type="Boolean" />
           <NavigationProperty Name="Activitate" Relationship="CTIScheduleDBModel.FK_Modul_Activitate" FromRole="Modul" ToRole="Activitate" />
           <NavigationProperty Name="Disciplina" Relationship="CTIScheduleDBModel.FK_Modul_Disciplina" FromRole="Modul" ToRole="Disciplina" />
-          <NavigationProperty Name="Profesor" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Modul" ToRole="Profesor1" />
+          <NavigationProperty Name="Profesor" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Modul" ToRole="Profesor" />
           <NavigationProperty Name="Zile" Relationship="CTIScheduleDBModel.FK_Modul_ZI" FromRole="Modul" ToRole="Zile" />
         </EntityType>
-        <EntityType Name="Profesor1">
+        <EntityType Name="Profesor">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -388,7 +357,16 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <Property Name="Prenume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Titlu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Profesor1" ToRole="Modul" />
+          <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Profesor" ToRole="Modul" />
+        </EntityType>
+        <EntityType Name="Sala">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacitate" Type="Int32" Nullable="false" />
+          <Property Name="IdActivitate" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="SubGrupa">
           <Key>
@@ -492,10 +470,10 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Modul_Profesor">
-          <End Type="CTIScheduleDBModel.Profesor1" Role="Profesor1" Multiplicity="1" />
+          <End Type="CTIScheduleDBModel.Profesor" Role="Profesor" Multiplicity="1" />
           <End Type="CTIScheduleDBModel.Modul" Role="Modul" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Profesor1">
+            <Principal Role="Profesor">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Modul">
@@ -515,22 +493,12 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CTIScheduleDBModelStoreContainer" CdmEntityContainer="CTIScheduleDBEntities">
-          <EntitySetMapping Name="Salas">
-            <EntityTypeMapping TypeName="CTIScheduleDBModel.Sala">
-              <MappingFragment StoreEntitySet="Sala">
-                <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
-                <ScalarProperty Name="Capacitate" ColumnName="Capacitate" />
-                <ScalarProperty Name="Nume" ColumnName="Nume" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Activitates">
             <EntityTypeMapping TypeName="CTIScheduleDBModel.Activitate">
               <MappingFragment StoreEntitySet="Activitate">
@@ -582,12 +550,22 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Profesor1">
-            <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor1">
+          <EntitySetMapping Name="Profesors">
+            <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor">
               <MappingFragment StoreEntitySet="Profesor">
                 <ScalarProperty Name="Titlu" ColumnName="Titlu" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+                <ScalarProperty Name="Nume" ColumnName="Nume" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salas">
+            <EntityTypeMapping TypeName="CTIScheduleDBModel.Sala">
+              <MappingFragment StoreEntitySet="Sala">
+                <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
+                <ScalarProperty Name="Capacitate" ColumnName="Capacitate" />
                 <ScalarProperty Name="Nume" ColumnName="Nume" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
@@ -619,7 +597,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

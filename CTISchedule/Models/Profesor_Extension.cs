@@ -8,7 +8,6 @@ namespace CTISchedule.Models
 {
 	public partial class Profesor
 	{
-		public Profesor() { }
 		public Profesor(Profesor req)
 		{
 			Nume = req.Nume;
