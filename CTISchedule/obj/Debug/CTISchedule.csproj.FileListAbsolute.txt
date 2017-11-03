@@ -32,7 +32,6 @@ D:\uni\cti-schedule\CTISchedule\bin\Debug\EntityFramework.xml
 D:\uni\cti-schedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.xml
 D:\uni\cti-schedule\CTISchedule\bin\Debug\NPOI.xml
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csprojResolveAssemblyReference.cache
-D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule.resources
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Properties.Resources.resources
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.GenerateResource.Cache
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
@@ -58,3 +57,6 @@ D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.exe
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.pdb
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Scheduler.resources
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule_init.resources
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Start.resources

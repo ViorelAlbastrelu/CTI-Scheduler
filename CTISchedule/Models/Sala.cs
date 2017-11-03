@@ -17,6 +17,8 @@ namespace CTISchedule.Models
         public int Id { get; set; }
         public string Nume { get; set; }
         public int Capacitate { get; set; }
-        public int IdActivitate { get; set; }
+        public int Activitate { get; set; }
+    
+        public virtual Activitate Activitate1 { get; set; }
     }
 }

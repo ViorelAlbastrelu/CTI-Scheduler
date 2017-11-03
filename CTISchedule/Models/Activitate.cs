@@ -19,6 +19,7 @@ namespace CTISchedule.Models
         {
             this.DisciplinaActivitates = new HashSet<DisciplinaActivitate>();
             this.Moduls = new HashSet<Modul>();
+            this.Salas = new HashSet<Sala>();
         }
     
         public int Id { get; set; }
@@ -28,5 +29,7 @@ namespace CTISchedule.Models
         public virtual ICollection<DisciplinaActivitate> DisciplinaActivitates { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Modul> Moduls { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Sala> Salas { get; set; }
     }
 }

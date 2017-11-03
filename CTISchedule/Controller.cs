@@ -27,8 +27,6 @@ namespace CTISchedule
 				profesor = _context.Profesors.First(p => p.Id == req.Id);
 				profesor.Nume = req.Nume;
 				profesor.Prenume = req.Prenume;
-				profesor.Email = req.Email;
-				profesor.Titlu = req.Titlu;
 			}
 			else profesor = _context.Profesors.Add(new Profesor(req));
 			

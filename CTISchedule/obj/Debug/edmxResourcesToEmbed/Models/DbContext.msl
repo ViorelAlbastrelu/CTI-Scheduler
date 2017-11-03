@@ -55,8 +55,7 @@
     <EntitySetMapping Name="Profesors">
       <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor">
         <MappingFragment StoreEntitySet="Profesor">
-          <ScalarProperty Name="Titlu" ColumnName="Titlu" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Disciplina" ColumnName="Disciplina" />
           <ScalarProperty Name="Prenume" ColumnName="Prenume" />
           <ScalarProperty Name="Nume" ColumnName="Nume" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -66,7 +65,7 @@
     <EntitySetMapping Name="Salas">
       <EntityTypeMapping TypeName="CTIScheduleDBModel.Sala">
         <MappingFragment StoreEntitySet="Sala">
-          <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
+          <ScalarProperty Name="Activitate" ColumnName="Activitate" />
           <ScalarProperty Name="Capacitate" ColumnName="Capacitate" />
           <ScalarProperty Name="Nume" ColumnName="Nume" />
           <ScalarProperty Name="Id" ColumnName="Id" />

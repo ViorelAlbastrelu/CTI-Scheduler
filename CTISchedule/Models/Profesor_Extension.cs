@@ -12,8 +12,6 @@ namespace CTISchedule.Models
 		{
 			Nume = req.Nume;
 			Prenume = req.Prenume;
-			Titlu = req.Titlu;
-			Email = req.Email;
 		}
 	}
 

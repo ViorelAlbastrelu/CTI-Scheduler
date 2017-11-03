@@ -15,13 +15,18 @@ namespace CTISchedule
 		[STAThread]
 		static void Main()
 		{
+			/*
 			using (var db = new CTIScheduleDBEntities())
 			{
 				Controller controller = new Controller(db);
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
-				Application.Run(new Schedule(controller));
+				Application.Run(new Schedule_init(controller));
 			}
+			*/
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new Scheduler());
 		}
 	}
 }
