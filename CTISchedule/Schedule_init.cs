@@ -30,7 +30,6 @@ namespace CTISchedule
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			// TODO: This line of code loads data into the 'cTIScheduleDBDataSet.Profesors' table. You can move, or remove it, as needed.
-			this.profesorsTableAdapter.Fill(this.cTIScheduleDBDataSet.Profesors);
 			// TODO: This line of code loads data into the 'cTIScheduleDBProfesor.Profesor' table. You can move, or remove it, as needed.
 
 		}
@@ -75,7 +74,6 @@ namespace CTISchedule
 		private void btnDeleteProfesor_Click(object sender, EventArgs e)
 		{
 			_controller.DeleteProfesor(int.Parse(txtIdProfesor.Text));
-			profesorsTableAdapter.Fill(cTIScheduleDBDataSet.Profesors);
 		}
 
 		private void btnCancelProfesor_Click(object sender, EventArgs e)
@@ -154,7 +152,7 @@ namespace CTISchedule
 
 		private void tabControl1_Click(object sender, EventArgs e)
 		{
-			profesorsTableAdapter.Fill(cTIScheduleDBDataSet.Profesors);
+			//profesorsTableAdapter.Fill(cTIScheduleDBDataSet.Profesors);
 		}
 	}
 }

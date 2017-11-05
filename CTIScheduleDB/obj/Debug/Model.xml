@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="CTIScheduleDB.dll" />
-			<Metadata Name="FileName" Value="D:\UNI\CTI-SCHEDULE\CTISCHEDULEDB\OBJ\DEBUG\CTISCHEDULEDB.DLL" />
+			<Metadata Name="FileName" Value="D:\PROJECTS\UNIVERSITY\PIE\CTI-SCHEDULE\CTISCHEDULEDB\OBJ\DEBUG\CTISCHEDULEDB.DLL" />
 			<Metadata Name="AssemblyName" Value="CTIScheduleDB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\Projects\University\PIE\cti-schedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -183,7 +183,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[Profesor].[Id]" />
+								<References Name="[dbo].[Sala].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -191,7 +191,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[Profesor]" />
+					<References Name="[dbo].[Sala]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
@@ -202,7 +202,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[Sala].[Id]" />
+								<References Name="[dbo].[Profesor].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -210,7 +210,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[Sala]" />
+					<References Name="[dbo].[Profesor]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
@@ -397,6 +397,50 @@
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DisciplinaProfesor]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DisciplinaProfesor].[Id_Disciplina]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DisciplinaProfesor].[Id_Profesor]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_DisciplinaActivitate_Activitate]">
 			<Relationship Name="Columns">
 				<Entry>
@@ -443,6 +487,52 @@
 			</Relationship>
 			<AttachedAnnotation Disambiguator="12" />
 		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_DisciplinaProfesor_Disciplina]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[DisciplinaProfesor].[Id_Disciplina]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DisciplinaProfesor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Disciplina].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Disciplina]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="14" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_DisciplinaProfesor_Profesor]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[DisciplinaProfesor].[Id_Profesor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DisciplinaProfesor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Profesor].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Profesor]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="15" />
+		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Grupa_Generatie]">
 			<Relationship Name="Columns">
 				<Entry>
@@ -464,7 +554,7 @@
 					<References Name="[dbo].[Generatie]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Modul_Activitate]">
 			<Relationship Name="Columns">
@@ -487,7 +577,7 @@
 					<References Name="[dbo].[Activitate]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Modul_Disciplina]">
 			<Relationship Name="Columns">
@@ -510,7 +600,7 @@
 					<References Name="[dbo].[Disciplina]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Modul_Profesor]">
 			<Relationship Name="Columns">
@@ -533,7 +623,7 @@
 					<References Name="[dbo].[Profesor]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Modul_ZI]">
 			<Relationship Name="Columns">
@@ -556,30 +646,7 @@
 					<References Name="[dbo].[Zile]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
-		</Element>
-		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Profesor_Disciplina]">
-			<Relationship Name="Columns">
-				<Entry>
-					<References Name="[dbo].[Profesor].[Disciplina]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Profesor]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignColumns">
-				<Entry>
-					<References Name="[dbo].[Disciplina].[Id]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignTable">
-				<Entry>
-					<References Name="[dbo].[Disciplina]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Sala_Activitate]">
 			<Relationship Name="Columns">
@@ -602,7 +669,7 @@
 					<References Name="[dbo].[Activitate]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SubGrupa_Grupa]">
 			<Relationship Name="Columns">
@@ -625,7 +692,7 @@
 					<References Name="[dbo].[Grupa]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Generatie]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -763,7 +830,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="14" />
+			<AttachedAnnotation Disambiguator="16" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Modul]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -905,10 +972,10 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+			<AttachedAnnotation Disambiguator="20" />
 			<AttachedAnnotation Disambiguator="18" />
-			<AttachedAnnotation Disambiguator="16" />
-			<AttachedAnnotation Disambiguator="15" />
 			<AttachedAnnotation Disambiguator="17" />
+			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Profesor]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -928,7 +995,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="10" />
+						<AttachedAnnotation Disambiguator="11" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -965,29 +1032,12 @@
 						</Relationship>
 					</Element>
 				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[Profesor].[Disciplina]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Sala]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1007,7 +1057,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="11" />
+						<AttachedAnnotation Disambiguator="10" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1065,7 +1115,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="21" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[SubGrupa]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1127,7 +1177,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="22" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Zile]">
 			<Property Name="IsAnsiNullsOn" Value="True" />

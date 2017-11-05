@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\uni\cti-schedule\CTISchedule\Models\DbContext.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Projects\University\PIE\cti-schedule\CTISchedule\Models\DbContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

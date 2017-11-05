@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CTIScheduleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="CTIScheduleDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__RefactorLog" EntityType="CTIScheduleDBModel.C__RefactorLog" />
     <EntitySet Name="Activitates" EntityType="CTIScheduleDBModel.Activitate" />
     <EntitySet Name="Disciplinas" EntityType="CTIScheduleDBModel.Disciplina" />
     <EntitySet Name="Generaties" EntityType="CTIScheduleDBModel.Generatie" />
@@ -31,10 +32,6 @@
       <End Role="Disciplina" EntitySet="Disciplinas" />
       <End Role="Modul" EntitySet="Moduls" />
     </AssociationSet>
-    <AssociationSet Name="FK_Profesor_Disciplina" Association="CTIScheduleDBModel.FK_Profesor_Disciplina">
-      <End Role="Disciplina" EntitySet="Disciplinas" />
-      <End Role="Profesor" EntitySet="Profesors" />
-    </AssociationSet>
     <AssociationSet Name="FK_Grupa_Generatie" Association="CTIScheduleDBModel.FK_Grupa_Generatie">
       <End Role="Generatie" EntitySet="Generaties" />
       <End Role="Grupa" EntitySet="Grupas" />
@@ -51,7 +48,17 @@
       <End Role="Zile" EntitySet="Ziles" />
       <End Role="Modul" EntitySet="Moduls" />
     </AssociationSet>
+    <AssociationSet Name="DisciplinaProfesor" Association="CTIScheduleDBModel.DisciplinaProfesor">
+      <End Role="Disciplina" EntitySet="Disciplinas" />
+      <End Role="Profesor" EntitySet="Profesors" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
   <EntityType Name="Activitate">
     <Key>
       <PropertyRef Name="Id" />
@@ -72,7 +79,7 @@
     <Property Name="Credite" Type="Int32" Nullable="false" />
     <NavigationProperty Name="DisciplinaActivitates" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" FromRole="Disciplina" ToRole="DisciplinaActivitate" />
     <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Disciplina" FromRole="Disciplina" ToRole="Modul" />
-    <NavigationProperty Name="Profesors" Relationship="CTIScheduleDBModel.FK_Profesor_Disciplina" FromRole="Disciplina" ToRole="Profesor" />
+    <NavigationProperty Name="Profesors" Relationship="CTIScheduleDBModel.DisciplinaProfesor" FromRole="Disciplina" ToRole="Profesor" />
   </EntityType>
   <EntityType Name="Generatie">
     <Key>
@@ -118,9 +125,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Prenume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Disciplina" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Disciplina1" Relationship="CTIScheduleDBModel.FK_Profesor_Disciplina" FromRole="Profesor" ToRole="Disciplina" />
     <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Profesor" ToRole="Modul" />
+    <NavigationProperty Name="Disciplinas" Relationship="CTIScheduleDBModel.DisciplinaProfesor" FromRole="Profesor" ToRole="Disciplina" />
   </EntityType>
   <EntityType Name="Sala">
     <Key>
@@ -221,18 +227,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Profesor_Disciplina">
-    <End Type="CTIScheduleDBModel.Disciplina" Role="Disciplina" Multiplicity="1" />
-    <End Type="CTIScheduleDBModel.Profesor" Role="Profesor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Disciplina">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Profesor">
-        <PropertyRef Name="Disciplina" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Grupa_Generatie">
     <End Type="CTIScheduleDBModel.Generatie" Role="Generatie" Multiplicity="1" />
     <End Type="CTIScheduleDBModel.Grupa" Role="Grupa" Multiplicity="*" />
@@ -280,5 +274,9 @@
         <PropertyRef Name="IdZi" />
       </Dependent>
     </ReferentialConstraint>
+  </Association>
+  <Association Name="DisciplinaProfesor">
+    <End Type="CTIScheduleDBModel.Disciplina" Role="Disciplina" Multiplicity="*" />
+    <End Type="CTIScheduleDBModel.Profesor" Role="Profesor" Multiplicity="*" />
   </Association>
 </Schema>

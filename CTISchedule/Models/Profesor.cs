@@ -18,15 +18,16 @@ namespace CTISchedule.Models
         public Profesor()
         {
             this.Moduls = new HashSet<Modul>();
+            this.Disciplinas = new HashSet<Disciplina>();
         }
     
         public int Id { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
-        public int Disciplina { get; set; }
     
-        public virtual Disciplina Disciplina1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Modul> Moduls { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Disciplina> Disciplinas { get; set; }
     }
 }

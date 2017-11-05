@@ -70,12 +70,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
-    <Compile Include="CTIScheduleDBDataSet.Designer.cs">
+    <Compile Include="ctischeduleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CTIScheduleDBDataSet.xsd</DependentUpon>
+      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctischeduleDataSetActivitate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetActivitate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctischeduleDataSetDisciplina.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctischeduleDataSetSala.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctischeduleDataSetZile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Activitate.cs">
+      <DependentUpon>DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__RefactorLog.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DbContext.Context.cs">
@@ -163,21 +186,66 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CTIScheduleDBDataSet.xsc">
-      <DependentUpon>CTIScheduleDBDataSet.xsd</DependentUpon>
+    <None Include="ctischeduleDataSet.xsc">
+      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
     </None>
-    <None Include="CTIScheduleDBDataSet.xsd">
+    <None Include="ctischeduleDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CTIScheduleDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ctischeduleDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CTIScheduleDBDataSet.xss">
-      <DependentUpon>CTIScheduleDBDataSet.xsd</DependentUpon>
+    <None Include="ctischeduleDataSet.xss">
+      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetActivitate.xsc">
+      <DependentUpon>ctischeduleDataSetActivitate.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetActivitate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetActivitate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetActivitate.xss">
+      <DependentUpon>ctischeduleDataSetActivitate.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetDisciplina.xsc">
+      <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetDisciplina.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetDisciplina.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetDisciplina.xss">
+      <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetSala.xsc">
+      <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetSala.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetSala.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetSala.xss">
+      <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetZile.xsc">
+      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetZile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetZile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetZile.xss">
+      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
     </None>
     <None Include="Models\DbContext.edmx.diagram">
       <DependentUpon>DbContext.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CTISchedule.Models.Profesor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

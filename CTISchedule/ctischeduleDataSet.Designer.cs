@@ -20,17 +20,17 @@ namespace CTISchedule {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CTIScheduleDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ctischeduleDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CTIScheduleDBDataSet : global::System.Data.DataSet {
+    public partial class ctischeduleDataSet : global::System.Data.DataSet {
         
-        private ProfesorsDataTable tableProfesors;
+        private ProfesorDataTable tableProfesor;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public CTIScheduleDBDataSet() {
+        public ctischeduleDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace CTISchedule {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected CTIScheduleDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ctischeduleDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace CTISchedule {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Profesors"] != null)) {
-                    base.Tables.Add(new ProfesorsDataTable(ds.Tables["Profesors"]));
+                if ((ds.Tables["Profesor"] != null)) {
+                    base.Tables.Add(new ProfesorDataTable(ds.Tables["Profesor"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace CTISchedule {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ProfesorsDataTable Profesors {
+        public ProfesorDataTable Profesor {
             get {
-                return this.tableProfesors;
+                return this.tableProfesor;
             }
         }
         
@@ -127,7 +127,7 @@ namespace CTISchedule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CTIScheduleDBDataSet cln = ((CTIScheduleDBDataSet)(base.Clone()));
+            ctischeduleDataSet cln = ((ctischeduleDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace CTISchedule {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Profesors"] != null)) {
-                    base.Tables.Add(new ProfesorsDataTable(ds.Tables["Profesors"]));
+                if ((ds.Tables["Profesor"] != null)) {
+                    base.Tables.Add(new ProfesorDataTable(ds.Tables["Profesor"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace CTISchedule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableProfesors = ((ProfesorsDataTable)(base.Tables["Profesors"]));
+            this.tableProfesor = ((ProfesorDataTable)(base.Tables["Profesor"]));
             if ((initTable == true)) {
-                if ((this.tableProfesors != null)) {
-                    this.tableProfesors.InitVars();
+                if ((this.tableProfesor != null)) {
+                    this.tableProfesor.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace CTISchedule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CTIScheduleDBDataSet";
+            this.DataSetName = "ctischeduleDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CTIScheduleDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ctischeduleDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableProfesors = new ProfesorsDataTable();
-            base.Tables.Add(this.tableProfesors);
+            this.tableProfesor = new ProfesorDataTable();
+            base.Tables.Add(this.tableProfesor);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeProfesors() {
+        private bool ShouldSerializeProfesor() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace CTISchedule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CTIScheduleDBDataSet ds = new CTIScheduleDBDataSet();
+            ctischeduleDataSet ds = new ctischeduleDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace CTISchedule {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ProfesorsRowChangeEventHandler(object sender, ProfesorsRowChangeEvent e);
+        public delegate void ProfesorRowChangeEventHandler(object sender, ProfesorRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ProfesorsDataTable : global::System.Data.TypedTableBase<ProfesorsRow> {
+        public partial class ProfesorDataTable : global::System.Data.TypedTableBase<ProfesorRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -285,14 +285,10 @@ namespace CTISchedule {
             
             private global::System.Data.DataColumn columnPrenume;
             
-            private global::System.Data.DataColumn columnEmail;
-            
-            private global::System.Data.DataColumn columnTitlu;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsDataTable() {
-                this.TableName = "Profesors";
+            public ProfesorDataTable() {
+                this.TableName = "Profesor";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +296,7 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProfesorsDataTable(global::System.Data.DataTable table) {
+            internal ProfesorDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +313,7 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ProfesorsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProfesorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -348,22 +344,6 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
-                get {
-                    return this.columnEmail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TitluColumn {
-                get {
-                    return this.columnTitlu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -373,56 +353,54 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRow this[int index] {
+            public ProfesorRow this[int index] {
                 get {
-                    return ((ProfesorsRow)(this.Rows[index]));
+                    return ((ProfesorRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProfesorsRowChangeEventHandler ProfesorsRowChanging;
+            public event ProfesorRowChangeEventHandler ProfesorRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProfesorsRowChangeEventHandler ProfesorsRowChanged;
+            public event ProfesorRowChangeEventHandler ProfesorRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProfesorsRowChangeEventHandler ProfesorsRowDeleting;
+            public event ProfesorRowChangeEventHandler ProfesorRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProfesorsRowChangeEventHandler ProfesorsRowDeleted;
+            public event ProfesorRowChangeEventHandler ProfesorRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddProfesorsRow(ProfesorsRow row) {
+            public void AddProfesorRow(ProfesorRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRow AddProfesorsRow(string Nume, string Prenume, string Email, string Titlu) {
-                ProfesorsRow rowProfesorsRow = ((ProfesorsRow)(this.NewRow()));
+            public ProfesorRow AddProfesorRow(string Nume, string Prenume) {
+                ProfesorRow rowProfesorRow = ((ProfesorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nume,
-                        Prenume,
-                        Email,
-                        Titlu};
-                rowProfesorsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowProfesorsRow);
-                return rowProfesorsRow;
+                        Prenume};
+                rowProfesorRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProfesorRow);
+                return rowProfesorRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRow FindById(int Id) {
-                return ((ProfesorsRow)(this.Rows.Find(new object[] {
+            public ProfesorRow FindById(int Id) {
+                return ((ProfesorRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ProfesorsDataTable cln = ((ProfesorsDataTable)(base.Clone()));
+                ProfesorDataTable cln = ((ProfesorDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,7 +408,7 @@ namespace CTISchedule {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ProfesorsDataTable();
+                return new ProfesorDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -439,8 +417,6 @@ namespace CTISchedule {
                 this.columnId = base.Columns["Id"];
                 this.columnNume = base.Columns["Nume"];
                 this.columnPrenume = base.Columns["Prenume"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnTitlu = base.Columns["Titlu"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -452,10 +428,6 @@ namespace CTISchedule {
                 base.Columns.Add(this.columnNume);
                 this.columnPrenume = new global::System.Data.DataColumn("Prenume", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrenume);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnTitlu = new global::System.Data.DataColumn("Titlu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTitlu);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -465,39 +437,35 @@ namespace CTISchedule {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnNume.AllowDBNull = false;
-                this.columnNume.MaxLength = 2147483647;
+                this.columnNume.MaxLength = 50;
                 this.columnPrenume.AllowDBNull = false;
-                this.columnPrenume.MaxLength = 2147483647;
-                this.columnEmail.AllowDBNull = false;
-                this.columnEmail.MaxLength = 2147483647;
-                this.columnTitlu.AllowDBNull = false;
-                this.columnTitlu.MaxLength = 2147483647;
+                this.columnPrenume.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRow NewProfesorsRow() {
-                return ((ProfesorsRow)(this.NewRow()));
+            public ProfesorRow NewProfesorRow() {
+                return ((ProfesorRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ProfesorsRow(builder);
+                return new ProfesorRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ProfesorsRow);
+                return typeof(ProfesorRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ProfesorsRowChanged != null)) {
-                    this.ProfesorsRowChanged(this, new ProfesorsRowChangeEvent(((ProfesorsRow)(e.Row)), e.Action));
+                if ((this.ProfesorRowChanged != null)) {
+                    this.ProfesorRowChanged(this, new ProfesorRowChangeEvent(((ProfesorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,8 +473,8 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ProfesorsRowChanging != null)) {
-                    this.ProfesorsRowChanging(this, new ProfesorsRowChangeEvent(((ProfesorsRow)(e.Row)), e.Action));
+                if ((this.ProfesorRowChanging != null)) {
+                    this.ProfesorRowChanging(this, new ProfesorRowChangeEvent(((ProfesorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,8 +482,8 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ProfesorsRowDeleted != null)) {
-                    this.ProfesorsRowDeleted(this, new ProfesorsRowChangeEvent(((ProfesorsRow)(e.Row)), e.Action));
+                if ((this.ProfesorRowDeleted != null)) {
+                    this.ProfesorRowDeleted(this, new ProfesorRowChangeEvent(((ProfesorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -523,14 +491,14 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ProfesorsRowDeleting != null)) {
-                    this.ProfesorsRowDeleting(this, new ProfesorsRowChangeEvent(((ProfesorsRow)(e.Row)), e.Action));
+                if ((this.ProfesorRowDeleting != null)) {
+                    this.ProfesorRowDeleting(this, new ProfesorRowChangeEvent(((ProfesorRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveProfesorsRow(ProfesorsRow row) {
+            public void RemoveProfesorRow(ProfesorRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -539,7 +507,7 @@ namespace CTISchedule {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CTIScheduleDBDataSet ds = new CTIScheduleDBDataSet();
+                ctischeduleDataSet ds = new ctischeduleDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -557,7 +525,7 @@ namespace CTISchedule {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ProfesorsDataTable";
+                attribute2.FixedValue = "ProfesorDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -601,25 +569,25 @@ namespace CTISchedule {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ProfesorsRow : global::System.Data.DataRow {
+        public partial class ProfesorRow : global::System.Data.DataRow {
             
-            private ProfesorsDataTable tableProfesors;
+            private ProfesorDataTable tableProfesor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProfesorsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProfesorRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableProfesors = ((ProfesorsDataTable)(this.Table));
+                this.tableProfesor = ((ProfesorDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableProfesors.IdColumn]));
+                    return ((int)(this[this.tableProfesor.IdColumn]));
                 }
                 set {
-                    this[this.tableProfesors.IdColumn] = value;
+                    this[this.tableProfesor.IdColumn] = value;
                 }
             }
             
@@ -627,10 +595,10 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nume {
                 get {
-                    return ((string)(this[this.tableProfesors.NumeColumn]));
+                    return ((string)(this[this.tableProfesor.NumeColumn]));
                 }
                 set {
-                    this[this.tableProfesors.NumeColumn] = value;
+                    this[this.tableProfesor.NumeColumn] = value;
                 }
             }
             
@@ -638,32 +606,10 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Prenume {
                 get {
-                    return ((string)(this[this.tableProfesors.PrenumeColumn]));
+                    return ((string)(this[this.tableProfesor.PrenumeColumn]));
                 }
                 set {
-                    this[this.tableProfesors.PrenumeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Email {
-                get {
-                    return ((string)(this[this.tableProfesors.EmailColumn]));
-                }
-                set {
-                    this[this.tableProfesors.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Titlu {
-                get {
-                    return ((string)(this[this.tableProfesors.TitluColumn]));
-                }
-                set {
-                    this[this.tableProfesors.TitluColumn] = value;
+                    this[this.tableProfesor.PrenumeColumn] = value;
                 }
             }
         }
@@ -672,22 +618,22 @@ namespace CTISchedule {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ProfesorsRowChangeEvent : global::System.EventArgs {
+        public class ProfesorRowChangeEvent : global::System.EventArgs {
             
-            private ProfesorsRow eventRow;
+            private ProfesorRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRowChangeEvent(ProfesorsRow row, global::System.Data.DataRowAction action) {
+            public ProfesorRowChangeEvent(ProfesorRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProfesorsRow Row {
+            public ProfesorRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -703,7 +649,7 @@ namespace CTISchedule {
         }
     }
 }
-namespace CTISchedule.CTIScheduleDBDataSetTableAdapters {
+namespace CTISchedule.ctischeduleDataSetTableAdapters {
     
     
     /// <summary>
@@ -715,7 +661,7 @@ namespace CTISchedule.CTIScheduleDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ProfesorsTableAdapter : global::System.ComponentModel.Component {
+    public partial class ProfesorTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -729,7 +675,7 @@ namespace CTISchedule.CTIScheduleDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ProfesorsTableAdapter() {
+        public ProfesorTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -826,48 +772,37 @@ namespace CTISchedule.CTIScheduleDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Profesors";
+            tableMapping.DataSetTable = "Profesor";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Nume", "Nume");
             tableMapping.ColumnMappings.Add("Prenume", "Prenume");
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("Titlu", "Titlu");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Profesor] WHERE (([Id] = @Original_Id) AND ([Nume] = @Original" +
-                "_Nume) AND ([Prenume] = @Original_Prenume) AND ([Email] = @Original_Email) AND (" +
-                "[Titlu] = @Original_Titlu))";
+                "_Nume) AND ([Prenume] = @Original_Prenume))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prenume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prenume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titlu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titlu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Profesor] ([Nume], [Prenume], [Email], [Titlu]) VALUES (@Nume," +
-                " @Prenume, @Email, @Titlu);\r\nSELECT Id, Nume, Prenume, Email, Titlu FROM Profeso" +
-                "r WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Profesor] ([Nume], [Prenume]) VALUES (@Nume, @Prenume);\r\nSELEC" +
+                "T Id, Nume, Prenume FROM Profesor WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prenume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prenume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titlu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titlu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Profesor] SET [Nume] = @Nume, [Prenume] = @Prenume, [Email] = @Email, [Titlu] = @Titlu WHERE (([Id] = @Original_Id) AND ([Nume] = @Original_Nume) AND ([Prenume] = @Original_Prenume) AND ([Email] = @Original_Email) AND ([Titlu] = @Original_Titlu));
-SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Profesor] SET [Nume] = @Nume, [Prenume] = @Prenume WHERE (([Id] = @" +
+                "Original_Id) AND ([Nume] = @Original_Nume) AND ([Prenume] = @Original_Prenume));" +
+                "\r\nSELECT Id, Nume, Prenume FROM Profesor WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prenume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prenume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titlu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titlu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prenume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prenume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titlu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titlu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -884,7 +819,7 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Nume, Prenume, Email, Titlu FROM dbo.Profesor";
+            this._commandCollection[0].CommandText = "SELECT Id, Nume, Prenume FROM dbo.Profesor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -892,7 +827,7 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CTIScheduleDBDataSet.ProfesorsDataTable dataTable) {
+        public virtual int Fill(ctischeduleDataSet.ProfesorDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -905,9 +840,9 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CTIScheduleDBDataSet.ProfesorsDataTable GetData() {
+        public virtual ctischeduleDataSet.ProfesorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CTIScheduleDBDataSet.ProfesorsDataTable dataTable = new CTIScheduleDBDataSet.ProfesorsDataTable();
+            ctischeduleDataSet.ProfesorDataTable dataTable = new ctischeduleDataSet.ProfesorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -915,15 +850,15 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CTIScheduleDBDataSet.ProfesorsDataTable dataTable) {
+        public virtual int Update(ctischeduleDataSet.ProfesorDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CTIScheduleDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Profesors");
+        public virtual int Update(ctischeduleDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Profesor");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -940,6 +875,128 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, string Original_Nume, string Original_Prenume) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Nume == null)) {
+                throw new global::System.ArgumentNullException("Original_Nume");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nume));
+            }
+            if ((Original_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Original_Prenume");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Prenume));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Nume, string Prenume) {
+            if ((Nume == null)) {
+                throw new global::System.ArgumentNullException("Nume");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nume));
+            }
+            if ((Prenume == null)) {
+                throw new global::System.ArgumentNullException("Prenume");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Prenume));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Nume, string Prenume, int Original_Id, string Original_Nume, string Original_Prenume, int Id) {
+            if ((Nume == null)) {
+                throw new global::System.ArgumentNullException("Nume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nume));
+            }
+            if ((Prenume == null)) {
+                throw new global::System.ArgumentNullException("Prenume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Prenume));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
+            if ((Original_Nume == null)) {
+                throw new global::System.ArgumentNullException("Original_Nume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Nume));
+            }
+            if ((Original_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Original_Prenume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Prenume));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Nume, string Prenume, int Original_Id, string Original_Nume, string Original_Prenume) {
+            return this.Update(Nume, Prenume, Original_Id, Original_Nume, Original_Prenume, Original_Id);
+        }
     }
     
     /// <summary>
@@ -954,7 +1011,7 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         
         private UpdateOrderOption _updateOrder;
         
-        private ProfesorsTableAdapter _profesorsTableAdapter;
+        private ProfesorTableAdapter _profesorTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -976,12 +1033,12 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ProfesorsTableAdapter ProfesorsTableAdapter {
+        public ProfesorTableAdapter ProfesorTableAdapter {
             get {
-                return this._profesorsTableAdapter;
+                return this._profesorTableAdapter;
             }
             set {
-                this._profesorsTableAdapter = value;
+                this._profesorTableAdapter = value;
             }
         }
         
@@ -1004,9 +1061,9 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._profesorsTableAdapter != null) 
-                            && (this._profesorsTableAdapter.Connection != null))) {
-                    return this._profesorsTableAdapter.Connection;
+                if (((this._profesorTableAdapter != null) 
+                            && (this._profesorTableAdapter.Connection != null))) {
+                    return this._profesorTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1021,7 +1078,7 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._profesorsTableAdapter != null)) {
+                if ((this._profesorTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1033,14 +1090,14 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(CTIScheduleDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ctischeduleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._profesorsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Profesors.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._profesorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Profesor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._profesorsTableAdapter.Update(updatedRows));
+                    result = (result + this._profesorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1052,13 +1109,13 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(CTIScheduleDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ctischeduleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._profesorsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Profesors.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._profesorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Profesor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._profesorsTableAdapter.Update(addedRows));
+                    result = (result + this._profesorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1070,13 +1127,13 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(CTIScheduleDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ctischeduleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._profesorsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Profesors.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._profesorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Profesor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._profesorsTableAdapter.Update(deletedRows));
+                    result = (result + this._profesorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1112,15 +1169,15 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(CTIScheduleDBDataSet dataSet) {
+        public virtual int UpdateAll(ctischeduleDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._profesorsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._profesorsTableAdapter.Connection) == false))) {
+            if (((this._profesorTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._profesorTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1156,13 +1213,13 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._profesorsTableAdapter != null)) {
-                    revertConnections.Add(this._profesorsTableAdapter, this._profesorsTableAdapter.Connection);
-                    this._profesorsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._profesorsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._profesorsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._profesorsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._profesorsTableAdapter.Adapter);
+                if ((this._profesorTableAdapter != null)) {
+                    revertConnections.Add(this._profesorTableAdapter, this._profesorTableAdapter.Connection);
+                    this._profesorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._profesorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._profesorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._profesorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._profesorTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1223,9 +1280,9 @@ SELECT Id, Nume, Prenume, Email, Titlu FROM Profesor WHERE (Id = @Id)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._profesorsTableAdapter != null)) {
-                    this._profesorsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._profesorsTableAdapter]));
-                    this._profesorsTableAdapter.Transaction = null;
+                if ((this._profesorTableAdapter != null)) {
+                    this._profesorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._profesorTableAdapter]));
+                    this._profesorTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

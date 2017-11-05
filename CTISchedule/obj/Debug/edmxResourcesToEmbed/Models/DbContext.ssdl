@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CTIScheduleDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
   <EntityType Name="Activitate">
     <Key>
       <PropertyRef Name="Id" />
@@ -17,7 +23,7 @@
     <Property Name="Credite" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'ctischedule.dbo.DisciplinaActivitate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="DisciplinaActivitate">
     <Key>
       <PropertyRef Name="Id_Disciplina" />
@@ -27,6 +33,16 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     <Property Name="Id_Disciplina" Type="int" Nullable="false" />
     <Property Name="Id_Activitate" Type="int" Nullable="false" />
     <Property Name="NrOre" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DisciplinaProfesor">
+    <Key>
+      <PropertyRef Name="Id_Disciplina" />
+      <PropertyRef Name="Id_Profesor" />
+    </Key>
+    <Property Name="Id_Disciplina" Type="int" Nullable="false" />
+    <Property Name="Id_Profesor" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Generatie">
     <Key>
@@ -65,7 +81,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Prenume" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Disciplina" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Sala">
     <Key>
@@ -112,6 +127,30 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
       </Principal>
       <Dependent Role="DisciplinaActivitate">
         <PropertyRef Name="Id_Disciplina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisciplinaProfesor_Disciplina">
+    <End Role="Disciplina" Type="Self.Disciplina" Multiplicity="1" />
+    <End Role="DisciplinaProfesor" Type="Self.DisciplinaProfesor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disciplina">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DisciplinaProfesor">
+        <PropertyRef Name="Id_Disciplina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisciplinaProfesor_Profesor">
+    <End Role="Profesor" Type="Self.Profesor" Multiplicity="1" />
+    <End Role="DisciplinaProfesor" Type="Self.DisciplinaProfesor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DisciplinaProfesor">
+        <PropertyRef Name="Id_Profesor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -175,18 +214,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Profesor_Disciplina">
-    <End Role="Disciplina" Type="Self.Disciplina" Multiplicity="1" />
-    <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Disciplina">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Profesor">
-        <PropertyRef Name="Disciplina" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Sala_Activitate">
     <End Role="Activitate" Type="Self.Activitate" Multiplicity="1" />
     <End Role="Sala" Type="Self.Sala" Multiplicity="*" />
@@ -212,6 +239,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="CTIScheduleDBModelStoreContainer">
+    <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Activitate" EntityType="Self.Activitate" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Disciplina" EntityType="Self.Disciplina" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Generatie" EntityType="Self.Generatie" Schema="dbo" store:Type="Tables" />
@@ -228,6 +256,12 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     [DisciplinaActivitate].[NrOre] AS [NrOre]
     FROM [dbo].[DisciplinaActivitate] AS [DisciplinaActivitate]</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="DisciplinaProfesor" EntityType="Self.DisciplinaProfesor" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DisciplinaProfesor].[Id_Disciplina] AS [Id_Disciplina], 
+    [DisciplinaProfesor].[Id_Profesor] AS [Id_Profesor]
+    FROM [dbo].[DisciplinaProfesor] AS [DisciplinaProfesor]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_DisciplinaActivitate_Activitate" Association="Self.FK_DisciplinaActivitate_Activitate">
       <End Role="Activitate" EntitySet="Activitate" />
       <End Role="DisciplinaActivitate" EntitySet="DisciplinaActivitate" />
@@ -235,6 +269,14 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     <AssociationSet Name="FK_DisciplinaActivitate_Disciplina" Association="Self.FK_DisciplinaActivitate_Disciplina">
       <End Role="Disciplina" EntitySet="Disciplina" />
       <End Role="DisciplinaActivitate" EntitySet="DisciplinaActivitate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisciplinaProfesor_Disciplina" Association="Self.FK_DisciplinaProfesor_Disciplina">
+      <End Role="Disciplina" EntitySet="Disciplina" />
+      <End Role="DisciplinaProfesor" EntitySet="DisciplinaProfesor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisciplinaProfesor_Profesor" Association="Self.FK_DisciplinaProfesor_Profesor">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="DisciplinaProfesor" EntitySet="DisciplinaProfesor" />
     </AssociationSet>
     <AssociationSet Name="FK_Grupa_Generatie" Association="Self.FK_Grupa_Generatie">
       <End Role="Generatie" EntitySet="Generatie" />
@@ -255,10 +297,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
     <AssociationSet Name="FK_Modul_ZI" Association="Self.FK_Modul_ZI">
       <End Role="Zile" EntitySet="Zile" />
       <End Role="Modul" EntitySet="Modul" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Profesor_Disciplina" Association="Self.FK_Profesor_Disciplina">
-      <End Role="Disciplina" EntitySet="Disciplina" />
-      <End Role="Profesor" EntitySet="Profesor" />
     </AssociationSet>
     <AssociationSet Name="FK_Sala_Activitate" Association="Self.FK_Sala_Activitate">
       <End Role="Activitate" EntitySet="Activitate" />

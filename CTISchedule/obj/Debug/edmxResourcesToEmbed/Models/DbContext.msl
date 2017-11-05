@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CTIScheduleDBModelStoreContainer" CdmEntityContainer="CTIScheduleDBEntities">
+    <EntitySetMapping Name="C__RefactorLog">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.C__RefactorLog">
+        <MappingFragment StoreEntitySet="__RefactorLog">
+          <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Activitates">
       <EntityTypeMapping TypeName="CTIScheduleDBModel.Activitate">
         <MappingFragment StoreEntitySet="Activitate">
@@ -55,7 +62,6 @@
     <EntitySetMapping Name="Profesors">
       <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor">
         <MappingFragment StoreEntitySet="Profesor">
-          <ScalarProperty Name="Disciplina" ColumnName="Disciplina" />
           <ScalarProperty Name="Prenume" ColumnName="Prenume" />
           <ScalarProperty Name="Nume" ColumnName="Nume" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -98,5 +104,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="DisciplinaProfesor" TypeName="CTIScheduleDBModel.DisciplinaProfesor" StoreEntitySet="DisciplinaProfesor">
+      <EndProperty Name="Profesor">
+        <ScalarProperty Name="Id" ColumnName="Id_Profesor" />
+      </EndProperty>
+      <EndProperty Name="Disciplina">
+        <ScalarProperty Name="Id" ColumnName="Id_Disciplina" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

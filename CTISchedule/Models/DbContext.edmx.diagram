@@ -5,26 +5,27 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5cf07776b2164da6a09fdf98845d2bb2" Name="Diagram1">
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Activitate" Width="1.5" PointX="0.75" PointY="1.75" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Disciplina" Width="1.5" PointX="0.75" PointY="4.625" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Generatie" Width="1.5" PointX="2.75" PointY="0.875" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Grupa" Width="1.5" PointX="5" PointY="0.875" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Modul" Width="1.5" PointX="5.25" PointY="7.5" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Profesor" Width="1.5" PointX="3" PointY="11.5" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Sala" Width="1.5" PointX="3" PointY="14.75" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.SubGrupa" Width="1.5" PointX="7.25" PointY="1" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.Zile" Width="1.5" PointX="3" PointY="8.375" />
-        <EntityTypeShape EntityType="CTIScheduleDBModel.DisciplinaActivitate" Width="1.5" PointX="3" PointY="4.75" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.C__RefactorLog" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Activitate" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Disciplina" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Generatie" Width="1.5" PointX="5.75" PointY="0.875" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Grupa" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Modul" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Profesor" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Sala" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.SubGrupa" Width="1.5" PointX="10.25" PointY="1" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.Zile" Width="1.5" PointX="3" PointY="7.875" />
+        <EntityTypeShape EntityType="CTIScheduleDBModel.DisciplinaActivitate" Width="1.5" PointX="3" PointY="1.625" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_DisciplinaActivitate_Activitate" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Modul_Activitate" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Sala_Activitate" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Modul_Disciplina" />
-        <AssociationConnector Association="CTIScheduleDBModel.FK_Profesor_Disciplina" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Grupa_Generatie" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_SubGrupa_Grupa" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Modul_Profesor" />
         <AssociationConnector Association="CTIScheduleDBModel.FK_Modul_ZI" />
+        <AssociationConnector Association="CTIScheduleDBModel.DisciplinaProfesor" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

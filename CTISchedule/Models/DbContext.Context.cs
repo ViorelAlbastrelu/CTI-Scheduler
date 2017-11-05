@@ -25,6 +25,7 @@ namespace CTISchedule.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<Activitate> Activitates { get; set; }
         public virtual DbSet<Disciplina> Disciplinas { get; set; }
         public virtual DbSet<Generatie> Generaties { get; set; }

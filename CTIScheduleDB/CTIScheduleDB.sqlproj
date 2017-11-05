@@ -71,5 +71,9 @@
     <Build Include="Tables\Grupa.sql" />
     <Build Include="Tables\SubGrupa.sql" />
     <Build Include="Tables\Modul.sql" />
+    <Build Include="Tables\DisciplinaProfesor.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CTIScheduleDB.refactorlog" />
   </ItemGroup>
 </Project>

@@ -37,6 +37,9 @@ D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.GenerateResource.Ca
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.exe
 D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.pdb
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Scheduler.resources
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule_init.resources
+D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Start.resources
 D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\CTISchedule.exe.config
 D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\CTISchedule.exe
 D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\CTISchedule.pdb
@@ -51,12 +54,11 @@ D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\EntityFramework.xm
 D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\University\PIE\cti-schedule\CTISchedule\bin\Debug\NPOI.xml
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csprojResolveAssemblyReference.cache
-D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule.resources
+D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Scheduler.resources
+D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule_init.resources
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Properties.Resources.resources
+D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Start.resources
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.GenerateResource.Cache
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.csproj.CoreCompileInputs.cache
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.exe
 D:\Projects\University\PIE\cti-schedule\CTISchedule\obj\Debug\CTISchedule.pdb
-D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Scheduler.resources
-D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Schedule_init.resources
-D:\uni\cti-schedule\CTISchedule\obj\Debug\CTISchedule.Start.resources

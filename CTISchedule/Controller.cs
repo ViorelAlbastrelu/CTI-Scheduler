@@ -40,5 +40,37 @@ namespace CTISchedule
 			if(profesor != null) _context.Profesors.Remove(profesor); _context.SaveChanges();
 		}
 
+        /*
+         *  Disciplina */
+
+        public Disciplina AddUpdateDisciplina(Disciplina req)
+        {
+            Disciplina disciplina;
+            if(req.Id != 0)
+            {
+                disciplina = _context.Disciplinas.Find(req.Id);
+                disciplina.Nume = req.Nume;
+                disciplina.Credite = req.Credite;
+                disciplina.An = req.An;
+            }
+            else
+            {
+                disciplina = _context.Disciplinas.Add(new Disciplina()
+                {
+                    An = req.An,
+                    Credite = req.Credite,
+                    Nume = req.Nume
+                });
+            }
+            _context.SaveChanges();
+            return disciplina;
+        }
+
+        public void DeleteDisciplina(int idDisciplina)
+        {
+            var disciplina = _context.Disciplinas.Find(idDisciplina);
+            if (disciplina != null) _context.Disciplinas.Remove(disciplina);
+            _context.SaveChanges();
+        }
 	}
 }

@@ -30,10 +30,8 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.profesorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.cTIScheduleDBDataSet = new CTISchedule.CTIScheduleDBDataSet();
 			this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label1 = new System.Windows.Forms.Label();
-			this.profesorsTableAdapter = new CTISchedule.CTIScheduleDBDataSetTableAdapters.ProfesorsTableAdapter();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.tabShcedule = new System.Windows.Forms.TabPage();
 			this.tabGeneration = new System.Windows.Forms.TabPage();
@@ -69,7 +67,6 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.importDetails = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.profesorsBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cTIScheduleDBDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
 			this.tabProffesor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).BeginInit();
@@ -79,15 +76,6 @@
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// profesorsBindingSource
-			// 
-			this.profesorsBindingSource.DataMember = "Profesors";
-			this.profesorsBindingSource.DataSource = this.cTIScheduleDBDataSet;
-			// 
-			// cTIScheduleDBDataSet
-			// 
-			this.cTIScheduleDBDataSet.DataSetName = "CTIScheduleDBDataSet";
-			this.cTIScheduleDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// profesorBindingSource
 			// 
@@ -104,9 +92,6 @@
 			this.label1.Text = "CTI Schedule";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
-			// profesorsTableAdapter
-			// 
-			this.profesorsTableAdapter.ClearBeforeFill = true;
 			// 
 			// tabShcedule
 			// 
@@ -446,7 +431,6 @@
 			this.Text = "CTI Schedule";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.profesorsBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cTIScheduleDBDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
 			this.tabProffesor.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).EndInit();
@@ -465,9 +449,7 @@
 		#endregion
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.BindingSource profesorBindingSource;
-		private CTIScheduleDBDataSet cTIScheduleDBDataSet;
 		private System.Windows.Forms.BindingSource profesorsBindingSource;
-		private CTIScheduleDBDataSetTableAdapters.ProfesorsTableAdapter profesorsTableAdapter;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.TabPage tabShcedule;
 		private System.Windows.Forms.TabPage tabGeneration;
