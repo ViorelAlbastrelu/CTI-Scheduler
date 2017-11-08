@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,13 +45,34 @@
             this.informatiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSchedule = new System.Windows.Forms.Panel();
             this.moduleFormContainer = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSaptPara = new System.Windows.Forms.RadioButton();
+            this.rbSaptImpara = new System.Windows.Forms.RadioButton();
+            this.rbSapt = new System.Windows.Forms.RadioButton();
+            this.btnSaveModule = new System.Windows.Forms.Button();
+            this.btnDeleteModule = new System.Windows.Forms.Button();
+            this.btnCancelModule = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.zileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetZile = new CTISchedule.ctischeduleDataSetZile();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.salaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetSala = new CTISchedule.ctischeduleDataSetSala();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.profesorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSet = new CTISchedule.ctischeduleDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.activitateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetActivitate = new CTISchedule.ctischeduleDataSetActivitate();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.disciplinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetDisciplina = new CTISchedule.ctischeduleDataSetDisciplina();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvScheduler = new System.Windows.Forms.DataGridView();
@@ -63,8 +84,6 @@
             this.panelProfesori = new System.Windows.Forms.Panel();
             this.moduleProfesorContainer = new System.Windows.Forms.Panel();
             this.txtIdProfesor = new System.Windows.Forms.TextBox();
-            this.profesorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ctischeduleDataSet = new CTISchedule.ctischeduleDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSaveProfesor = new System.Windows.Forms.Button();
             this.btnDeleteProfesor = new System.Windows.Forms.Button();
@@ -72,8 +91,6 @@
             this.lboxPModule = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboxPDiscipline = new System.Windows.Forms.ComboBox();
-            this.disciplinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ctischeduleDataSetDisciplina = new CTISchedule.ctischeduleDataSetDisciplina();
             this.lboxPDiscipline = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -105,48 +122,32 @@
             this.anDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crediteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.rbSaptPara = new System.Windows.Forms.RadioButton();
-            this.rbSaptImpara = new System.Windows.Forms.RadioButton();
-            this.rbSapt = new System.Windows.Forms.RadioButton();
-            this.btnCancelModule = new System.Windows.Forms.Button();
-            this.btnDeleteModule = new System.Windows.Forms.Button();
-            this.btnSaveModule = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ctischeduleDataSetActivitate = new CTISchedule.ctischeduleDataSetActivitate();
-            this.activitateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.activitateTableAdapter = new CTISchedule.ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter();
-            this.ctischeduleDataSetSala = new CTISchedule.ctischeduleDataSetSala();
-            this.salaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salaTableAdapter = new CTISchedule.ctischeduleDataSetSalaTableAdapters.SalaTableAdapter();
-            this.ctischeduleDataSetZile = new CTISchedule.ctischeduleDataSetZile();
-            this.zileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zileTableAdapter = new CTISchedule.ctischeduleDataSetZileTableAdapters.ZileTableAdapter();
+            this.orar1 = new CTISchedule.Orar();
             this.menuStrip1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.moduleFormContainer.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetZile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduler)).BeginInit();
             this.panelProfesori.SuspendLayout();
             this.moduleProfesorContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             this.panelDiscipline.SuspendLayout();
             this.moduleDiscplinaContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetZile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zileBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -250,6 +251,7 @@
             // panelSchedule
             // 
             this.panelSchedule.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelSchedule.Controls.Add(this.orar1);
             this.panelSchedule.Controls.Add(this.moduleFormContainer);
             this.panelSchedule.Controls.Add(this.dgvScheduler);
             this.panelSchedule.Location = new System.Drawing.Point(9, 27);
@@ -278,26 +280,172 @@
             this.moduleFormContainer.Controls.Add(this.splitter1);
             this.moduleFormContainer.Controls.Add(this.label1);
             this.moduleFormContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleFormContainer.Location = new System.Drawing.Point(639, 0);
+            this.moduleFormContainer.Location = new System.Drawing.Point(675, 0);
             this.moduleFormContainer.Name = "moduleFormContainer";
-            this.moduleFormContainer.Size = new System.Drawing.Size(221, 441);
+            this.moduleFormContainer.Size = new System.Drawing.Size(185, 441);
             this.moduleFormContainer.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbSaptPara);
+            this.groupBox1.Controls.Add(this.rbSaptImpara);
+            this.groupBox1.Controls.Add(this.rbSapt);
+            this.groupBox1.Location = new System.Drawing.Point(19, 238);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(156, 94);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Saptamana";
+            // 
+            // rbSaptPara
+            // 
+            this.rbSaptPara.AutoSize = true;
+            this.rbSaptPara.Location = new System.Drawing.Point(8, 69);
+            this.rbSaptPara.Name = "rbSaptPara";
+            this.rbSaptPara.Size = new System.Drawing.Size(47, 17);
+            this.rbSaptPara.TabIndex = 13;
+            this.rbSaptPara.TabStop = true;
+            this.rbSaptPara.Text = "Para";
+            this.rbSaptPara.UseVisualStyleBackColor = true;
+            // 
+            // rbSaptImpara
+            // 
+            this.rbSaptImpara.AutoSize = true;
+            this.rbSaptImpara.Location = new System.Drawing.Point(8, 46);
+            this.rbSaptImpara.Name = "rbSaptImpara";
+            this.rbSaptImpara.Size = new System.Drawing.Size(57, 17);
+            this.rbSaptImpara.TabIndex = 14;
+            this.rbSaptImpara.TabStop = true;
+            this.rbSaptImpara.Text = "Impara";
+            this.rbSaptImpara.UseVisualStyleBackColor = true;
+            // 
+            // rbSapt
+            // 
+            this.rbSapt.AutoSize = true;
+            this.rbSapt.Location = new System.Drawing.Point(9, 23);
+            this.rbSapt.Name = "rbSapt";
+            this.rbSapt.Size = new System.Drawing.Size(64, 17);
+            this.rbSapt.TabIndex = 15;
+            this.rbSapt.TabStop = true;
+            this.rbSapt.Text = "Normala";
+            this.rbSapt.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveModule
+            // 
+            this.btnSaveModule.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSaveModule.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnSaveModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSaveModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveModule.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSaveModule.Location = new System.Drawing.Point(19, 404);
+            this.btnSaveModule.Name = "btnSaveModule";
+            this.btnSaveModule.Size = new System.Drawing.Size(157, 23);
+            this.btnSaveModule.TabIndex = 19;
+            this.btnSaveModule.Text = "Salveaza";
+            this.btnSaveModule.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteModule
+            // 
+            this.btnDeleteModule.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDeleteModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteModule.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDeleteModule.Location = new System.Drawing.Point(100, 375);
+            this.btnDeleteModule.Name = "btnDeleteModule";
+            this.btnDeleteModule.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteModule.TabIndex = 18;
+            this.btnDeleteModule.Text = "Sterge";
+            this.btnDeleteModule.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelModule
+            // 
+            this.btnCancelModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelModule.Location = new System.Drawing.Point(20, 375);
+            this.btnCancelModule.Name = "btnCancelModule";
+            this.btnCancelModule.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelModule.TabIndex = 17;
+            this.btnCancelModule.Text = "Anuleaza";
+            this.btnCancelModule.UseVisualStyleBackColor = true;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.DataSource = this.zileBindingSource;
+            this.comboBox6.DisplayMember = "Nume";
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(59, 211);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(117, 21);
+            this.comboBox6.TabIndex = 12;
+            this.comboBox6.ValueMember = "Id";
+            // 
+            // zileBindingSource
+            // 
+            this.zileBindingSource.DataMember = "Zile";
+            this.zileBindingSource.DataSource = this.ctischeduleDataSetZile;
+            // 
+            // ctischeduleDataSetZile
+            // 
+            this.ctischeduleDataSetZile.DataSetName = "ctischeduleDataSetZile";
+            this.ctischeduleDataSetZile.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(17, 214);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(28, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Ziua";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "I",
+            "II",
+            "III",
+            "IV",
+            "V",
+            "VI"});
+            this.comboBox5.Location = new System.Drawing.Point(59, 184);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(117, 21);
+            this.comboBox5.TabIndex = 10;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 187);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 13);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Modul";
             // 
             // comboBox4
             // 
             this.comboBox4.DataSource = this.salaBindingSource;
             this.comboBox4.DisplayMember = "Nume";
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(37, 195);
+            this.comboBox4.Location = new System.Drawing.Point(20, 152);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(156, 21);
             this.comboBox4.TabIndex = 8;
             this.comboBox4.ValueMember = "Id";
             // 
+            // salaBindingSource
+            // 
+            this.salaBindingSource.DataMember = "Sala";
+            this.salaBindingSource.DataSource = this.ctischeduleDataSetSala;
+            // 
+            // ctischeduleDataSetSala
+            // 
+            this.ctischeduleDataSetSala.DataSetName = "ctischeduleDataSetSala";
+            this.ctischeduleDataSetSala.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 179);
+            this.label4.Location = new System.Drawing.Point(17, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 7;
@@ -308,16 +456,26 @@
             this.comboBox3.DataSource = this.profesorBindingSource1;
             this.comboBox3.DisplayMember = "Nume";
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(36, 153);
+            this.comboBox3.Location = new System.Drawing.Point(19, 110);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(156, 21);
             this.comboBox3.TabIndex = 6;
             this.comboBox3.ValueMember = "Id";
             // 
+            // profesorBindingSource1
+            // 
+            this.profesorBindingSource1.DataMember = "Profesor";
+            this.profesorBindingSource1.DataSource = this.ctischeduleDataSet;
+            // 
+            // ctischeduleDataSet
+            // 
+            this.ctischeduleDataSet.DataSetName = "ctischeduleDataSet";
+            this.ctischeduleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 137);
+            this.label3.Location = new System.Drawing.Point(16, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 5;
@@ -328,16 +486,26 @@
             this.comboBox2.DataSource = this.activitateBindingSource;
             this.comboBox2.DisplayMember = "Nume";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(36, 108);
+            this.comboBox2.Location = new System.Drawing.Point(19, 65);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(156, 21);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.ValueMember = "Id";
             // 
+            // activitateBindingSource
+            // 
+            this.activitateBindingSource.DataMember = "Activitate";
+            this.activitateBindingSource.DataSource = this.ctischeduleDataSetActivitate;
+            // 
+            // ctischeduleDataSetActivitate
+            // 
+            this.ctischeduleDataSetActivitate.DataSetName = "ctischeduleDataSetActivitate";
+            this.ctischeduleDataSetActivitate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 92);
+            this.label2.Location = new System.Drawing.Point(16, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 3;
@@ -348,11 +516,21 @@
             this.comboBox1.DataSource = this.disciplinaBindingSource;
             this.comboBox1.DisplayMember = "Nume";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(36, 68);
+            this.comboBox1.Location = new System.Drawing.Point(19, 25);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(156, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "Id";
+            // 
+            // disciplinaBindingSource
+            // 
+            this.disciplinaBindingSource.DataMember = "Disciplina";
+            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
+            // 
+            // ctischeduleDataSetDisciplina
+            // 
+            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
+            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitter1
             // 
@@ -365,7 +543,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 52);
+            this.label1.Location = new System.Drawing.Point(16, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -384,7 +562,7 @@
             this.dgvScheduler.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvScheduler.Location = new System.Drawing.Point(0, 0);
             this.dgvScheduler.Name = "dgvScheduler";
-            this.dgvScheduler.Size = new System.Drawing.Size(640, 441);
+            this.dgvScheduler.Size = new System.Drawing.Size(678, 441);
             this.dgvScheduler.TabIndex = 0;
             this.dgvScheduler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduler_CellClick);
             this.dgvScheduler.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvScheduler_CellPainting);
@@ -392,8 +570,8 @@
             // daysColumn
             // 
             this.daysColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.daysColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.daysColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.daysColumn.HeaderText = "ZIUA";
             this.daysColumn.Name = "daysColumn";
             this.daysColumn.Width = 57;
@@ -467,16 +645,6 @@
             this.txtIdProfesor.ReadOnly = true;
             this.txtIdProfesor.Size = new System.Drawing.Size(92, 20);
             this.txtIdProfesor.TabIndex = 14;
-            // 
-            // profesorBindingSource1
-            // 
-            this.profesorBindingSource1.DataMember = "Profesor";
-            this.profesorBindingSource1.DataSource = this.ctischeduleDataSet;
-            // 
-            // ctischeduleDataSet
-            // 
-            this.ctischeduleDataSet.DataSetName = "ctischeduleDataSet";
-            this.ctischeduleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
@@ -555,16 +723,6 @@
             this.cboxPDiscipline.Size = new System.Drawing.Size(157, 21);
             this.cboxPDiscipline.TabIndex = 6;
             this.cboxPDiscipline.ValueMember = "Nume";
-            // 
-            // disciplinaBindingSource
-            // 
-            this.disciplinaBindingSource.DataMember = "Disciplina";
-            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
-            // 
-            // ctischeduleDataSetDisciplina
-            // 
-            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
-            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lboxPDiscipline
             // 
@@ -845,168 +1003,32 @@
             this.crediteDataGridViewTextBoxColumn.HeaderText = "Credite";
             this.crediteDataGridViewTextBoxColumn.Name = "crediteDataGridViewTextBoxColumn";
             // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III",
-            "IV",
-            "V",
-            "VI"});
-            this.comboBox5.Location = new System.Drawing.Point(76, 227);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(117, 21);
-            this.comboBox5.TabIndex = 10;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(34, 230);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Modul";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.DataSource = this.zileBindingSource;
-            this.comboBox6.DisplayMember = "Nume";
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(76, 254);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(117, 21);
-            this.comboBox6.TabIndex = 12;
-            this.comboBox6.ValueMember = "Id";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(34, 257);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(28, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Ziua";
-            // 
-            // rbSaptPara
-            // 
-            this.rbSaptPara.AutoSize = true;
-            this.rbSaptPara.Location = new System.Drawing.Point(139, 23);
-            this.rbSaptPara.Name = "rbSaptPara";
-            this.rbSaptPara.Size = new System.Drawing.Size(47, 17);
-            this.rbSaptPara.TabIndex = 13;
-            this.rbSaptPara.TabStop = true;
-            this.rbSaptPara.Text = "Para";
-            this.rbSaptPara.UseVisualStyleBackColor = true;
-            // 
-            // rbSaptImpara
-            // 
-            this.rbSaptImpara.AutoSize = true;
-            this.rbSaptImpara.Location = new System.Drawing.Point(76, 23);
-            this.rbSaptImpara.Name = "rbSaptImpara";
-            this.rbSaptImpara.Size = new System.Drawing.Size(57, 17);
-            this.rbSaptImpara.TabIndex = 14;
-            this.rbSaptImpara.TabStop = true;
-            this.rbSaptImpara.Text = "Impara";
-            this.rbSaptImpara.UseVisualStyleBackColor = true;
-            // 
-            // rbSapt
-            // 
-            this.rbSapt.AutoSize = true;
-            this.rbSapt.Location = new System.Drawing.Point(6, 23);
-            this.rbSapt.Name = "rbSapt";
-            this.rbSapt.Size = new System.Drawing.Size(64, 17);
-            this.rbSapt.TabIndex = 15;
-            this.rbSapt.TabStop = true;
-            this.rbSapt.Text = "Normala";
-            this.rbSapt.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelModule
-            // 
-            this.btnCancelModule.Location = new System.Drawing.Point(36, 365);
-            this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelModule.TabIndex = 17;
-            this.btnCancelModule.Text = "Anuleaza";
-            this.btnCancelModule.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteModule
-            // 
-            this.btnDeleteModule.Location = new System.Drawing.Point(116, 365);
-            this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteModule.TabIndex = 18;
-            this.btnDeleteModule.Text = "Sterge";
-            this.btnDeleteModule.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveModule
-            // 
-            this.btnSaveModule.Location = new System.Drawing.Point(35, 394);
-            this.btnSaveModule.Name = "btnSaveModule";
-            this.btnSaveModule.Size = new System.Drawing.Size(157, 23);
-            this.btnSaveModule.TabIndex = 19;
-            this.btnSaveModule.Text = "Salveaza";
-            this.btnSaveModule.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbSaptPara);
-            this.groupBox1.Controls.Add(this.rbSaptImpara);
-            this.groupBox1.Controls.Add(this.rbSapt);
-            this.groupBox1.Location = new System.Drawing.Point(15, 290);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 52);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Saptamana";
-            // 
-            // ctischeduleDataSetActivitate
-            // 
-            this.ctischeduleDataSetActivitate.DataSetName = "ctischeduleDataSetActivitate";
-            this.ctischeduleDataSetActivitate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // activitateBindingSource
-            // 
-            this.activitateBindingSource.DataMember = "Activitate";
-            this.activitateBindingSource.DataSource = this.ctischeduleDataSetActivitate;
-            // 
             // activitateTableAdapter
             // 
             this.activitateTableAdapter.ClearBeforeFill = true;
-            // 
-            // ctischeduleDataSetSala
-            // 
-            this.ctischeduleDataSetSala.DataSetName = "ctischeduleDataSetSala";
-            this.ctischeduleDataSetSala.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salaBindingSource
-            // 
-            this.salaBindingSource.DataMember = "Sala";
-            this.salaBindingSource.DataSource = this.ctischeduleDataSetSala;
             // 
             // salaTableAdapter
             // 
             this.salaTableAdapter.ClearBeforeFill = true;
             // 
-            // ctischeduleDataSetZile
-            // 
-            this.ctischeduleDataSetZile.DataSetName = "ctischeduleDataSetZile";
-            this.ctischeduleDataSetZile.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zileBindingSource
-            // 
-            this.zileBindingSource.DataMember = "Zile";
-            this.zileBindingSource.DataSource = this.ctischeduleDataSetZile;
-            // 
             // zileTableAdapter
             // 
             this.zileTableAdapter.ClearBeforeFill = true;
+            // 
+            // orar1
+            // 
+            this.orar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.orar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orar1.Location = new System.Drawing.Point(0, 1);
+            this.orar1.Name = "orar1";
+            this.orar1.Size = new System.Drawing.Size(678, 1500);
+            this.orar1.TabIndex = 2;
             // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(880, 473);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelSchedule);
@@ -1021,28 +1043,28 @@
             this.panelSchedule.ResumeLayout(false);
             this.moduleFormContainer.ResumeLayout(false);
             this.moduleFormContainer.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetZile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduler)).EndInit();
             this.panelProfesori.ResumeLayout(false);
             this.moduleProfesorContainer.ResumeLayout(false);
             this.moduleProfesorContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             this.panelDiscipline.ResumeLayout(false);
             this.moduleDiscplinaContainer.ResumeLayout(false);
             this.moduleDiscplinaContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetZile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zileBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1150,5 +1172,6 @@
         private ctischeduleDataSetZile ctischeduleDataSetZile;
         private System.Windows.Forms.BindingSource zileBindingSource;
         private ctischeduleDataSetZileTableAdapters.ZileTableAdapter zileTableAdapter;
+        private Orar orar1;
     }
 }
