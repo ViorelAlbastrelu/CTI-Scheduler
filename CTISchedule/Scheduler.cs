@@ -191,5 +191,14 @@ namespace CTISchedule
             this.Hide();
             _start.Show();
         }
-    }
+
+		private void orar1_Load(object sender, EventArgs e)
+		{
+			orar1.VerticalScroll.Maximum = 10;
+			orar1.HorizontalScroll.Maximum = 10;
+			orar1.VerticalScroll.Enabled = false;
+			orar1.VerticalScroll.Visible = false;
+			orar1.AutoScroll = true;
+		}
+	}
 }
