@@ -1,9 +1,13 @@
 ﻿using CTISchedule.Models;
+using iText.IO.Image;
+using iText.Kernel.Pdf;
+using iText.Layout;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -184,6 +188,45 @@ namespace CTISchedule
         private void disciplineToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelDiscipline.BringToFront();
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Orar exportSchedule = new Orar();
+            Orar intermediateSchedule = new Orar();
+            string startupPath = Environment.CurrentDirectory;
+            string newPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(startupPath, "..\\..\\..\\"));
+
+            orar1 = intermediateSchedule;
+            exportSchedule = intermediateSchedule;
+            exportSchedule = orar1;
+
+            exportSchedule.Size = new Size(orar1.Width, 1240);
+
+            using (Graphics graphics = exportSchedule.CreateGraphics())
+            {
+
+                using (Bitmap bitmapImage = new Bitmap(exportSchedule.Width, exportSchedule.Height, graphics))
+                {
+                    exportSchedule.DrawToBitmap(bitmapImage, new System.Drawing.Rectangle(0, 0, exportSchedule.Width, exportSchedule.Height));
+                    bitmapImage.Save(newPath + "ScheduleImage.jpg");
+                }
+            }
+
+            if (File.Exists(newPath + "ScheduleImage.jpg"))
+            {
+                string orarImagePath = newPath + "\\ScheduleImage.jpg";
+                var pdf = new PdfDocument(new PdfWriter(newPath + "\\Schedule.pdf"));
+                var document = new Document(pdf);
+                iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
+                orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
+                orarImage.SetWidthPercent(80);
+                document.Add(orarImage);
+                document.Close();
+                File.Delete(newPath + "\\ScheduleImage.jpg");
+                MessageBox.Show("The schedule has been exported successfully in the folder " + newPath);
+            }
+            exportSchedule.Dispose();
         }
 
         private void Scheduler_FormClosed(object sender, FormClosedEventArgs e)
