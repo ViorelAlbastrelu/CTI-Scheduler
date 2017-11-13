@@ -30,13 +30,21 @@ namespace CTISchedule
 
 		private void btnYear_Click(object sender, EventArgs e)
 		{
-            StartSchedule(1);
+			switch ((sender as Button).Text) {
+				case "Anul Universitar I":
+					StartSchedule(1);
+					break;
+				case "Anul Universitar II":
+					StartSchedule(2);
+					break;
+				case "Anul Universitar III":
+					StartSchedule(3);
+					break;
+				case "Anul Universitar IV":
+					StartSchedule(4);
+					break;
+			}
 		}
-
-        private void btnYear2_Click(object sender, EventArgs e)
-        {
-            StartSchedule(2);
-        }
 
         public void StartSchedule(int anStudiu)
         {
@@ -49,5 +57,6 @@ namespace CTISchedule
         {
             Environment.Exit(Environment.ExitCode);
         }
-    }
+
+	}
 }
