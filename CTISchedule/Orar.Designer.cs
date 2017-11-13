@@ -31,51 +31,51 @@
             this.tabelModuleLuni = new System.Windows.Forms.TableLayoutPanel();
             this.tabelZiLuni = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOreLuni = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_L6 = new System.Windows.Forms.Label();
+            this.label_L5 = new System.Windows.Forms.Label();
+            this.label_L4 = new System.Windows.Forms.Label();
+            this.label_L3 = new System.Windows.Forms.Label();
+            this.label_L2 = new System.Windows.Forms.Label();
+            this.label_L1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabelZiMarti = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOreMarti = new System.Windows.Forms.TableLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label_Ma6 = new System.Windows.Forms.Label();
+            this.label_Ma5 = new System.Windows.Forms.Label();
+            this.label_Ma4 = new System.Windows.Forms.Label();
+            this.label_Ma3 = new System.Windows.Forms.Label();
+            this.label_Ma2 = new System.Windows.Forms.Label();
+            this.label_Ma1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabelModuleMarti = new System.Windows.Forms.TableLayoutPanel();
             this.tabelZiMiercuri = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOreMiercuri = new System.Windows.Forms.TableLayoutPanel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label_Mi6 = new System.Windows.Forms.Label();
+            this.label_Mi5 = new System.Windows.Forms.Label();
+            this.label_Mi4 = new System.Windows.Forms.Label();
+            this.label_Mi3 = new System.Windows.Forms.Label();
+            this.label_Mi2 = new System.Windows.Forms.Label();
+            this.label_Mi1 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabelModuleMiercuri = new System.Windows.Forms.TableLayoutPanel();
             this.tabelZiJoi = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOreJoi = new System.Windows.Forms.TableLayoutPanel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.label_J6 = new System.Windows.Forms.Label();
+            this.label_J5 = new System.Windows.Forms.Label();
+            this.label_J4 = new System.Windows.Forms.Label();
+            this.label_J3 = new System.Windows.Forms.Label();
+            this.label_J2 = new System.Windows.Forms.Label();
+            this.label_J1 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.tabelModuleJoi = new System.Windows.Forms.TableLayoutPanel();
             this.tabelZiVineri = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOreVineri = new System.Windows.Forms.TableLayoutPanel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.label_V6 = new System.Windows.Forms.Label();
+            this.label_V5 = new System.Windows.Forms.Label();
+            this.label_V4 = new System.Windows.Forms.Label();
+            this.label_V3 = new System.Windows.Forms.Label();
+            this.label_V2 = new System.Windows.Forms.Label();
+            this.label_V1 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.tabelModuleVineri = new System.Windows.Forms.TableLayoutPanel();
             this.tabelOrar = new System.Windows.Forms.TableLayoutPanel();
@@ -136,12 +136,12 @@
             // 
             this.tabelOreLuni.ColumnCount = 1;
             this.tabelOreLuni.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tabelOreLuni.Controls.Add(this.label7, 0, 5);
-            this.tabelOreLuni.Controls.Add(this.label6, 0, 4);
-            this.tabelOreLuni.Controls.Add(this.label5, 0, 3);
-            this.tabelOreLuni.Controls.Add(this.label4, 0, 2);
-            this.tabelOreLuni.Controls.Add(this.label3, 0, 1);
-            this.tabelOreLuni.Controls.Add(this.label1, 0, 0);
+            this.tabelOreLuni.Controls.Add(this.label_L6, 0, 5);
+            this.tabelOreLuni.Controls.Add(this.label_L5, 0, 4);
+            this.tabelOreLuni.Controls.Add(this.label_L4, 0, 3);
+            this.tabelOreLuni.Controls.Add(this.label_L3, 0, 2);
+            this.tabelOreLuni.Controls.Add(this.label_L2, 0, 1);
+            this.tabelOreLuni.Controls.Add(this.label_L1, 0, 0);
             this.tabelOreLuni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelOreLuni.Location = new System.Drawing.Point(89, 5);
             this.tabelOreLuni.Name = "tabelOreLuni";
@@ -155,83 +155,83 @@
             this.tabelOreLuni.Size = new System.Drawing.Size(35, 232);
             this.tabelOreLuni.TabIndex = 0;
             // 
-            // label7
+            // label_L6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 190);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 42);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "18-20";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L6.AutoSize = true;
+            this.label_L6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L6.Location = new System.Drawing.Point(0, 190);
+            this.label_L6.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L6.Name = "label_L6";
+            this.label_L6.Size = new System.Drawing.Size(35, 42);
+            this.label_L6.TabIndex = 5;
+            this.label_L6.Text = "18-20";
+            this.label_L6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // label_L5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 152);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 38);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "16-18";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L5.AutoSize = true;
+            this.label_L5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L5.Location = new System.Drawing.Point(0, 152);
+            this.label_L5.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L5.Name = "label_L5";
+            this.label_L5.Size = new System.Drawing.Size(35, 38);
+            this.label_L5.TabIndex = 4;
+            this.label_L5.Text = "16-18";
+            this.label_L5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // label_L4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 114);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 38);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "14-16";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L4.AutoSize = true;
+            this.label_L4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L4.Location = new System.Drawing.Point(0, 114);
+            this.label_L4.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L4.Name = "label_L4";
+            this.label_L4.Size = new System.Drawing.Size(35, 38);
+            this.label_L4.TabIndex = 3;
+            this.label_L4.Text = "14-16";
+            this.label_L4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label_L3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 38);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "12-14";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L3.AutoSize = true;
+            this.label_L3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L3.Location = new System.Drawing.Point(0, 76);
+            this.label_L3.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L3.Name = "label_L3";
+            this.label_L3.Size = new System.Drawing.Size(35, 38);
+            this.label_L3.TabIndex = 2;
+            this.label_L3.Text = "12-14";
+            this.label_L3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label_L2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 38);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "10-12";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L2.AutoSize = true;
+            this.label_L2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L2.Location = new System.Drawing.Point(0, 38);
+            this.label_L2.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L2.Name = "label_L2";
+            this.label_L2.Size = new System.Drawing.Size(35, 38);
+            this.label_L2.TabIndex = 1;
+            this.label_L2.Text = "10-12";
+            this.label_L2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_L1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "8 -10";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_L1.AutoSize = true;
+            this.label_L1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_L1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_L1.Location = new System.Drawing.Point(0, 0);
+            this.label_L1.Margin = new System.Windows.Forms.Padding(0);
+            this.label_L1.Name = "label_L1";
+            this.label_L1.Size = new System.Drawing.Size(35, 38);
+            this.label_L1.TabIndex = 0;
+            this.label_L1.Text = "8 -10";
+            this.label_L1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -270,12 +270,12 @@
             // 
             this.tabelOreMarti.ColumnCount = 1;
             this.tabelOreMarti.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tabelOreMarti.Controls.Add(this.label12, 0, 5);
-            this.tabelOreMarti.Controls.Add(this.label13, 0, 4);
-            this.tabelOreMarti.Controls.Add(this.label14, 0, 3);
-            this.tabelOreMarti.Controls.Add(this.label15, 0, 2);
-            this.tabelOreMarti.Controls.Add(this.label16, 0, 1);
-            this.tabelOreMarti.Controls.Add(this.label17, 0, 0);
+            this.tabelOreMarti.Controls.Add(this.label_Ma6, 0, 5);
+            this.tabelOreMarti.Controls.Add(this.label_Ma5, 0, 4);
+            this.tabelOreMarti.Controls.Add(this.label_Ma4, 0, 3);
+            this.tabelOreMarti.Controls.Add(this.label_Ma3, 0, 2);
+            this.tabelOreMarti.Controls.Add(this.label_Ma2, 0, 1);
+            this.tabelOreMarti.Controls.Add(this.label_Ma1, 0, 0);
             this.tabelOreMarti.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelOreMarti.Location = new System.Drawing.Point(89, 5);
             this.tabelOreMarti.Name = "tabelOreMarti";
@@ -289,83 +289,83 @@
             this.tabelOreMarti.Size = new System.Drawing.Size(35, 232);
             this.tabelOreMarti.TabIndex = 0;
             // 
-            // label12
+            // label_Ma6
             // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(0, 190);
-            this.label12.Margin = new System.Windows.Forms.Padding(0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 42);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "18-20";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma6.AutoSize = true;
+            this.label_Ma6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma6.Location = new System.Drawing.Point(0, 190);
+            this.label_Ma6.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma6.Name = "label_Ma6";
+            this.label_Ma6.Size = new System.Drawing.Size(35, 42);
+            this.label_Ma6.TabIndex = 5;
+            this.label_Ma6.Text = "18-20";
+            this.label_Ma6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // label_Ma5
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 152);
-            this.label13.Margin = new System.Windows.Forms.Padding(0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 38);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "16-18";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma5.AutoSize = true;
+            this.label_Ma5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma5.Location = new System.Drawing.Point(0, 152);
+            this.label_Ma5.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma5.Name = "label_Ma5";
+            this.label_Ma5.Size = new System.Drawing.Size(35, 38);
+            this.label_Ma5.TabIndex = 4;
+            this.label_Ma5.Text = "16-18";
+            this.label_Ma5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // label_Ma4
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(0, 114);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 38);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "14-16";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma4.AutoSize = true;
+            this.label_Ma4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma4.Location = new System.Drawing.Point(0, 114);
+            this.label_Ma4.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma4.Name = "label_Ma4";
+            this.label_Ma4.Size = new System.Drawing.Size(35, 38);
+            this.label_Ma4.TabIndex = 3;
+            this.label_Ma4.Text = "14-16";
+            this.label_Ma4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // label_Ma3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(0, 76);
-            this.label15.Margin = new System.Windows.Forms.Padding(0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 38);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "12-14";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma3.AutoSize = true;
+            this.label_Ma3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma3.Location = new System.Drawing.Point(0, 76);
+            this.label_Ma3.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma3.Name = "label_Ma3";
+            this.label_Ma3.Size = new System.Drawing.Size(35, 38);
+            this.label_Ma3.TabIndex = 2;
+            this.label_Ma3.Text = "12-14";
+            this.label_Ma3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // label_Ma2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(0, 38);
-            this.label16.Margin = new System.Windows.Forms.Padding(0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 38);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "10-12";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma2.AutoSize = true;
+            this.label_Ma2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma2.Location = new System.Drawing.Point(0, 38);
+            this.label_Ma2.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma2.Name = "label_Ma2";
+            this.label_Ma2.Size = new System.Drawing.Size(35, 38);
+            this.label_Ma2.TabIndex = 1;
+            this.label_Ma2.Text = "10-12";
+            this.label_Ma2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // label_Ma1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(0, 0);
-            this.label17.Margin = new System.Windows.Forms.Padding(0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 38);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "8 -10";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Ma1.AutoSize = true;
+            this.label_Ma1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Ma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ma1.Location = new System.Drawing.Point(0, 0);
+            this.label_Ma1.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Ma1.Name = "label_Ma1";
+            this.label_Ma1.Size = new System.Drawing.Size(35, 38);
+            this.label_Ma1.TabIndex = 0;
+            this.label_Ma1.Text = "8 -10";
+            this.label_Ma1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
             // 
@@ -426,12 +426,12 @@
             // 
             this.tabelOreMiercuri.ColumnCount = 1;
             this.tabelOreMiercuri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tabelOreMiercuri.Controls.Add(this.label21, 0, 5);
-            this.tabelOreMiercuri.Controls.Add(this.label22, 0, 4);
-            this.tabelOreMiercuri.Controls.Add(this.label23, 0, 3);
-            this.tabelOreMiercuri.Controls.Add(this.label24, 0, 2);
-            this.tabelOreMiercuri.Controls.Add(this.label25, 0, 1);
-            this.tabelOreMiercuri.Controls.Add(this.label26, 0, 0);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi6, 0, 5);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi5, 0, 4);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi4, 0, 3);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi3, 0, 2);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi2, 0, 1);
+            this.tabelOreMiercuri.Controls.Add(this.label_Mi1, 0, 0);
             this.tabelOreMiercuri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelOreMiercuri.Location = new System.Drawing.Point(89, 5);
             this.tabelOreMiercuri.Name = "tabelOreMiercuri";
@@ -445,83 +445,83 @@
             this.tabelOreMiercuri.Size = new System.Drawing.Size(35, 232);
             this.tabelOreMiercuri.TabIndex = 0;
             // 
-            // label21
+            // label_Mi6
             // 
-            this.label21.AutoSize = true;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(0, 190);
-            this.label21.Margin = new System.Windows.Forms.Padding(0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 42);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "18-20";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi6.AutoSize = true;
+            this.label_Mi6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi6.Location = new System.Drawing.Point(0, 190);
+            this.label_Mi6.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi6.Name = "label_Mi6";
+            this.label_Mi6.Size = new System.Drawing.Size(35, 42);
+            this.label_Mi6.TabIndex = 5;
+            this.label_Mi6.Text = "18-20";
+            this.label_Mi6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // label_Mi5
             // 
-            this.label22.AutoSize = true;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(0, 152);
-            this.label22.Margin = new System.Windows.Forms.Padding(0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 38);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "16-18";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi5.AutoSize = true;
+            this.label_Mi5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi5.Location = new System.Drawing.Point(0, 152);
+            this.label_Mi5.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi5.Name = "label_Mi5";
+            this.label_Mi5.Size = new System.Drawing.Size(35, 38);
+            this.label_Mi5.TabIndex = 4;
+            this.label_Mi5.Text = "16-18";
+            this.label_Mi5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // label_Mi4
             // 
-            this.label23.AutoSize = true;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(0, 114);
-            this.label23.Margin = new System.Windows.Forms.Padding(0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 38);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "14-16";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi4.AutoSize = true;
+            this.label_Mi4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi4.Location = new System.Drawing.Point(0, 114);
+            this.label_Mi4.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi4.Name = "label_Mi4";
+            this.label_Mi4.Size = new System.Drawing.Size(35, 38);
+            this.label_Mi4.TabIndex = 3;
+            this.label_Mi4.Text = "14-16";
+            this.label_Mi4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label24
+            // label_Mi3
             // 
-            this.label24.AutoSize = true;
-            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(0, 76);
-            this.label24.Margin = new System.Windows.Forms.Padding(0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(35, 38);
-            this.label24.TabIndex = 2;
-            this.label24.Text = "12-14";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi3.AutoSize = true;
+            this.label_Mi3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi3.Location = new System.Drawing.Point(0, 76);
+            this.label_Mi3.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi3.Name = "label_Mi3";
+            this.label_Mi3.Size = new System.Drawing.Size(35, 38);
+            this.label_Mi3.TabIndex = 2;
+            this.label_Mi3.Text = "12-14";
+            this.label_Mi3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label25
+            // label_Mi2
             // 
-            this.label25.AutoSize = true;
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(0, 38);
-            this.label25.Margin = new System.Windows.Forms.Padding(0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(35, 38);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "10-12";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi2.AutoSize = true;
+            this.label_Mi2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi2.Location = new System.Drawing.Point(0, 38);
+            this.label_Mi2.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi2.Name = "label_Mi2";
+            this.label_Mi2.Size = new System.Drawing.Size(35, 38);
+            this.label_Mi2.TabIndex = 1;
+            this.label_Mi2.Text = "10-12";
+            this.label_Mi2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // label_Mi1
             // 
-            this.label26.AutoSize = true;
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(0, 0);
-            this.label26.Margin = new System.Windows.Forms.Padding(0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 38);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "8 -10";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mi1.AutoSize = true;
+            this.label_Mi1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Mi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Mi1.Location = new System.Drawing.Point(0, 0);
+            this.label_Mi1.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Mi1.Name = "label_Mi1";
+            this.label_Mi1.Size = new System.Drawing.Size(35, 38);
+            this.label_Mi1.TabIndex = 0;
+            this.label_Mi1.Text = "8 -10";
+            this.label_Mi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label27
             // 
@@ -582,12 +582,12 @@
             // 
             this.tabelOreJoi.ColumnCount = 1;
             this.tabelOreJoi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tabelOreJoi.Controls.Add(this.label30, 0, 5);
-            this.tabelOreJoi.Controls.Add(this.label31, 0, 4);
-            this.tabelOreJoi.Controls.Add(this.label32, 0, 3);
-            this.tabelOreJoi.Controls.Add(this.label33, 0, 2);
-            this.tabelOreJoi.Controls.Add(this.label34, 0, 1);
-            this.tabelOreJoi.Controls.Add(this.label35, 0, 0);
+            this.tabelOreJoi.Controls.Add(this.label_J6, 0, 5);
+            this.tabelOreJoi.Controls.Add(this.label_J5, 0, 4);
+            this.tabelOreJoi.Controls.Add(this.label_J4, 0, 3);
+            this.tabelOreJoi.Controls.Add(this.label_J3, 0, 2);
+            this.tabelOreJoi.Controls.Add(this.label_J2, 0, 1);
+            this.tabelOreJoi.Controls.Add(this.label_J1, 0, 0);
             this.tabelOreJoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelOreJoi.Location = new System.Drawing.Point(89, 5);
             this.tabelOreJoi.Name = "tabelOreJoi";
@@ -601,83 +601,83 @@
             this.tabelOreJoi.Size = new System.Drawing.Size(35, 232);
             this.tabelOreJoi.TabIndex = 0;
             // 
-            // label30
+            // label_J6
             // 
-            this.label30.AutoSize = true;
-            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(0, 190);
-            this.label30.Margin = new System.Windows.Forms.Padding(0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(35, 42);
-            this.label30.TabIndex = 5;
-            this.label30.Text = "18-20";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J6.AutoSize = true;
+            this.label_J6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J6.Location = new System.Drawing.Point(0, 190);
+            this.label_J6.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J6.Name = "label_J6";
+            this.label_J6.Size = new System.Drawing.Size(35, 42);
+            this.label_J6.TabIndex = 5;
+            this.label_J6.Text = "18-20";
+            this.label_J6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // label_J5
             // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(0, 152);
-            this.label31.Margin = new System.Windows.Forms.Padding(0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(35, 38);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "16-18";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J5.AutoSize = true;
+            this.label_J5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J5.Location = new System.Drawing.Point(0, 152);
+            this.label_J5.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J5.Name = "label_J5";
+            this.label_J5.Size = new System.Drawing.Size(35, 38);
+            this.label_J5.TabIndex = 4;
+            this.label_J5.Text = "16-18";
+            this.label_J5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // label_J4
             // 
-            this.label32.AutoSize = true;
-            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(0, 114);
-            this.label32.Margin = new System.Windows.Forms.Padding(0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(35, 38);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "14-16";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J4.AutoSize = true;
+            this.label_J4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J4.Location = new System.Drawing.Point(0, 114);
+            this.label_J4.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J4.Name = "label_J4";
+            this.label_J4.Size = new System.Drawing.Size(35, 38);
+            this.label_J4.TabIndex = 3;
+            this.label_J4.Text = "14-16";
+            this.label_J4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // label_J3
             // 
-            this.label33.AutoSize = true;
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(0, 76);
-            this.label33.Margin = new System.Windows.Forms.Padding(0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(35, 38);
-            this.label33.TabIndex = 2;
-            this.label33.Text = "12-14";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J3.AutoSize = true;
+            this.label_J3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J3.Location = new System.Drawing.Point(0, 76);
+            this.label_J3.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J3.Name = "label_J3";
+            this.label_J3.Size = new System.Drawing.Size(35, 38);
+            this.label_J3.TabIndex = 2;
+            this.label_J3.Text = "12-14";
+            this.label_J3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label34
+            // label_J2
             // 
-            this.label34.AutoSize = true;
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(0, 38);
-            this.label34.Margin = new System.Windows.Forms.Padding(0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(35, 38);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "10-12";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J2.AutoSize = true;
+            this.label_J2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J2.Location = new System.Drawing.Point(0, 38);
+            this.label_J2.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J2.Name = "label_J2";
+            this.label_J2.Size = new System.Drawing.Size(35, 38);
+            this.label_J2.TabIndex = 1;
+            this.label_J2.Text = "10-12";
+            this.label_J2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label35
+            // label_J1
             // 
-            this.label35.AutoSize = true;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(0, 0);
-            this.label35.Margin = new System.Windows.Forms.Padding(0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(35, 38);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "8 -10";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_J1.AutoSize = true;
+            this.label_J1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_J1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_J1.Location = new System.Drawing.Point(0, 0);
+            this.label_J1.Margin = new System.Windows.Forms.Padding(0);
+            this.label_J1.Name = "label_J1";
+            this.label_J1.Size = new System.Drawing.Size(35, 38);
+            this.label_J1.TabIndex = 0;
+            this.label_J1.Text = "8 -10";
+            this.label_J1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label36
             // 
@@ -738,12 +738,12 @@
             // 
             this.tabelOreVineri.ColumnCount = 1;
             this.tabelOreVineri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tabelOreVineri.Controls.Add(this.label39, 0, 5);
-            this.tabelOreVineri.Controls.Add(this.label40, 0, 4);
-            this.tabelOreVineri.Controls.Add(this.label41, 0, 3);
-            this.tabelOreVineri.Controls.Add(this.label42, 0, 2);
-            this.tabelOreVineri.Controls.Add(this.label43, 0, 1);
-            this.tabelOreVineri.Controls.Add(this.label44, 0, 0);
+            this.tabelOreVineri.Controls.Add(this.label_V6, 0, 5);
+            this.tabelOreVineri.Controls.Add(this.label_V5, 0, 4);
+            this.tabelOreVineri.Controls.Add(this.label_V4, 0, 3);
+            this.tabelOreVineri.Controls.Add(this.label_V3, 0, 2);
+            this.tabelOreVineri.Controls.Add(this.label_V2, 0, 1);
+            this.tabelOreVineri.Controls.Add(this.label_V1, 0, 0);
             this.tabelOreVineri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelOreVineri.Location = new System.Drawing.Point(89, 5);
             this.tabelOreVineri.Name = "tabelOreVineri";
@@ -757,83 +757,83 @@
             this.tabelOreVineri.Size = new System.Drawing.Size(35, 232);
             this.tabelOreVineri.TabIndex = 0;
             // 
-            // label39
+            // label_V6
             // 
-            this.label39.AutoSize = true;
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(0, 190);
-            this.label39.Margin = new System.Windows.Forms.Padding(0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(35, 42);
-            this.label39.TabIndex = 5;
-            this.label39.Text = "18-20";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V6.AutoSize = true;
+            this.label_V6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V6.Location = new System.Drawing.Point(0, 190);
+            this.label_V6.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V6.Name = "label_V6";
+            this.label_V6.Size = new System.Drawing.Size(35, 42);
+            this.label_V6.TabIndex = 5;
+            this.label_V6.Text = "18-20";
+            this.label_V6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label40
+            // label_V5
             // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(0, 152);
-            this.label40.Margin = new System.Windows.Forms.Padding(0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(35, 38);
-            this.label40.TabIndex = 4;
-            this.label40.Text = "16-18";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V5.AutoSize = true;
+            this.label_V5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V5.Location = new System.Drawing.Point(0, 152);
+            this.label_V5.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V5.Name = "label_V5";
+            this.label_V5.Size = new System.Drawing.Size(35, 38);
+            this.label_V5.TabIndex = 4;
+            this.label_V5.Text = "16-18";
+            this.label_V5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label41
+            // label_V4
             // 
-            this.label41.AutoSize = true;
-            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(0, 114);
-            this.label41.Margin = new System.Windows.Forms.Padding(0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(35, 38);
-            this.label41.TabIndex = 3;
-            this.label41.Text = "14-16";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V4.AutoSize = true;
+            this.label_V4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V4.Location = new System.Drawing.Point(0, 114);
+            this.label_V4.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V4.Name = "label_V4";
+            this.label_V4.Size = new System.Drawing.Size(35, 38);
+            this.label_V4.TabIndex = 3;
+            this.label_V4.Text = "14-16";
+            this.label_V4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label42
+            // label_V3
             // 
-            this.label42.AutoSize = true;
-            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(0, 76);
-            this.label42.Margin = new System.Windows.Forms.Padding(0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(35, 38);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "12-14";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V3.AutoSize = true;
+            this.label_V3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V3.Location = new System.Drawing.Point(0, 76);
+            this.label_V3.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V3.Name = "label_V3";
+            this.label_V3.Size = new System.Drawing.Size(35, 38);
+            this.label_V3.TabIndex = 2;
+            this.label_V3.Text = "12-14";
+            this.label_V3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label43
+            // label_V2
             // 
-            this.label43.AutoSize = true;
-            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(0, 38);
-            this.label43.Margin = new System.Windows.Forms.Padding(0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(35, 38);
-            this.label43.TabIndex = 1;
-            this.label43.Text = "10-12";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V2.AutoSize = true;
+            this.label_V2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V2.Location = new System.Drawing.Point(0, 38);
+            this.label_V2.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V2.Name = "label_V2";
+            this.label_V2.Size = new System.Drawing.Size(35, 38);
+            this.label_V2.TabIndex = 1;
+            this.label_V2.Text = "10-12";
+            this.label_V2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label44
+            // label_V1
             // 
-            this.label44.AutoSize = true;
-            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(0, 0);
-            this.label44.Margin = new System.Windows.Forms.Padding(0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(35, 38);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "8 -10";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_V1.AutoSize = true;
+            this.label_V1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_V1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_V1.Location = new System.Drawing.Point(0, 0);
+            this.label_V1.Margin = new System.Windows.Forms.Padding(0);
+            this.label_V1.Name = "label_V1";
+            this.label_V1.Size = new System.Drawing.Size(35, 38);
+            this.label_V1.TabIndex = 0;
+            this.label_V1.Text = "8 -10";
+            this.label_V1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label45
             // 
@@ -935,51 +935,51 @@
         private System.Windows.Forms.TableLayoutPanel tabelModuleLuni;
         private System.Windows.Forms.TableLayoutPanel tabelZiLuni;
         private System.Windows.Forms.TableLayoutPanel tabelOreLuni;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_L1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_L6;
+        private System.Windows.Forms.Label label_L5;
+        private System.Windows.Forms.Label label_L4;
+        private System.Windows.Forms.Label label_L3;
+        private System.Windows.Forms.Label label_L2;
         private System.Windows.Forms.TableLayoutPanel tabelZiMarti;
         private System.Windows.Forms.TableLayoutPanel tabelOreMarti;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label_Ma6;
+        private System.Windows.Forms.Label label_Ma5;
+        private System.Windows.Forms.Label label_Ma4;
+        private System.Windows.Forms.Label label_Ma3;
+        private System.Windows.Forms.Label label_Ma2;
+        private System.Windows.Forms.Label label_Ma1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TableLayoutPanel tabelModuleMarti;
         private System.Windows.Forms.TableLayoutPanel tabelZiMiercuri;
         private System.Windows.Forms.TableLayoutPanel tabelOreMiercuri;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label_Mi6;
+        private System.Windows.Forms.Label label_Mi5;
+        private System.Windows.Forms.Label label_Mi4;
+        private System.Windows.Forms.Label label_Mi3;
+        private System.Windows.Forms.Label label_Mi2;
+        private System.Windows.Forms.Label label_Mi1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TableLayoutPanel tabelModuleMiercuri;
         private System.Windows.Forms.TableLayoutPanel tabelZiJoi;
         private System.Windows.Forms.TableLayoutPanel tabelOreJoi;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label_J6;
+        private System.Windows.Forms.Label label_J5;
+        private System.Windows.Forms.Label label_J4;
+        private System.Windows.Forms.Label label_J3;
+        private System.Windows.Forms.Label label_J2;
+        private System.Windows.Forms.Label label_J1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TableLayoutPanel tabelModuleJoi;
         private System.Windows.Forms.TableLayoutPanel tabelZiVineri;
         private System.Windows.Forms.TableLayoutPanel tabelOreVineri;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label_V6;
+        private System.Windows.Forms.Label label_V5;
+        private System.Windows.Forms.Label label_V4;
+        private System.Windows.Forms.Label label_V3;
+        private System.Windows.Forms.Label label_V2;
+        private System.Windows.Forms.Label label_V1;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TableLayoutPanel tabelModuleVineri;
         private System.Windows.Forms.TableLayoutPanel tabelOrar;
