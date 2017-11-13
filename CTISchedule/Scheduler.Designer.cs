@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,6 +126,7 @@
 			this.activitateTableAdapter = new CTISchedule.ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter();
 			this.salaTableAdapter = new CTISchedule.ctischeduleDataSetSalaTableAdapters.SalaTableAdapter();
 			this.zileTableAdapter = new CTISchedule.ctischeduleDataSetZileTableAdapters.ZileTableAdapter();
+			this.btnLinkProfesorDisciplina = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.panelSchedule.SuspendLayout();
 			this.moduleFormContainer.SuspendLayout();
@@ -184,7 +185,7 @@
 			this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
 			this.exportToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
 			this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+			this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
 			// 
 			// xToolStripMenuItem
 			// 
@@ -581,8 +582,8 @@
 			// daysColumn
 			// 
 			this.daysColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.daysColumn.DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.daysColumn.DefaultCellStyle = dataGridViewCellStyle1;
 			this.daysColumn.HeaderText = "ZIUA";
 			this.daysColumn.Name = "daysColumn";
 			this.daysColumn.Width = 57;
@@ -628,6 +629,7 @@
 			// moduleProfesorContainer
 			// 
 			this.moduleProfesorContainer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.moduleProfesorContainer.Controls.Add(this.btnLinkProfesorDisciplina);
 			this.moduleProfesorContainer.Controls.Add(this.txtIdProfesor);
 			this.moduleProfesorContainer.Controls.Add(this.label9);
 			this.moduleProfesorContainer.Controls.Add(this.btnSaveProfesor);
@@ -656,6 +658,7 @@
 			this.txtIdProfesor.ReadOnly = true;
 			this.txtIdProfesor.Size = new System.Drawing.Size(92, 20);
 			this.txtIdProfesor.TabIndex = 14;
+			this.txtIdProfesor.TextChanged += new System.EventHandler(this.txtIdProfesor_TextChanged);
 			// 
 			// label9
 			// 
@@ -700,16 +703,6 @@
 			// 
 			this.lboxPModule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lboxPModule.FormattingEnabled = true;
-			this.lboxPModule.Items.AddRange(new object[] {
-            "POO",
-            "LPO",
-            "PW",
-            "POO",
-            "LPO",
-            "PW",
-            "POO",
-            "LPO",
-            "PW"});
 			this.lboxPModule.Location = new System.Drawing.Point(36, 292);
 			this.lboxPModule.Name = "lboxPModule";
 			this.lboxPModule.Size = new System.Drawing.Size(157, 67);
@@ -726,33 +719,21 @@
 			// 
 			// cboxPDiscipline
 			// 
-			this.cboxPDiscipline.DataSource = this.disciplinaBindingSource;
-			this.cboxPDiscipline.DisplayMember = "Nume";
 			this.cboxPDiscipline.FormattingEnabled = true;
 			this.cboxPDiscipline.Location = new System.Drawing.Point(36, 177);
 			this.cboxPDiscipline.Name = "cboxPDiscipline";
-			this.cboxPDiscipline.Size = new System.Drawing.Size(157, 21);
+			this.cboxPDiscipline.Size = new System.Drawing.Size(84, 21);
 			this.cboxPDiscipline.TabIndex = 6;
-			this.cboxPDiscipline.ValueMember = "Nume";
 			// 
 			// lboxPDiscipline
 			// 
 			this.lboxPDiscipline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lboxPDiscipline.FormattingEnabled = true;
-			this.lboxPDiscipline.Items.AddRange(new object[] {
-            "POO",
-            "LPO",
-            "PW",
-            "POO",
-            "LPO",
-            "PW",
-            "POO",
-            "LPO",
-            "PW"});
 			this.lboxPDiscipline.Location = new System.Drawing.Point(36, 204);
 			this.lboxPDiscipline.Name = "lboxPDiscipline";
 			this.lboxPDiscipline.Size = new System.Drawing.Size(157, 54);
 			this.lboxPDiscipline.TabIndex = 5;
+			this.lboxPDiscipline.DoubleClick += new System.EventHandler(this.lboxPDiscipline_DoubleClick);
 			// 
 			// label7
 			// 
@@ -799,6 +780,7 @@
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1026,6 +1008,16 @@
 			// 
 			this.zileTableAdapter.ClearBeforeFill = true;
 			// 
+			// btnLinkProfesorDisciplina
+			// 
+			this.btnLinkProfesorDisciplina.Location = new System.Drawing.Point(126, 175);
+			this.btnLinkProfesorDisciplina.Name = "btnLinkProfesorDisciplina";
+			this.btnLinkProfesorDisciplina.Size = new System.Drawing.Size(66, 23);
+			this.btnLinkProfesorDisciplina.TabIndex = 15;
+			this.btnLinkProfesorDisciplina.Text = "Adauga";
+			this.btnLinkProfesorDisciplina.UseVisualStyleBackColor = true;
+			this.btnLinkProfesorDisciplina.Click += new System.EventHandler(this.btnLinkProfesorDisciplina_Click);
+			// 
 			// Scheduler
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1033,9 +1025,9 @@
 			this.AutoScroll = true;
 			this.ClientSize = new System.Drawing.Size(880, 473);
 			this.Controls.Add(this.menuStrip1);
+			this.Controls.Add(this.panelProfesori);
 			this.Controls.Add(this.panelSchedule);
 			this.Controls.Add(this.panelDiscipline);
-			this.Controls.Add(this.panelProfesori);
 			this.Name = "Scheduler";
 			this.Text = "Scheduler";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
@@ -1175,5 +1167,6 @@
         private System.Windows.Forms.BindingSource zileBindingSource;
         private ctischeduleDataSetZileTableAdapters.ZileTableAdapter zileTableAdapter;
         private Orar orar1;
-    }
+		private System.Windows.Forms.Button btnLinkProfesorDisciplina;
+	}
 }

@@ -17,8 +17,8 @@ namespace CTISchedule.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Profesor()
         {
+            this.DisciplinaProfesors = new HashSet<DisciplinaProfesor>();
             this.Moduls = new HashSet<Modul>();
-            this.Disciplinas = new HashSet<Disciplina>();
         }
     
         public int Id { get; set; }
@@ -26,8 +26,8 @@ namespace CTISchedule.Models
         public string Prenume { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Modul> Moduls { get; set; }
+        public virtual ICollection<DisciplinaProfesor> DisciplinaProfesors { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Disciplina> Disciplinas { get; set; }
+        public virtual ICollection<Modul> Moduls { get; set; }
     }
 }

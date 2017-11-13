@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace CTISchedule.Models
 {
-	public partial class Profesor
+	public partial class Disciplina
 	{
-		public Profesor(Profesor req)
-		{
-			Nume = req.Nume;
-			Prenume = req.Prenume;
-		}
+
 	}
 
-	public class ProfesorList
+	public class DisciplinaList
 	{
 		public int Id { get; set; }
 		public string Nume { get; set; }

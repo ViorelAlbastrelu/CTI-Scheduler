@@ -10,10 +10,6 @@ D:\uni\CTISchedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.pdb
 D:\uni\cti-schedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.dacpac
 D:\uni\cti-schedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.dll
 D:\uni\cti-schedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.pdb
-D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\Model.xml
-D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\refactor.xml
-D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\postdeploy.sql
-D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\predeploy.sql
 D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.dll
 D:\uni\cti-schedule\CTIScheduleDB\obj\Debug\CTIScheduleDB.pdb
 D:\Projects\University\PIE\cti-schedule\CTIScheduleDB\bin\Debug\CTIScheduleDB.dacpac

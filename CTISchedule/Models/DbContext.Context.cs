@@ -28,6 +28,7 @@ namespace CTISchedule.Models
         public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<Activitate> Activitates { get; set; }
         public virtual DbSet<Disciplina> Disciplinas { get; set; }
+        public virtual DbSet<DisciplinaProfesor> DisciplinaProfesors { get; set; }
         public virtual DbSet<Generatie> Generaties { get; set; }
         public virtual DbSet<Grupa> Grupas { get; set; }
         public virtual DbSet<Modul> Moduls { get; set; }

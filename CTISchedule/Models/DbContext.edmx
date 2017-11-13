@@ -28,7 +28,7 @@
           <Property Name="Credite" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'ctischedule.dbo.DisciplinaActivitate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DisciplinaActivitate">
           <Key>
             <PropertyRef Name="Id_Disciplina" />
@@ -39,13 +39,11 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaActivitate' does not hav
           <Property Name="Id_Activitate" Type="int" Nullable="false" />
           <Property Name="NrOre" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DisciplinaProfesor">
           <Key>
-            <PropertyRef Name="Id_Disciplina" />
-            <PropertyRef Name="Id_Profesor" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_Disciplina" Type="int" Nullable="false" />
           <Property Name="Id_Profesor" Type="int" Nullable="false" />
         </EntityType>
@@ -247,6 +245,7 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
           <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Activitate" EntityType="Self.Activitate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Disciplina" EntityType="Self.Disciplina" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DisciplinaProfesor" EntityType="Self.DisciplinaProfesor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Generatie" EntityType="Self.Generatie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Grupa" EntityType="Self.Grupa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Modul" EntityType="Self.Modul" Schema="dbo" store:Type="Tables" />
@@ -260,12 +259,6 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
     [DisciplinaActivitate].[Id_Activitate] AS [Id_Activitate], 
     [DisciplinaActivitate].[NrOre] AS [NrOre]
     FROM [dbo].[DisciplinaActivitate] AS [DisciplinaActivitate]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="DisciplinaProfesor" EntityType="Self.DisciplinaProfesor" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [DisciplinaProfesor].[Id_Disciplina] AS [Id_Disciplina], 
-    [DisciplinaProfesor].[Id_Profesor] AS [Id_Profesor]
-    FROM [dbo].[DisciplinaProfesor] AS [DisciplinaProfesor]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_DisciplinaActivitate_Activitate" Association="Self.FK_DisciplinaActivitate_Activitate">
             <End Role="Activitate" EntitySet="Activitate" />
@@ -320,6 +313,7 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
           <EntitySet Name="C__RefactorLog" EntityType="CTIScheduleDBModel.C__RefactorLog" />
           <EntitySet Name="Activitates" EntityType="CTIScheduleDBModel.Activitate" />
           <EntitySet Name="Disciplinas" EntityType="CTIScheduleDBModel.Disciplina" />
+          <EntitySet Name="DisciplinaProfesors" EntityType="CTIScheduleDBModel.DisciplinaProfesor" />
           <EntitySet Name="Generaties" EntityType="CTIScheduleDBModel.Generatie" />
           <EntitySet Name="Grupas" EntityType="CTIScheduleDBModel.Grupa" />
           <EntitySet Name="Moduls" EntityType="CTIScheduleDBModel.Modul" />
@@ -344,9 +338,17 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
             <End Role="Disciplina" EntitySet="Disciplinas" />
             <End Role="DisciplinaActivitate" EntitySet="DisciplinaActivitates" />
           </AssociationSet>
+          <AssociationSet Name="FK_DisciplinaProfesor_Disciplina" Association="CTIScheduleDBModel.FK_DisciplinaProfesor_Disciplina">
+            <End Role="Disciplina" EntitySet="Disciplinas" />
+            <End Role="DisciplinaProfesor" EntitySet="DisciplinaProfesors" />
+          </AssociationSet>
           <AssociationSet Name="FK_Modul_Disciplina" Association="CTIScheduleDBModel.FK_Modul_Disciplina">
             <End Role="Disciplina" EntitySet="Disciplinas" />
             <End Role="Modul" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DisciplinaProfesor_Profesor" Association="CTIScheduleDBModel.FK_DisciplinaProfesor_Profesor">
+            <End Role="Profesor" EntitySet="Profesors" />
+            <End Role="DisciplinaProfesor" EntitySet="DisciplinaProfesors" />
           </AssociationSet>
           <AssociationSet Name="FK_Grupa_Generatie" Association="CTIScheduleDBModel.FK_Grupa_Generatie">
             <End Role="Generatie" EntitySet="Generaties" />
@@ -363,10 +365,6 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
           <AssociationSet Name="FK_Modul_ZI" Association="CTIScheduleDBModel.FK_Modul_ZI">
             <End Role="Zile" EntitySet="Ziles" />
             <End Role="Modul" EntitySet="Moduls" />
-          </AssociationSet>
-          <AssociationSet Name="DisciplinaProfesor" Association="CTIScheduleDBModel.DisciplinaProfesor">
-            <End Role="Disciplina" EntitySet="Disciplinas" />
-            <End Role="Profesor" EntitySet="Profesors" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="C__RefactorLog">
@@ -394,8 +392,18 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Credite" Type="Int32" Nullable="false" />
           <NavigationProperty Name="DisciplinaActivitates" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" FromRole="Disciplina" ToRole="DisciplinaActivitate" />
+          <NavigationProperty Name="DisciplinaProfesors" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Disciplina" FromRole="Disciplina" ToRole="DisciplinaProfesor" />
           <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Disciplina" FromRole="Disciplina" ToRole="Modul" />
-          <NavigationProperty Name="Profesors" Relationship="CTIScheduleDBModel.DisciplinaProfesor" FromRole="Disciplina" ToRole="Profesor" />
+        </EntityType>
+        <EntityType Name="DisciplinaProfesor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Disciplina" Type="Int32" Nullable="false" />
+          <Property Name="Id_Profesor" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Disciplina" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Disciplina" FromRole="DisciplinaProfesor" ToRole="Disciplina" />
+          <NavigationProperty Name="Profesor" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Profesor" FromRole="DisciplinaProfesor" ToRole="Profesor" />
         </EntityType>
         <EntityType Name="Generatie">
           <Key>
@@ -441,8 +449,8 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Prenume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DisciplinaProfesors" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Profesor" FromRole="Profesor" ToRole="DisciplinaProfesor" />
           <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Profesor" ToRole="Modul" />
-          <NavigationProperty Name="Disciplinas" Relationship="CTIScheduleDBModel.DisciplinaProfesor" FromRole="Profesor" ToRole="Disciplina" />
         </EntityType>
         <EntityType Name="Sala">
           <Key>
@@ -531,6 +539,18 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DisciplinaProfesor_Disciplina">
+          <End Type="CTIScheduleDBModel.Disciplina" Role="Disciplina" Multiplicity="1" />
+          <End Type="CTIScheduleDBModel.DisciplinaProfesor" Role="DisciplinaProfesor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplina">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DisciplinaProfesor">
+              <PropertyRef Name="Id_Disciplina" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Modul_Disciplina">
           <End Type="CTIScheduleDBModel.Disciplina" Role="Disciplina" Multiplicity="1" />
           <End Type="CTIScheduleDBModel.Modul" Role="Modul" Multiplicity="*" />
@@ -540,6 +560,18 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
             </Principal>
             <Dependent Role="Modul">
               <PropertyRef Name="IdDisciplina" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DisciplinaProfesor_Profesor">
+          <End Type="CTIScheduleDBModel.Profesor" Role="Profesor" Multiplicity="1" />
+          <End Type="CTIScheduleDBModel.DisciplinaProfesor" Role="DisciplinaProfesor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DisciplinaProfesor">
+              <PropertyRef Name="Id_Profesor" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -591,10 +623,6 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="DisciplinaProfesor">
-          <End Type="CTIScheduleDBModel.Disciplina" Role="Disciplina" Multiplicity="*" />
-          <End Type="CTIScheduleDBModel.Profesor" Role="Profesor" Multiplicity="*" />
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -622,6 +650,15 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
                 <ScalarProperty Name="Credite" ColumnName="Credite" />
                 <ScalarProperty Name="Nume" ColumnName="Nume" />
                 <ScalarProperty Name="An" ColumnName="An" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DisciplinaProfesors">
+            <EntityTypeMapping TypeName="CTIScheduleDBModel.DisciplinaProfesor">
+              <MappingFragment StoreEntitySet="DisciplinaProfesor">
+                <ScalarProperty Name="Id_Profesor" ColumnName="Id_Profesor" />
+                <ScalarProperty Name="Id_Disciplina" ColumnName="Id_Disciplina" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -704,14 +741,6 @@ warning 6002: The table/view 'ctischedule.dbo.DisciplinaProfesor' does not have 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="DisciplinaProfesor" TypeName="CTIScheduleDBModel.DisciplinaProfesor" StoreEntitySet="DisciplinaProfesor">
-            <EndProperty Name="Profesor">
-              <ScalarProperty Name="Id" ColumnName="Id_Profesor" />
-            </EndProperty>
-            <EndProperty Name="Disciplina">
-              <ScalarProperty Name="Id" ColumnName="Id_Disciplina" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

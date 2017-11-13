@@ -26,6 +26,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="DisciplinaProfesors">
+      <EntityTypeMapping TypeName="CTIScheduleDBModel.DisciplinaProfesor">
+        <MappingFragment StoreEntitySet="DisciplinaProfesor">
+          <ScalarProperty Name="Id_Profesor" ColumnName="Id_Profesor" />
+          <ScalarProperty Name="Id_Disciplina" ColumnName="Id_Disciplina" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Generaties">
       <EntityTypeMapping TypeName="CTIScheduleDBModel.Generatie">
         <MappingFragment StoreEntitySet="Generatie">
@@ -104,13 +113,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="DisciplinaProfesor" TypeName="CTIScheduleDBModel.DisciplinaProfesor" StoreEntitySet="DisciplinaProfesor">
-      <EndProperty Name="Profesor">
-        <ScalarProperty Name="Id" ColumnName="Id_Profesor" />
-      </EndProperty>
-      <EndProperty Name="Disciplina">
-        <ScalarProperty Name="Id" ColumnName="Id_Disciplina" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

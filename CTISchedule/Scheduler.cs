@@ -30,6 +30,7 @@ namespace CTISchedule
             _anStudiu = anStudiu;
             _start = start;
 
+			/*
 			this.dgvScheduler.RowHeadersVisible = false;
 			this.dgvScheduler.AllowUserToResizeRows = false;
 			this.dgvScheduler.AllowUserToResizeColumns = false;
@@ -39,6 +40,7 @@ namespace CTISchedule
 			this.dgvScheduler.Rows.Add("U","IV", "14:00 - 15:50");
 			this.dgvScheduler.Rows.Add("","V", "16:00 - 17:50");
 			this.dgvScheduler.Rows.Add("","VI", "18:00 - 19:50");
+			*/
 		}
 
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -242,6 +244,71 @@ namespace CTISchedule
 			orar1.VerticalScroll.Enabled = false;
 			orar1.VerticalScroll.Visible = false;
 			orar1.AutoScroll = true;
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			
+		}
+
+		private void UpdateDisciplineProfesor()
+		{
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			{
+				try
+				{
+					lboxPDiscipline.DataSource = _controller.UpdateProfesorDisciplina(pid, _anStudiu).ToList();
+					lboxPDiscipline.DisplayMember = "Nume";
+				}
+				catch (Exception) { }
+			}
+		}
+
+		private void UpdateAvailableDiscipline()
+		{
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			{
+				try
+				{
+					cboxPDiscipline.DataSource = _controller.GetAvailableProfeosrDisciplinas(pid, _anStudiu).ToList();
+					cboxPDiscipline.DisplayMember = "Nume";
+				}
+				catch (Exception) { }
+			}
+		}
+
+		private void UpdateProfesorModule()
+		{
+			UpdateDisciplineProfesor();
+			UpdateAvailableDiscipline();
+			cboxPDiscipline.Text = "";
+		}
+
+		private void txtIdProfesor_TextChanged(object sender, EventArgs e)
+		{
+			UpdateProfesorModule();
+		}
+
+		private void lboxPDiscipline_DoubleClick(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			{
+				_controller.DeleteLinkDisciplinaProfesor(pid, (lboxPDiscipline.SelectedItem as ProfesorList).Id);
+				UpdateProfesorModule();
+			}
+		}
+
+		private void btnLinkProfesorDisciplina_Click(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			{
+				try
+				{
+					_controller.LinkDisciplinaProfesor(pid, (cboxPDiscipline.SelectedValue as DisciplinaList).Id);
+				}
+				catch (Exception) { }
+			}
+			UpdateProfesorModule();
 		}
 	}
 }

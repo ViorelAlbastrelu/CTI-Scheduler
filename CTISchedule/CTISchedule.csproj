@@ -210,6 +210,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DisciplinaProfesorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\Activitate.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
@@ -237,6 +242,10 @@
     <Compile Include="Models\DisciplinaActivitate.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DisciplinaProfesor.cs">
+      <DependentUpon>DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disciplina_Extension.cs" />
     <Compile Include="Models\Generatie.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
@@ -364,6 +373,17 @@
     </None>
     <None Include="ctischeduleDataSetZile.xss">
       <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
+    </None>
+    <None Include="DisciplinaProfesorDataSet.xsc">
+      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DisciplinaProfesorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DisciplinaProfesorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DisciplinaProfesorDataSet.xss">
+      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
     </None>
     <None Include="Models\DbContext.edmx.diagram">
       <DependentUpon>DbContext.edmx</DependentUpon>
