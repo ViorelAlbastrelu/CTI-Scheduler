@@ -310,5 +310,19 @@ namespace CTISchedule
 			}
 			UpdateProfesorModule();
 		}
-	}
+
+        private void onlyLetter_Restriction(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void onlyDigit_Restriction(object sender, KeyPressEventArgs e)
+        {
+            if(!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+    }
 }

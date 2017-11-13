@@ -760,18 +760,20 @@
 			this.txtPrenumeProfesor.Name = "txtPrenumeProfesor";
 			this.txtPrenumeProfesor.Size = new System.Drawing.Size(157, 20);
 			this.txtPrenumeProfesor.TabIndex = 2;
-			// 
-			// txtNumeProfesor
-			// 
-			this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource1, "Nume", true));
+            this.txtPrenumeProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
+            // 
+            // txtNumeProfesor
+            // 
+            this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource1, "Nume", true));
 			this.txtNumeProfesor.Location = new System.Drawing.Point(36, 76);
 			this.txtNumeProfesor.Name = "txtNumeProfesor";
 			this.txtNumeProfesor.Size = new System.Drawing.Size(157, 20);
 			this.txtNumeProfesor.TabIndex = 1;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
+            this.txtNumeProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
 			this.label5.Location = new System.Drawing.Point(33, 59);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(35, 13);
@@ -905,10 +907,12 @@
 			this.txtCredite.Name = "txtCredite";
 			this.txtCredite.Size = new System.Drawing.Size(79, 20);
 			this.txtCredite.TabIndex = 6;
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
+            this.txtCredite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyDigit_Restriction);
+
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
 			this.label12.Location = new System.Drawing.Point(34, 133);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(40, 13);
@@ -945,10 +949,12 @@
 			this.txtNumeDisciplina.Name = "txtNumeDisciplina";
 			this.txtNumeDisciplina.Size = new System.Drawing.Size(156, 20);
 			this.txtNumeDisciplina.TabIndex = 2;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
+            this.txtNumeDisciplina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
+
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
 			this.label10.Location = new System.Drawing.Point(34, 104);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(74, 13);
