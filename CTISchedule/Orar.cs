@@ -16,5 +16,17 @@ namespace CTISchedule
         {
             InitializeComponent();
         }
+
+        private void moduleCell_MouseEnter(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+        }
+
+        private void moduleCell_MouseLeave(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = System.Drawing.SystemColors.ControlLightLight;
+        }
     }
 }
