@@ -215,6 +215,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Informatii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informatii.Designer.cs">
+      <DependentUpon>Informatii.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Activitate.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
@@ -294,6 +300,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Informatii.resx">
+      <DependentUpon>Informatii.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Orar.resx">
       <DependentUpon>Orar.cs</DependentUpon>
     </EmbeddedResource>
