@@ -49,7 +49,7 @@
             this.tabInformatii.Controls.Add(this.tabPage6);
             this.tabInformatii.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabInformatii.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabInformatii.ItemSize = new System.Drawing.Size(30, 120);
+            this.tabInformatii.ItemSize = new System.Drawing.Size(30, 80);
             this.tabInformatii.Location = new System.Drawing.Point(0, 0);
             this.tabInformatii.Multiline = true;
             this.tabInformatii.Name = "tabInformatii";
@@ -61,10 +61,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(124, 4);
+            this.tabPage1.Location = new System.Drawing.Point(84, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(356, 253);
+            this.tabPage1.Size = new System.Drawing.Size(396, 253);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Intro";
             this.tabPage1.UseVisualStyleBackColor = true;

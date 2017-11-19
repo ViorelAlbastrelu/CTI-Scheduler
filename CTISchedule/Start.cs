@@ -58,5 +58,10 @@ namespace CTISchedule
             Environment.Exit(Environment.ExitCode);
         }
 
-	}
+        private void informatiiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Informatii().Show();
+
+        }
+    }
 }

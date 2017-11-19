@@ -134,6 +134,7 @@
             this.informatiiToolStripMenuItem.Name = "informatiiToolStripMenuItem";
             this.informatiiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.informatiiToolStripMenuItem.Text = "Informatii";
+            this.informatiiToolStripMenuItem.Click += new System.EventHandler(this.informatiiToolStripMenuItem_Click);
             // 
             // btnYear1
             // 

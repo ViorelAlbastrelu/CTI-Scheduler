@@ -32,8 +32,8 @@ namespace CTISchedule
             {
 
                 // Draw a different background color, and don't paint a focus rectangle.
-                _textBrush = new SolidBrush(Color.Red);
-                g.FillRectangle(Brushes.Gray, e.Bounds);
+                _textBrush = new SolidBrush(Color.White);
+                g.FillRectangle(Brushes.LightSteelBlue, e.Bounds);
             }
             else
             {
@@ -42,7 +42,7 @@ namespace CTISchedule
             }
 
             // Use our own font.
-            Font _tabFont = new Font("Arial", (float)10.0, FontStyle.Bold, GraphicsUnit.Pixel);
+            Font _tabFont = new Font("Arial", (float)14.0, FontStyle.Regular, GraphicsUnit.Pixel);
 
             // Draw string. Center the text.
             StringFormat _stringFlags = new StringFormat();
