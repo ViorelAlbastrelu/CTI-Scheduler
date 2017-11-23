@@ -28,6 +28,7 @@ namespace CTISchedule.Models
         public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<Activitate> Activitates { get; set; }
         public virtual DbSet<Disciplina> Disciplinas { get; set; }
+        public virtual DbSet<DisciplinaActivitate> DisciplinaActivitates { get; set; }
         public virtual DbSet<DisciplinaProfesor> DisciplinaProfesors { get; set; }
         public virtual DbSet<Generatie> Generaties { get; set; }
         public virtual DbSet<Grupa> Grupas { get; set; }
@@ -36,6 +37,5 @@ namespace CTISchedule.Models
         public virtual DbSet<Sala> Salas { get; set; }
         public virtual DbSet<SubGrupa> SubGrupas { get; set; }
         public virtual DbSet<Zile> Ziles { get; set; }
-        public virtual DbSet<DisciplinaActivitate> DisciplinaActivitates { get; set; }
     }
 }

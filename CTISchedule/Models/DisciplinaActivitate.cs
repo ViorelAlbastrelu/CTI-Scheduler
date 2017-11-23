@@ -14,9 +14,10 @@ namespace CTISchedule.Models
     
     public partial class DisciplinaActivitate
     {
+        public int Id { get; set; }
         public int Id_Disciplina { get; set; }
         public int Id_Activitate { get; set; }
-        public int NrOre { get; set; }
+        public int Nr_Module { get; set; }
     
         public virtual Activitate Activitate { get; set; }
         public virtual Disciplina Disciplina { get; set; }

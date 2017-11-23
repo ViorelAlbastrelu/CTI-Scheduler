@@ -23,9 +23,10 @@ namespace CTISchedule.Models
         }
     
         public int Id { get; set; }
-        public int An { get; set; }
         public string Nume { get; set; }
-        public int Credite { get; set; }
+        public string NumeScurt { get; set; }
+        public int An { get; set; }
+        public int Semestru { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DisciplinaActivitate> DisciplinaActivitates { get; set; }

@@ -23,21 +23,19 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="An" Type="int" Nullable="false" />
           <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Credite" Type="int" Nullable="false" />
+          <Property Name="NumeScurt" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="An" Type="int" Nullable="false" />
+          <Property Name="Semestru" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DisciplinaActivitate">
           <Key>
-            <PropertyRef Name="Id_Disciplina" />
-            <PropertyRef Name="Id_Activitate" />
-            <PropertyRef Name="NrOre" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_Disciplina" Type="int" Nullable="false" />
           <Property Name="Id_Activitate" Type="int" Nullable="false" />
-          <Property Name="NrOre" Type="int" Nullable="false" />
+          <Property Name="Nr_Module" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DisciplinaProfesor">
           <Key>
@@ -83,7 +81,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Prenume" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Titlu" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="Sala">
           <Key>
@@ -245,6 +243,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Activitate" EntityType="Self.Activitate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Disciplina" EntityType="Self.Disciplina" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DisciplinaActivitate" EntityType="Self.DisciplinaActivitate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DisciplinaProfesor" EntityType="Self.DisciplinaProfesor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Generatie" EntityType="Self.Generatie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Grupa" EntityType="Self.Grupa" Schema="dbo" store:Type="Tables" />
@@ -253,13 +252,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySet Name="Sala" EntityType="Self.Sala" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubGrupa" EntityType="Self.SubGrupa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zile" EntityType="Self.Zile" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="DisciplinaActivitate" EntityType="Self.DisciplinaActivitate" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [DisciplinaActivitate].[Id_Disciplina] AS [Id_Disciplina], 
-    [DisciplinaActivitate].[Id_Activitate] AS [Id_Activitate], 
-    [DisciplinaActivitate].[NrOre] AS [NrOre]
-    FROM [dbo].[DisciplinaActivitate] AS [DisciplinaActivitate]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_DisciplinaActivitate_Activitate" Association="Self.FK_DisciplinaActivitate_Activitate">
             <End Role="Activitate" EntitySet="Activitate" />
             <End Role="DisciplinaActivitate" EntitySet="DisciplinaActivitate" />
@@ -313,6 +305,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySet Name="C__RefactorLog" EntityType="CTIScheduleDBModel.C__RefactorLog" />
           <EntitySet Name="Activitates" EntityType="CTIScheduleDBModel.Activitate" />
           <EntitySet Name="Disciplinas" EntityType="CTIScheduleDBModel.Disciplina" />
+          <EntitySet Name="DisciplinaActivitates" EntityType="CTIScheduleDBModel.DisciplinaActivitate" />
           <EntitySet Name="DisciplinaProfesors" EntityType="CTIScheduleDBModel.DisciplinaProfesor" />
           <EntitySet Name="Generaties" EntityType="CTIScheduleDBModel.Generatie" />
           <EntitySet Name="Grupas" EntityType="CTIScheduleDBModel.Grupa" />
@@ -321,7 +314,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySet Name="Salas" EntityType="CTIScheduleDBModel.Sala" />
           <EntitySet Name="SubGrupas" EntityType="CTIScheduleDBModel.SubGrupa" />
           <EntitySet Name="Ziles" EntityType="CTIScheduleDBModel.Zile" />
-          <EntitySet Name="DisciplinaActivitates" EntityType="CTIScheduleDBModel.DisciplinaActivitate" />
           <AssociationSet Name="FK_DisciplinaActivitate_Activitate" Association="CTIScheduleDBModel.FK_DisciplinaActivitate_Activitate">
             <End Role="Activitate" EntitySet="Activitates" />
             <End Role="DisciplinaActivitate" EntitySet="DisciplinaActivitates" />
@@ -388,12 +380,24 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="An" Type="Int32" Nullable="false" />
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Credite" Type="Int32" Nullable="false" />
+          <Property Name="NumeScurt" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="An" Type="Int32" Nullable="false" />
+          <Property Name="Semestru" Type="Int32" Nullable="false" />
           <NavigationProperty Name="DisciplinaActivitates" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" FromRole="Disciplina" ToRole="DisciplinaActivitate" />
           <NavigationProperty Name="DisciplinaProfesors" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Disciplina" FromRole="Disciplina" ToRole="DisciplinaProfesor" />
           <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Disciplina" FromRole="Disciplina" ToRole="Modul" />
+        </EntityType>
+        <EntityType Name="DisciplinaActivitate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Disciplina" Type="Int32" Nullable="false" />
+          <Property Name="Id_Activitate" Type="Int32" Nullable="false" />
+          <Property Name="Nr_Module" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Activitate" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Activitate" FromRole="DisciplinaActivitate" ToRole="Activitate" />
+          <NavigationProperty Name="Disciplina" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" FromRole="DisciplinaActivitate" ToRole="Disciplina" />
         </EntityType>
         <EntityType Name="DisciplinaProfesor">
           <Key>
@@ -448,7 +452,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Prenume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Titlu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DisciplinaProfesors" Relationship="CTIScheduleDBModel.FK_DisciplinaProfesor_Profesor" FromRole="Profesor" ToRole="DisciplinaProfesor" />
           <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Profesor" ToRole="Modul" />
         </EntityType>
@@ -478,18 +482,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_ZI" FromRole="Zile" ToRole="Modul" />
-        </EntityType>
-        <EntityType Name="DisciplinaActivitate">
-          <Key>
-            <PropertyRef Name="Id_Disciplina" />
-            <PropertyRef Name="Id_Activitate" />
-            <PropertyRef Name="NrOre" />
-          </Key>
-          <Property Name="Id_Disciplina" Type="Int32" Nullable="false" />
-          <Property Name="Id_Activitate" Type="Int32" Nullable="false" />
-          <Property Name="NrOre" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Activitate" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Activitate" FromRole="DisciplinaActivitate" ToRole="Activitate" />
-          <NavigationProperty Name="Disciplina" Relationship="CTIScheduleDBModel.FK_DisciplinaActivitate_Disciplina" FromRole="DisciplinaActivitate" ToRole="Disciplina" />
         </EntityType>
         <Association Name="FK_DisciplinaActivitate_Activitate">
           <End Type="CTIScheduleDBModel.Activitate" Role="Activitate" Multiplicity="1" />
@@ -647,9 +639,20 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySetMapping Name="Disciplinas">
             <EntityTypeMapping TypeName="CTIScheduleDBModel.Disciplina">
               <MappingFragment StoreEntitySet="Disciplina">
-                <ScalarProperty Name="Credite" ColumnName="Credite" />
-                <ScalarProperty Name="Nume" ColumnName="Nume" />
+                <ScalarProperty Name="Semestru" ColumnName="Semestru" />
                 <ScalarProperty Name="An" ColumnName="An" />
+                <ScalarProperty Name="NumeScurt" ColumnName="NumeScurt" />
+                <ScalarProperty Name="Nume" ColumnName="Nume" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DisciplinaActivitates">
+            <EntityTypeMapping TypeName="CTIScheduleDBModel.DisciplinaActivitate">
+              <MappingFragment StoreEntitySet="DisciplinaActivitate">
+                <ScalarProperty Name="Nr_Module" ColumnName="Nr_Module" />
+                <ScalarProperty Name="Id_Activitate" ColumnName="Id_Activitate" />
+                <ScalarProperty Name="Id_Disciplina" ColumnName="Id_Disciplina" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -699,7 +702,7 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
           <EntitySetMapping Name="Profesors">
             <EntityTypeMapping TypeName="CTIScheduleDBModel.Profesor">
               <MappingFragment StoreEntitySet="Profesor">
-                <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+                <ScalarProperty Name="Titlu" ColumnName="Titlu" />
                 <ScalarProperty Name="Nume" ColumnName="Nume" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
@@ -729,15 +732,6 @@ warning 6002: The table/view 'CTIScheduleDB.dbo.DisciplinaActivitate' does not h
               <MappingFragment StoreEntitySet="Zile">
                 <ScalarProperty Name="Nume" ColumnName="Nume" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DisciplinaActivitates">
-            <EntityTypeMapping TypeName="CTIScheduleDBModel.DisciplinaActivitate">
-              <MappingFragment StoreEntitySet="DisciplinaActivitate">
-                <ScalarProperty Name="NrOre" ColumnName="NrOre" />
-                <ScalarProperty Name="Id_Activitate" ColumnName="Id_Activitate" />
-                <ScalarProperty Name="Id_Disciplina" ColumnName="Id_Disciplina" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
