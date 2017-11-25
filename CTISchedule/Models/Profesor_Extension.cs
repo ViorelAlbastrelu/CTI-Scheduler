@@ -11,7 +11,7 @@ namespace CTISchedule.Models
 		public Profesor(Profesor req)
 		{
 			Nume = req.Nume;
-			Prenume = req.Prenume;
+			Titlu = req.Titlu;
 		}
 	}
 

@@ -69,6 +69,11 @@ namespace CTISchedule
             panelProfesori.BringToFront();
 		}
 
+        private void saliToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelSali.BringToFront();
+        }
+
         private void Scheduler_Load(object sender, EventArgs e)
         {
 
@@ -81,17 +86,15 @@ namespace CTISchedule
 
         private void Scheduler_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ctischeduleDataSetZile.Zile' table. You can move, or remove it, as needed.
-            this.zileTableAdapter.Fill(this.ctischeduleDataSetZile.Zile);
-            // TODO: This line of code loads data into the 'ctischeduleDataSetSala.Sala' table. You can move, or remove it, as needed.
-            this.salaTableAdapter.Fill(this.ctischeduleDataSetSala.Sala);
             // TODO: This line of code loads data into the 'ctischeduleDataSetActivitate.Activitate' table. You can move, or remove it, as needed.
             this.activitateTableAdapter.Fill(this.ctischeduleDataSetActivitate.Activitate);
-            // TODO: This line of code loads data into the 'ctischeduleDataSet.Profesor' table. You can move, or remove it, as needed.
-            this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
+            // TODO: This line of code loads data into the 'ctischeduleDataSetSala.Sala' table. You can move, or remove it, as needed.
+            this.salaTableAdapter.Fill(this.ctischeduleDataSetSala.Sala);
             // TODO: This line of code loads data into the 'ctischeduleDataSetDisciplina.Disciplina' table. You can move, or remove it, as needed.
             this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
-
+            // TODO: This line of code loads data into the 'ctischeduleDataSetProfesor.Profesor' table. You can move, or remove it, as needed.
+            this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
+            // TODO: This line of code loads data into the 'ctischeduleDataSetZile.Zile' table. You can move, or remove it, as needed.
         }
 
         private void btnSaveProfesor_Click(object sender, EventArgs e)
@@ -102,14 +105,14 @@ namespace CTISchedule
             {
                 Id = Id,
                 Nume = txtNumeProfesor.Text,
-                Prenume = txtPrenumeProfesor.Text,
+                Titlu = txtTitluProfesor.Text,
             };
             var profesor = _controller.AddUpdateProfesor(profesorReq);
             if (profesor != null)
             {
                 txtNumeProfesor.Text = null;
-                txtPrenumeProfesor.Text = null;
-                this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
+                txtTitluProfesor.Text = null;
+                //this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
             }
             else
             {
@@ -121,7 +124,7 @@ namespace CTISchedule
         {
             txtIdProfesor.Clear();
             txtNumeProfesor.Clear();
-            txtPrenumeProfesor.Clear();
+            txtTitluProfesor.Clear();
         }
 
         private void btnDeleteProfesor_Click(object sender, EventArgs e)
@@ -129,7 +132,7 @@ namespace CTISchedule
             if(txtIdProfesor.Text != "")
             {
                 _controller.DeleteProfesor(int.Parse(txtIdProfesor.Text));
-                this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
+                //this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
             }
             else
             {
@@ -155,7 +158,7 @@ namespace CTISchedule
             if(txtIdDisciplina.Text != "")
             {
                 _controller.DeleteDisciplina(int.Parse(txtIdDisciplina.Text));
-                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+                //this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
             }
             else
             {
@@ -172,13 +175,12 @@ namespace CTISchedule
             {
                 Id = Id,
                 Nume = txtNumeDisciplina.Text,
-                Credite = int.Parse(txtCredite.Text),
                 An = int.Parse(cboxDAnStudiu.SelectedItem.ToString())
             };
             var disciplina = _controller.AddUpdateDisciplina(disciplinaReq);
             if (disciplina != null)
             {
-                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+                //this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
                 this.clearDisciplina();
             }
             else
@@ -257,8 +259,10 @@ namespace CTISchedule
 			{
 				try
 				{
-					lboxPDiscipline.DataSource = _controller.UpdateProfesorDisciplina(pid, _anStudiu).ToList();
-					lboxPDiscipline.DisplayMember = "Nume";
+                    this.disciplinaTableAdapter.FillByProfesorId(this.ctischeduleDataSetDisciplina.Disciplina,pid);
+
+                    //lboxPDiscipline.DataSource = _controller.UpdateProfesorDisciplina(pid, _anStudiu).ToList();
+					//lboxPDiscipline.DisplayMember = "Nume";
 				}
 				catch (Exception) { }
 			}
@@ -279,7 +283,8 @@ namespace CTISchedule
 
 		private void UpdateProfesorModule()
 		{
-			UpdateDisciplineProfesor();
+
+            UpdateDisciplineProfesor();
 			UpdateAvailableDiscipline();
 			cboxPDiscipline.Text = "";
 		}
@@ -323,6 +328,24 @@ namespace CTISchedule
             {
                 e.Handled = true;
             }
+        }
+
+        private void fillByProfesorIdToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               // this.disciplinaTableAdapter.FillByProfesorId(this.ctischeduleDataSetDisciplina.Disciplina, ((int)//(System.Convert.ChangeType(profesorIdToolStripTextBox.Text, typeof(int)))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dgvSali_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

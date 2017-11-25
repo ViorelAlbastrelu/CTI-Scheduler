@@ -26,7 +26,7 @@ namespace CTISchedule
 			if (req.Id != 0) {
 				profesor = _context.Profesors.First(p => p.Id == req.Id);
 				profesor.Nume = req.Nume;
-				profesor.Prenume = req.Prenume;
+				profesor.Titlu = req.Titlu;
 			}
 			else profesor = _context.Profesors.Add(new Profesor(req));
 			
@@ -108,7 +108,6 @@ namespace CTISchedule
             {
                 disciplina = _context.Disciplinas.Find(req.Id);
                 disciplina.Nume = req.Nume;
-                disciplina.Credite = req.Credite;
                 disciplina.An = req.An;
             }
             else
@@ -116,7 +115,6 @@ namespace CTISchedule
                 disciplina = _context.Disciplinas.Add(new Disciplina()
                 {
                     An = req.An,
-                    Credite = req.Credite,
                     Nume = req.Nume
                 });
             }

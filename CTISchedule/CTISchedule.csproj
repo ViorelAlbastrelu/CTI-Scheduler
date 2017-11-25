@@ -185,11 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
-    <Compile Include="ctischeduleDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ctischeduleDataSetActivitate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,20 +195,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ctischeduleDataSetProfesor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetProfesor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ctischeduleDataSetSala.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ctischeduleDataSetZile.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DisciplinaProfesorDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Informatii.cs">
       <SubType>Form</SubType>
@@ -286,12 +276,6 @@
     <Compile Include="Scheduler.Designer.cs">
       <DependentUpon>Scheduler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Schedule_init.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Schedule_init.Designer.cs">
-      <DependentUpon>Schedule_init.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
@@ -309,9 +293,6 @@
     <EmbeddedResource Include="Scheduler.resx">
       <DependentUpon>Scheduler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Schedule_init.resx">
-      <DependentUpon>Schedule_init.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -328,17 +309,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ctischeduleDataSet.xsc">
-      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ctischeduleDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ctischeduleDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ctischeduleDataSet.xss">
-      <DependentUpon>ctischeduleDataSet.xsd</DependentUpon>
-    </None>
     <None Include="ctischeduleDataSetActivitate.xsc">
       <DependentUpon>ctischeduleDataSetActivitate.xsd</DependentUpon>
     </None>
@@ -361,6 +331,17 @@
     <None Include="ctischeduleDataSetDisciplina.xss">
       <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
     </None>
+    <None Include="ctischeduleDataSetProfesor.xsc">
+      <DependentUpon>ctischeduleDataSetProfesor.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetProfesor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetProfesor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetProfesor.xss">
+      <DependentUpon>ctischeduleDataSetProfesor.xsd</DependentUpon>
+    </None>
     <None Include="ctischeduleDataSetSala.xsc">
       <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
     </None>
@@ -372,33 +353,10 @@
     <None Include="ctischeduleDataSetSala.xss">
       <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
     </None>
-    <None Include="ctischeduleDataSetZile.xsc">
-      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
-    </None>
-    <None Include="ctischeduleDataSetZile.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ctischeduleDataSetZile.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ctischeduleDataSetZile.xss">
-      <DependentUpon>ctischeduleDataSetZile.xsd</DependentUpon>
-    </None>
-    <None Include="DisciplinaProfesorDataSet.xsc">
-      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DisciplinaProfesorDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DisciplinaProfesorDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DisciplinaProfesorDataSet.xss">
-      <DependentUpon>DisciplinaProfesorDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Models\DbContext.edmx.diagram">
       <DependentUpon>DbContext.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\CTISchedule.Models.Profesor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -426,6 +384,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

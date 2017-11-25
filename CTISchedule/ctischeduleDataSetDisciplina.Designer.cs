@@ -281,11 +281,13 @@ namespace CTISchedule {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnAn;
-            
             private global::System.Data.DataColumn columnNume;
             
-            private global::System.Data.DataColumn columnCredite;
+            private global::System.Data.DataColumn columnNumeScurt;
+            
+            private global::System.Data.DataColumn columnAn;
+            
+            private global::System.Data.DataColumn columnSemestru;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -330,14 +332,6 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AnColumn {
-                get {
-                    return this.columnAn;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn NumeColumn {
                 get {
                     return this.columnNume;
@@ -346,9 +340,25 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CrediteColumn {
+            public global::System.Data.DataColumn NumeScurtColumn {
                 get {
-                    return this.columnCredite;
+                    return this.columnNumeScurt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AnColumn {
+                get {
+                    return this.columnAn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SemestruColumn {
+                get {
+                    return this.columnSemestru;
                 }
             }
             
@@ -389,13 +399,14 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DisciplinaRow AddDisciplinaRow(int An, string Nume, int Credite) {
+            public DisciplinaRow AddDisciplinaRow(string Nume, string NumeScurt, int An, int Semestru) {
                 DisciplinaRow rowDisciplinaRow = ((DisciplinaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        An,
                         Nume,
-                        Credite};
+                        NumeScurt,
+                        An,
+                        Semestru};
                 rowDisciplinaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDisciplinaRow);
                 return rowDisciplinaRow;
@@ -426,9 +437,10 @@ namespace CTISchedule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnAn = base.Columns["An"];
                 this.columnNume = base.Columns["Nume"];
-                this.columnCredite = base.Columns["Credite"];
+                this.columnNumeScurt = base.Columns["NumeScurt"];
+                this.columnAn = base.Columns["An"];
+                this.columnSemestru = base.Columns["Semestru"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,12 +448,14 @@ namespace CTISchedule {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnAn = new global::System.Data.DataColumn("An", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAn);
                 this.columnNume = new global::System.Data.DataColumn("Nume", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNume);
-                this.columnCredite = new global::System.Data.DataColumn("Credite", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCredite);
+                this.columnNumeScurt = new global::System.Data.DataColumn("NumeScurt", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeScurt);
+                this.columnAn = new global::System.Data.DataColumn("An", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAn);
+                this.columnSemestru = new global::System.Data.DataColumn("Semestru", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSemestru);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -450,10 +464,12 @@ namespace CTISchedule {
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
-                this.columnAn.AllowDBNull = false;
                 this.columnNume.AllowDBNull = false;
                 this.columnNume.MaxLength = 50;
-                this.columnCredite.AllowDBNull = false;
+                this.columnNumeScurt.AllowDBNull = false;
+                this.columnNumeScurt.MaxLength = 10;
+                this.columnAn.AllowDBNull = false;
+                this.columnSemestru.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -607,17 +623,6 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int An {
-                get {
-                    return ((int)(this[this.tableDisciplina.AnColumn]));
-                }
-                set {
-                    this[this.tableDisciplina.AnColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nume {
                 get {
                     return ((string)(this[this.tableDisciplina.NumeColumn]));
@@ -629,12 +634,34 @@ namespace CTISchedule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Credite {
+            public string NumeScurt {
                 get {
-                    return ((int)(this[this.tableDisciplina.CrediteColumn]));
+                    return ((string)(this[this.tableDisciplina.NumeScurtColumn]));
                 }
                 set {
-                    this[this.tableDisciplina.CrediteColumn] = value;
+                    this[this.tableDisciplina.NumeScurtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int An {
+                get {
+                    return ((int)(this[this.tableDisciplina.AnColumn]));
+                }
+                set {
+                    this[this.tableDisciplina.AnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Semestru {
+                get {
+                    return ((int)(this[this.tableDisciplina.SemestruColumn]));
+                }
+                set {
+                    this[this.tableDisciplina.SemestruColumn] = value;
                 }
             }
         }
@@ -799,40 +826,46 @@ namespace CTISchedule.ctischeduleDataSetDisciplinaTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Disciplina";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("An", "An");
             tableMapping.ColumnMappings.Add("Nume", "Nume");
-            tableMapping.ColumnMappings.Add("Credite", "Credite");
+            tableMapping.ColumnMappings.Add("NumeScurt", "NumeScurt");
+            tableMapping.ColumnMappings.Add("An", "An");
+            tableMapping.ColumnMappings.Add("Semestru", "Semestru");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Disciplina] WHERE (([Id] = @Original_Id) AND ([An] = @Original" +
-                "_An) AND ([Nume] = @Original_Nume) AND ([Credite] = @Original_Credite))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Disciplina] WHERE (([Id] = @Original_Id) AND ([Nume] = @Origin" +
+                "al_Nume) AND ([NumeScurt] = @Original_NumeScurt) AND ([An] = @Original_An) AND (" +
+                "[Semestru] = @Original_Semestru))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Credite", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Credite", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumeScurt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeScurt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Semestru", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestru", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Disciplina] ([An], [Nume], [Credite]) VALUES (@An, @Nume, @Cre" +
-                "dite);\r\nSELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = SCOPE_IDENTITY(" +
-                "))";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Disciplina] ([Nume], [NumeScurt], [An], [Semestru]) VALUES (@N" +
+                "ume, @NumeScurt, @An, @Semestru);\r\nSELECT Id, Nume, NumeScurt, An, Semestru FROM" +
+                " Disciplina WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Credite", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Credite", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeScurt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeScurt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestru", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestru", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Disciplina] SET [An] = @An, [Nume] = @Nume, [Credite] = @Credite WHERE (([Id] = @Original_Id) AND ([An] = @Original_An) AND ([Nume] = @Original_Nume) AND ([Credite] = @Original_Credite));
-SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Disciplina] SET [Nume] = @Nume, [NumeScurt] = @NumeScurt, [An] = @An, [Semestru] = @Semestru WHERE (([Id] = @Original_Id) AND ([Nume] = @Original_Nume) AND ([NumeScurt] = @Original_NumeScurt) AND ([An] = @Original_An) AND ([Semestru] = @Original_Semestru));
+SELECT Id, Nume, NumeScurt, An, Semestru FROM Disciplina WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Credite", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Credite", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeScurt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeScurt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestru", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestru", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Credite", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Credite", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumeScurt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeScurt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_An", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "An", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Semestru", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestru", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -846,11 +879,19 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, An, Nume, Credite FROM dbo.Disciplina";
+            this._commandCollection[0].CommandText = "SELECT Id, Nume, NumeScurt, An, Semestru FROM dbo.Disciplina";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        Disciplina.Id, Disciplina.Nume, Disciplina.NumeScurt, Disciplina.An" +
+                ", Disciplina.Semestru\r\nFROM            Disciplina CROSS JOIN\r\n                  " +
+                "       DisciplinaProfesor\r\nWHERE        (DisciplinaProfesor.Id_Profesor = @profe" +
+                "sorId)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@profesorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Profesor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -875,6 +916,20 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
             ctischeduleDataSetDisciplina.DisciplinaDataTable dataTable = new ctischeduleDataSetDisciplina.DisciplinaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByProfesorId(ctischeduleDataSetDisciplina.DisciplinaDataTable dataTable, int profesorId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(profesorId));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -910,16 +965,22 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_An, string Original_Nume, int Original_Credite) {
+        public virtual int Delete(int Original_Id, string Original_Nume, string Original_NumeScurt, int Original_An, int Original_Semestru) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_An));
             if ((Original_Nume == null)) {
                 throw new global::System.ArgumentNullException("Original_Nume");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nume));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nume));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Credite));
+            if ((Original_NumeScurt == null)) {
+                throw new global::System.ArgumentNullException("Original_NumeScurt");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NumeScurt));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_An));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Semestru));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -940,15 +1001,21 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int An, string Nume, int Credite) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(An));
+        public virtual int Insert(string Nume, string NumeScurt, int An, int Semestru) {
             if ((Nume == null)) {
                 throw new global::System.ArgumentNullException("Nume");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nume));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nume));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Credite));
+            if ((NumeScurt == null)) {
+                throw new global::System.ArgumentNullException("NumeScurt");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NumeScurt));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(An));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Semestru));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -969,25 +1036,37 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int An, string Nume, int Credite, int Original_Id, int Original_An, string Original_Nume, int Original_Credite, int Id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(An));
+        public virtual int Update(string Nume, string NumeScurt, int An, int Semestru, int Original_Id, string Original_Nume, string Original_NumeScurt, int Original_An, int Original_Semestru, int Id) {
             if ((Nume == null)) {
                 throw new global::System.ArgumentNullException("Nume");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nume));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nume));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Credite));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_An));
+            if ((NumeScurt == null)) {
+                throw new global::System.ArgumentNullException("NumeScurt");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NumeScurt));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(An));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Semestru));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
             if ((Original_Nume == null)) {
                 throw new global::System.ArgumentNullException("Original_Nume");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Nume));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Credite));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id));
+            if ((Original_NumeScurt == null)) {
+                throw new global::System.ArgumentNullException("Original_NumeScurt");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_NumeScurt));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_An));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Semestru));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1008,8 +1087,8 @@ SELECT Id, An, Nume, Credite FROM Disciplina WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int An, string Nume, int Credite, int Original_Id, int Original_An, string Original_Nume, int Original_Credite) {
-            return this.Update(An, Nume, Credite, Original_Id, Original_An, Original_Nume, Original_Credite, Original_Id);
+        public virtual int Update(string Nume, string NumeScurt, int An, int Semestru, int Original_Id, string Original_Nume, string Original_NumeScurt, int Original_An, int Original_Semestru) {
+            return this.Update(Nume, NumeScurt, An, Semestru, Original_Id, Original_Nume, Original_NumeScurt, Original_An, Original_Semestru, Original_Id);
         }
     }
     
