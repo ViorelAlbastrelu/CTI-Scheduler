@@ -58,7 +58,7 @@ namespace CTISchedule
 
         private void saliToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelSali.BringToFront();
+            panel2.BringToFront();
         }
 
         private void Scheduler_Load(object sender, EventArgs e)
@@ -320,27 +320,5 @@ namespace CTISchedule
             }
         }
 
-        private void fillByProfesorIdToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-               // this.disciplinaTableAdapter.FillByProfesorId(this.ctischeduleDataSetDisciplina.Disciplina, ((int)//(System.Convert.ChangeType(profesorIdToolStripTextBox.Text, typeof(int)))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void dgvSali_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void disciplinaBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

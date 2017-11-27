@@ -139,6 +139,25 @@
             this.salaTableAdapter = new CTISchedule.ctischeduleDataSetSalaTableAdapters.SalaTableAdapter();
             this.activitateTableAdapter = new CTISchedule.ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter();
             this.disciplinaTableAdapter1 = new CTISchedule.ctischeduleDataSetDisciplinaMainTableAdapters.DisciplinaTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.labelCapacitate = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.moduleFormContainer.SuspendLayout();
@@ -162,6 +181,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSalaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -172,7 +195,7 @@
             this.ajutorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(875, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1039, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -644,7 +667,6 @@
             // 
             this.disciplinaBindingSource.DataMember = "Disciplina";
             this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
-            this.disciplinaBindingSource.CurrentChanged += new System.EventHandler(this.disciplinaBindingSource_CurrentChanged);
             // 
             // ctischeduleDataSetDisciplina
             // 
@@ -890,8 +912,7 @@
             this.dgvSali.Location = new System.Drawing.Point(0, -1);
             this.dgvSali.Name = "dgvSali";
             this.dgvSali.Size = new System.Drawing.Size(640, 440);
-            this.dgvSali.TabIndex = 0;
-            this.dgvSali.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSali_CellContentClick);
+            this.dgvSali.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -1005,6 +1026,7 @@
             // 
             // txtIdDisciplina
             // 
+            this.txtIdDisciplina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.disciplinaBindingSource1, "Id", true));
             this.txtIdDisciplina.Location = new System.Drawing.Point(101, 33);
             this.txtIdDisciplina.Name = "txtIdDisciplina";
             this.txtIdDisciplina.ReadOnly = true;
@@ -1159,16 +1181,192 @@
             // 
             this.disciplinaTableAdapter1.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(9, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(860, 441);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.labelCapacitate);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.comboBox8);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(639, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(221, 441);
+            this.panel3.TabIndex = 1;
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Nume", true));
+            this.textBox4.Location = new System.Drawing.Point(101, 94);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(91, 20);
+            this.textBox4.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(32, 97);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Nume";
+            // 
+            // textBox5
+            // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Capacitate", true));
+            this.textBox5.Location = new System.Drawing.Point(101, 125);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(91, 20);
+            this.textBox5.TabIndex = 18;
+            // 
+            // labelCapacitate
+            // 
+            this.labelCapacitate.AutoSize = true;
+            this.labelCapacitate.Location = new System.Drawing.Point(34, 129);
+            this.labelCapacitate.Name = "labelCapacitate";
+            this.labelCapacitate.Size = new System.Drawing.Size(58, 13);
+            this.labelCapacitate.TabIndex = 17;
+            this.labelCapacitate.Text = "Capacitate";
+            // 
+            // textBox6
+            // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Id", true));
+            this.textBox6.Location = new System.Drawing.Point(101, 33);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(92, 20);
+            this.textBox6.TabIndex = 16;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(33, 36);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 13);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Identificator";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(36, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Salveaza";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(118, 365);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Sterge";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(37, 365);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Anuleaza";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Activitate", true));
+            this.comboBox8.DataSource = this.activitateBindingSource;
+            this.comboBox8.DisplayMember = "Nume";
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(101, 62);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(91, 21);
+            this.comboBox8.TabIndex = 4;
+            this.comboBox8.ValueMember = "Id";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(33, 65);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(51, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Activitate";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.numeDataGridViewTextBoxColumn,
+            this.capacitateDataGridViewTextBoxColumn,
+            this.activitateDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.salaBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(640, 441);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // ctischeduleDataSetSalaBindingSource
+            // 
+            this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
+            this.ctischeduleDataSetSalaBindingSource.Position = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            // 
+            // capacitateDataGridViewTextBoxColumn
+            // 
+            this.capacitateDataGridViewTextBoxColumn.DataPropertyName = "Capacitate";
+            this.capacitateDataGridViewTextBoxColumn.HeaderText = "Capacitate";
+            this.capacitateDataGridViewTextBoxColumn.Name = "capacitateDataGridViewTextBoxColumn";
+            // 
+            // activitateDataGridViewTextBoxColumn
+            // 
+            this.activitateDataGridViewTextBoxColumn.DataPropertyName = "Activitate";
+            this.activitateDataGridViewTextBoxColumn.HeaderText = "Activitate";
+            this.activitateDataGridViewTextBoxColumn.Name = "activitateDataGridViewTextBoxColumn";
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(875, 473);
+            this.ClientSize = new System.Drawing.Size(1039, 582);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
+            this.Controls.Add(this.panelSchedule);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
@@ -1202,6 +1400,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSalaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1324,5 +1527,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeScurtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn semestruDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label labelCapacitate;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacitateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activitateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ctischeduleDataSetSalaBindingSource;
     }
 }
