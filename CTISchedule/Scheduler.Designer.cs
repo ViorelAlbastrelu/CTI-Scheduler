@@ -1372,7 +1372,7 @@
             this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelSchedule);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
