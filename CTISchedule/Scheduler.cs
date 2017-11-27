@@ -321,5 +321,67 @@ namespace CTISchedule
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            //int Idsala = 1;
+            //if (txtIdSala.Text != "")
+            //    Idsala = int.Parse(txtIdSala.Text);
+            MessageBox.Show(activitatesala.SelectedValue.ToString());
+            Sala sala = new Sala()
+            {
+              //      Id = Idsala,
+                    Nume= numesala.Text,
+                    Capacitate= int.Parse(capacitatesala.Text),
+                    Activitate= int.Parse(activitatesala.SelectedValue.ToString()), 
+
+            };
+
+          //  var salarq = _controller.;
+      //      if (disciplina != null)
+        //    {
+        //        this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+        //        this.clearDisciplina();
+        //    }
+        //    else
+       //     {
+       //         MessageBox.Show("Error");
+      //      }
+
+            _controller.AddSala(sala);
+        }
+
+
+        // Stergere Sala
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (txtIdSala.Text != "")
+            {
+                _controller.DeleteDisciplina(int.Parse(txtIdSala.Text));
+             //   this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+            }
+            else
+            {
+                MessageBox.Show("Va rugam sa selectati o sala.");
+            }
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            numesala.Clear();
+            activitatesala.SelectedIndex = -1;
+            capacitatesala.Clear();
+        }
+
+        private void dgvDiscipline_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

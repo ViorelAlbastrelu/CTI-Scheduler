@@ -141,23 +141,23 @@
             this.disciplinaTableAdapter1 = new CTISchedule.ctischeduleDataSetDisciplinaMainTableAdapters.DisciplinaTableAdapter();
             this.panel2Sala = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.numesala = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.capacitatesala = new System.Windows.Forms.TextBox();
             this.labelCapacitate = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIdSala = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.activitatesala = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.moduleFormContainer.SuspendLayout();
@@ -195,7 +195,7 @@
             this.ajutorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(876, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(885, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1129,6 +1129,7 @@
             this.dgvDiscipline.Name = "dgvDiscipline";
             this.dgvDiscipline.Size = new System.Drawing.Size(640, 441);
             this.dgvDiscipline.TabIndex = 0;
+            this.dgvDiscipline.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiscipline_CellContentClick);
             // 
             // dataGridViewTextBoxColumn14
             // 
@@ -1193,16 +1194,16 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.numesala);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.capacitatesala);
             this.panel3.Controls.Add(this.labelCapacitate);
-            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.txtIdSala);
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.comboBox8);
+            this.panel3.Controls.Add(this.activitatesala);
             this.panel3.Controls.Add(this.label25);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(639, 0);
@@ -1210,13 +1211,13 @@
             this.panel3.Size = new System.Drawing.Size(221, 441);
             this.panel3.TabIndex = 1;
             // 
-            // textBox4
+            // numesala
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Nume", true));
-            this.textBox4.Location = new System.Drawing.Point(101, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(91, 20);
-            this.textBox4.TabIndex = 20;
+            this.numesala.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Nume", true));
+            this.numesala.Location = new System.Drawing.Point(101, 94);
+            this.numesala.Name = "numesala";
+            this.numesala.Size = new System.Drawing.Size(91, 20);
+            this.numesala.TabIndex = 20;
             // 
             // label12
             // 
@@ -1227,13 +1228,13 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Nume";
             // 
-            // textBox5
+            // capacitatesala
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Capacitate", true));
-            this.textBox5.Location = new System.Drawing.Point(101, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(91, 20);
-            this.textBox5.TabIndex = 18;
+            this.capacitatesala.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Capacitate", true));
+            this.capacitatesala.Location = new System.Drawing.Point(101, 125);
+            this.capacitatesala.Name = "capacitatesala";
+            this.capacitatesala.Size = new System.Drawing.Size(91, 20);
+            this.capacitatesala.TabIndex = 18;
             // 
             // labelCapacitate
             // 
@@ -1244,14 +1245,14 @@
             this.labelCapacitate.TabIndex = 17;
             this.labelCapacitate.Text = "Capacitate";
             // 
-            // textBox6
+            // txtIdSala
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Id", true));
-            this.textBox6.Location = new System.Drawing.Point(101, 33);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(92, 20);
-            this.textBox6.TabIndex = 16;
+            this.txtIdSala.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Id", true));
+            this.txtIdSala.Location = new System.Drawing.Point(101, 33);
+            this.txtIdSala.Name = "txtIdSala";
+            this.txtIdSala.ReadOnly = true;
+            this.txtIdSala.Size = new System.Drawing.Size(92, 20);
+            this.txtIdSala.TabIndex = 16;
             // 
             // label23
             // 
@@ -1270,6 +1271,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Salveaza";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -1279,6 +1281,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Sterge";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -1288,18 +1291,20 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Anuleaza";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // comboBox8
+            // activitatesala
             // 
-            this.comboBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Activitate", true));
-            this.comboBox8.DataSource = this.activitateBindingSource;
-            this.comboBox8.DisplayMember = "Nume";
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(101, 62);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(91, 21);
-            this.comboBox8.TabIndex = 4;
-            this.comboBox8.ValueMember = "Id";
+            this.activitatesala.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salaBindingSource, "Activitate", true));
+            this.activitatesala.DataSource = this.activitateBindingSource;
+            this.activitatesala.DisplayMember = "Nume";
+            this.activitatesala.FormattingEnabled = true;
+            this.activitatesala.Location = new System.Drawing.Point(101, 62);
+            this.activitatesala.Name = "activitatesala";
+            this.activitatesala.Size = new System.Drawing.Size(91, 21);
+            this.activitatesala.TabIndex = 4;
+            this.activitatesala.ValueMember = "Id";
+            this.activitatesala.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -1326,11 +1331,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(640, 441);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ctischeduleDataSetSalaBindingSource
-            // 
-            this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
-            this.ctischeduleDataSetSalaBindingSource.Position = 0;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -1356,17 +1356,23 @@
             this.activitateDataGridViewTextBoxColumn.HeaderText = "Activitate";
             this.activitateDataGridViewTextBoxColumn.Name = "activitateDataGridViewTextBoxColumn";
             // 
+            // ctischeduleDataSetSalaBindingSource
+            // 
+            this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
+            this.ctischeduleDataSetSalaBindingSource.Position = 0;
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(876, 475);
+            this.ClientSize = new System.Drawing.Size(885, 477);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2Sala);
             this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelSchedule);
+            this.Controls.Add(this.panel2);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
@@ -1529,16 +1535,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn semestruDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2Sala;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox numesala;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox capacitatesala;
         private System.Windows.Forms.Label labelCapacitate;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIdSala;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox activitatesala;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
