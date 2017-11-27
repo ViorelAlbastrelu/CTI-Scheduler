@@ -32,6 +32,10 @@
             this.fisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportProfesorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportGrupaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportDisciplinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.inchideAplicatiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,9 +82,42 @@
             // 
             // exportToolStripMenuItem
             // 
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportAnToolStripMenuItem,
+            this.exportProfesorToolStripMenuItem,
+            this.exportGrupaToolStripMenuItem,
+            this.exportDisciplinaToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // exportAnToolStripMenuItem
+            // 
+            this.exportAnToolStripMenuItem.Name = "exportAnToolStripMenuItem";
+            this.exportAnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportAnToolStripMenuItem.Text = "An";
+            this.exportAnToolStripMenuItem.Click += new System.EventHandler(this.exportAnToolStripMenuItem_Click);
+            // 
+            // exportProfesorToolStripMenuItem
+            // 
+            this.exportProfesorToolStripMenuItem.Name = "exportProfesorToolStripMenuItem";
+            this.exportProfesorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportProfesorToolStripMenuItem.Text = "Profesor";
+            this.exportProfesorToolStripMenuItem.Click += new System.EventHandler(this.exportProfesorToolStripMenuItem_Click);
+            // 
+            // exportGrupaToolStripMenuItem
+            // 
+            this.exportGrupaToolStripMenuItem.Name = "exportGrupaToolStripMenuItem";
+            this.exportGrupaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportGrupaToolStripMenuItem.Text = "Grupa";
+            this.exportGrupaToolStripMenuItem.Click += new System.EventHandler(this.exportGrupaToolStripMenuItem_Click);
+            // 
+            // exportDisciplinaToolStripMenuItem
+            // 
+            this.exportDisciplinaToolStripMenuItem.Name = "exportDisciplinaToolStripMenuItem";
+            this.exportDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportDisciplinaToolStripMenuItem.Text = "Disciplina";
+            this.exportDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.exportDisciplinaToolStripMenuItem_Click);
             // 
             // xToolStripMenuItem
             // 
@@ -106,19 +143,19 @@
             // profesoriToolStripMenuItem
             // 
             this.profesoriToolStripMenuItem.Name = "profesoriToolStripMenuItem";
-            this.profesoriToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profesoriToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.profesoriToolStripMenuItem.Text = "Profesori";
             // 
             // disciplineToolStripMenuItem
             // 
             this.disciplineToolStripMenuItem.Name = "disciplineToolStripMenuItem";
-            this.disciplineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.disciplineToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.disciplineToolStripMenuItem.Text = "Discipline";
             // 
             // saliToolStripMenuItem
             // 
             this.saliToolStripMenuItem.Name = "saliToolStripMenuItem";
-            this.saliToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saliToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.saliToolStripMenuItem.Text = "Sali";
             // 
             // ajutorToolStripMenuItem
@@ -132,7 +169,7 @@
             // informatiiToolStripMenuItem
             // 
             this.informatiiToolStripMenuItem.Name = "informatiiToolStripMenuItem";
-            this.informatiiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.informatiiToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.informatiiToolStripMenuItem.Text = "Informatii";
             this.informatiiToolStripMenuItem.Click += new System.EventHandler(this.informatiiToolStripMenuItem_Click);
             // 
@@ -216,5 +253,9 @@
 		private System.Windows.Forms.Button btnYear2;
 		private System.Windows.Forms.Button btnYear3;
 		private System.Windows.Forms.Button btnYear4;
-	}
+        private System.Windows.Forms.ToolStripMenuItem exportAnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportProfesorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportGrupaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportDisciplinaToolStripMenuItem;
+    }
 }

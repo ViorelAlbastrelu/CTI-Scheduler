@@ -17,6 +17,7 @@ namespace CTISchedule
         private static CTIScheduleDBEntities db = new CTIScheduleDBEntities();
         private Controller controller = new Controller(db);
         public static Scheduler scheduler;
+        public static Export export;
         public static Start start;
         public Start()
 		{
@@ -46,11 +47,39 @@ namespace CTISchedule
 			}
 		}
 
+        private void exportAnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startExport("Anul");
+        }
+
+        private void exportProfesorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startExport("Profesorul");
+        }
+
+        private void exportGrupaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startExport("Grupa");
+        }
+
+        private void exportDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startExport("Disciplina");
+        }
+
         public void StartSchedule(int anStudiu)
         {
             scheduler = new Scheduler(controller,this, anStudiu);
             scheduler.Show();
             Hide();
+        }
+
+        public void startExport(string nume)
+        {
+            export = new Export(controller, this, nume);
+            export.Show();
+            Hide();
+
         }
 
         private void Start_FormClosed(object sender, FormClosedEventArgs e)
