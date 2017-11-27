@@ -219,6 +219,12 @@
     <Compile Include="Export.Designer.cs">
       <DependentUpon>Export.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDisciplina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDisciplina.Designer.cs">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModul.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     </Compile>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisciplina.resx">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModul.resx">
       <DependentUpon>FormModul.cs</DependentUpon>

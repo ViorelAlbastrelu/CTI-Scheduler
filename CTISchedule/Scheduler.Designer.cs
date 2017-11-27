@@ -1367,10 +1367,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(885, 477);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panel2Sala);
             this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";

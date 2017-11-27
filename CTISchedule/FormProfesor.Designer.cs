@@ -29,50 +29,88 @@
         private void InitializeComponent()
         {
             this.moduleProfesorContainer = new System.Windows.Forms.Panel();
+            this.btnSaveProfesor = new System.Windows.Forms.Button();
+            this.btnDeleteProfesor = new System.Windows.Forms.Button();
+            this.btnCancelProfesor = new System.Windows.Forms.Button();
             this.btnLinkProfesorDisciplina = new System.Windows.Forms.Button();
             this.txtIdProfesor = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelIdentificator = new System.Windows.Forms.Label();
             this.lboxPModule = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelModule = new System.Windows.Forms.Label();
             this.cboxPDiscipline = new System.Windows.Forms.ComboBox();
             this.lboxPDiscipline = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelDiscipline = new System.Windows.Forms.Label();
+            this.labelTitlu = new System.Windows.Forms.Label();
             this.txtTitluProfesor = new System.Windows.Forms.TextBox();
             this.txtNumeProfesor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnSaveModule = new System.Windows.Forms.Button();
-            this.btnDeleteModule = new System.Windows.Forms.Button();
-            this.btnCancelModule = new System.Windows.Forms.Button();
+            this.labelNume = new System.Windows.Forms.Label();
             this.moduleProfesorContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // moduleProfesorContainer
             // 
             this.moduleProfesorContainer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.moduleProfesorContainer.Controls.Add(this.btnSaveModule);
-            this.moduleProfesorContainer.Controls.Add(this.btnDeleteModule);
-            this.moduleProfesorContainer.Controls.Add(this.btnCancelModule);
+            this.moduleProfesorContainer.Controls.Add(this.btnSaveProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.btnDeleteProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.btnCancelProfesor);
             this.moduleProfesorContainer.Controls.Add(this.btnLinkProfesorDisciplina);
             this.moduleProfesorContainer.Controls.Add(this.txtIdProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.label9);
+            this.moduleProfesorContainer.Controls.Add(this.labelIdentificator);
             this.moduleProfesorContainer.Controls.Add(this.lboxPModule);
-            this.moduleProfesorContainer.Controls.Add(this.label8);
+            this.moduleProfesorContainer.Controls.Add(this.labelModule);
             this.moduleProfesorContainer.Controls.Add(this.cboxPDiscipline);
             this.moduleProfesorContainer.Controls.Add(this.lboxPDiscipline);
-            this.moduleProfesorContainer.Controls.Add(this.label7);
-            this.moduleProfesorContainer.Controls.Add(this.label6);
+            this.moduleProfesorContainer.Controls.Add(this.labelDiscipline);
+            this.moduleProfesorContainer.Controls.Add(this.labelTitlu);
             this.moduleProfesorContainer.Controls.Add(this.txtTitluProfesor);
             this.moduleProfesorContainer.Controls.Add(this.txtNumeProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.label5);
+            this.moduleProfesorContainer.Controls.Add(this.labelNume);
             this.moduleProfesorContainer.Dock = System.Windows.Forms.DockStyle.Right;
             this.moduleProfesorContainer.Location = new System.Drawing.Point(0, 0);
             this.moduleProfesorContainer.Name = "moduleProfesorContainer";
             this.moduleProfesorContainer.Size = new System.Drawing.Size(185, 441);
             this.moduleProfesorContainer.TabIndex = 2;
             // 
+            // btnSaveProfesor
+            // 
+            this.btnSaveProfesor.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSaveProfesor.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveProfesor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnSaveProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSaveProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveProfesor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSaveProfesor.Location = new System.Drawing.Point(16, 403);
+            this.btnSaveProfesor.Name = "btnSaveProfesor";
+            this.btnSaveProfesor.Size = new System.Drawing.Size(157, 23);
+            this.btnSaveProfesor.TabIndex = 22;
+            this.btnSaveProfesor.Text = "Salveaza";
+            this.btnSaveProfesor.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteProfesor
+            // 
+            this.btnDeleteProfesor.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDeleteProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteProfesor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDeleteProfesor.Location = new System.Drawing.Point(98, 374);
+            this.btnDeleteProfesor.Name = "btnDeleteProfesor";
+            this.btnDeleteProfesor.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteProfesor.TabIndex = 21;
+            this.btnDeleteProfesor.Text = "Sterge";
+            this.btnDeleteProfesor.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelProfesor
+            // 
+            this.btnCancelProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelProfesor.Location = new System.Drawing.Point(17, 374);
+            this.btnCancelProfesor.Name = "btnCancelProfesor";
+            this.btnCancelProfesor.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelProfesor.TabIndex = 20;
+            this.btnCancelProfesor.Text = "Anuleaza";
+            this.btnCancelProfesor.UseVisualStyleBackColor = true;
+            // 
             // btnLinkProfesorDisciplina
             // 
+            this.btnLinkProfesorDisciplina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLinkProfesorDisciplina.Location = new System.Drawing.Point(107, 152);
             this.btnLinkProfesorDisciplina.Name = "btnLinkProfesorDisciplina";
             this.btnLinkProfesorDisciplina.Size = new System.Drawing.Size(66, 23);
@@ -82,20 +120,20 @@
             // 
             // txtIdProfesor
             // 
-            this.txtIdProfesor.Location = new System.Drawing.Point(81, 14);
+            this.txtIdProfesor.Location = new System.Drawing.Point(81, 11);
             this.txtIdProfesor.Name = "txtIdProfesor";
             this.txtIdProfesor.ReadOnly = true;
             this.txtIdProfesor.Size = new System.Drawing.Size(92, 20);
             this.txtIdProfesor.TabIndex = 14;
             // 
-            // label9
+            // labelIdentificator
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Identificator";
+            this.labelIdentificator.AutoSize = true;
+            this.labelIdentificator.Location = new System.Drawing.Point(13, 14);
+            this.labelIdentificator.Name = "labelIdentificator";
+            this.labelIdentificator.Size = new System.Drawing.Size(62, 13);
+            this.labelIdentificator.TabIndex = 13;
+            this.labelIdentificator.Text = "Identificator";
             // 
             // lboxPModule
             // 
@@ -106,14 +144,14 @@
             this.lboxPModule.Size = new System.Drawing.Size(157, 67);
             this.lboxPModule.TabIndex = 8;
             // 
-            // label8
+            // labelModule
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 253);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Module";
+            this.labelModule.AutoSize = true;
+            this.labelModule.Location = new System.Drawing.Point(13, 253);
+            this.labelModule.Name = "labelModule";
+            this.labelModule.Size = new System.Drawing.Size(42, 13);
+            this.labelModule.TabIndex = 7;
+            this.labelModule.Text = "Module";
             // 
             // cboxPDiscipline
             // 
@@ -134,23 +172,23 @@
             this.lboxPDiscipline.Size = new System.Drawing.Size(157, 54);
             this.lboxPDiscipline.TabIndex = 5;
             // 
-            // label7
+            // labelDiscipline
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Discipline";
+            this.labelDiscipline.AutoSize = true;
+            this.labelDiscipline.Location = new System.Drawing.Point(13, 138);
+            this.labelDiscipline.Name = "labelDiscipline";
+            this.labelDiscipline.Size = new System.Drawing.Size(52, 13);
+            this.labelDiscipline.TabIndex = 4;
+            this.labelDiscipline.Text = "Discipline";
             // 
-            // label6
+            // labelTitlu
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Titlu";
+            this.labelTitlu.AutoSize = true;
+            this.labelTitlu.Location = new System.Drawing.Point(13, 89);
+            this.labelTitlu.Name = "labelTitlu";
+            this.labelTitlu.Size = new System.Drawing.Size(27, 13);
+            this.labelTitlu.TabIndex = 3;
+            this.labelTitlu.Text = "Titlu";
             // 
             // txtTitluProfesor
             // 
@@ -166,51 +204,14 @@
             this.txtNumeProfesor.Size = new System.Drawing.Size(157, 20);
             this.txtNumeProfesor.TabIndex = 1;
             // 
-            // label5
+            // labelNume
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nume";
-            // 
-            // btnSaveModule
-            // 
-            this.btnSaveModule.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSaveModule.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnSaveModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSaveModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSaveModule.Location = new System.Drawing.Point(16, 403);
-            this.btnSaveModule.Name = "btnSaveModule";
-            this.btnSaveModule.Size = new System.Drawing.Size(157, 23);
-            this.btnSaveModule.TabIndex = 22;
-            this.btnSaveModule.Text = "Salveaza";
-            this.btnSaveModule.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteModule
-            // 
-            this.btnDeleteModule.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDeleteModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDeleteModule.Location = new System.Drawing.Point(98, 374);
-            this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteModule.TabIndex = 21;
-            this.btnDeleteModule.Text = "Sterge";
-            this.btnDeleteModule.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelModule
-            // 
-            this.btnCancelModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelModule.Location = new System.Drawing.Point(17, 374);
-            this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelModule.TabIndex = 20;
-            this.btnCancelModule.Text = "Anuleaza";
-            this.btnCancelModule.UseVisualStyleBackColor = true;
+            this.labelNume.AutoSize = true;
+            this.labelNume.Location = new System.Drawing.Point(13, 39);
+            this.labelNume.Name = "labelNume";
+            this.labelNume.Size = new System.Drawing.Size(35, 13);
+            this.labelNume.TabIndex = 0;
+            this.labelNume.Text = "Nume";
             // 
             // FormProfesor
             // 
@@ -230,18 +231,18 @@
         private System.Windows.Forms.Panel moduleProfesorContainer;
         private System.Windows.Forms.Button btnLinkProfesorDisciplina;
         private System.Windows.Forms.TextBox txtIdProfesor;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelIdentificator;
         private System.Windows.Forms.ListBox lboxPModule;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelModule;
         private System.Windows.Forms.ComboBox cboxPDiscipline;
         private System.Windows.Forms.ListBox lboxPDiscipline;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelDiscipline;
+        private System.Windows.Forms.Label labelTitlu;
         private System.Windows.Forms.TextBox txtTitluProfesor;
         private System.Windows.Forms.TextBox txtNumeProfesor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnSaveModule;
-        private System.Windows.Forms.Button btnDeleteModule;
-        private System.Windows.Forms.Button btnCancelModule;
+        private System.Windows.Forms.Label labelNume;
+        private System.Windows.Forms.Button btnSaveProfesor;
+        private System.Windows.Forms.Button btnDeleteProfesor;
+        private System.Windows.Forms.Button btnCancelProfesor;
     }
 }
