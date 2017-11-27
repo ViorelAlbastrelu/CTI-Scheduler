@@ -21,6 +21,7 @@ namespace CTISchedule
         private Controller _controller;
         private int _anStudiu;
         private Start _start;
+        private int pid;
 
         public Scheduler(Controller controller, Start start, int anStudiu)
 		{
@@ -245,7 +246,7 @@ namespace CTISchedule
 
 		private void UpdateDisciplineProfesor()
 		{
-			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out pid) && pid > 0)
 			{
 				try
 				{
@@ -260,7 +261,7 @@ namespace CTISchedule
 
 		private void UpdateAvailableDiscipline()
 		{
-			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out pid) && pid > 0)
 			{
 				try
 				{
@@ -286,7 +287,7 @@ namespace CTISchedule
 
 		private void lboxPDiscipline_DoubleClick(object sender, EventArgs e)
 		{
-			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out pid) && pid > 0)
 			{
 				_controller.DeleteLinkDisciplinaProfesor(pid, (lboxPDiscipline.SelectedItem as ProfesorList).Id);
 				UpdateProfesorModule();
@@ -295,7 +296,7 @@ namespace CTISchedule
 
 		private void btnLinkProfesorDisciplina_Click(object sender, EventArgs e)
 		{
-			if (int.TryParse(txtIdProfesor.Text.ToString(), out int pid) && pid > 0)
+			if (int.TryParse(txtIdProfesor.Text.ToString(), out pid) && pid > 0)
 			{
 				try
 				{
