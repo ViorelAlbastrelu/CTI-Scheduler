@@ -153,11 +153,11 @@
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.moduleFormContainer.SuspendLayout();
@@ -1326,11 +1326,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(640, 441);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ctischeduleDataSetSalaBindingSource
-            // 
-            this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
-            this.ctischeduleDataSetSalaBindingSource.Position = 0;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -1356,17 +1351,22 @@
             this.activitateDataGridViewTextBoxColumn.HeaderText = "Activitate";
             this.activitateDataGridViewTextBoxColumn.Name = "activitateDataGridViewTextBoxColumn";
             // 
+            // ctischeduleDataSetSalaBindingSource
+            // 
+            this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
+            this.ctischeduleDataSetSalaBindingSource.Position = 0;
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(876, 475);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panel2Sala);
-            this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelSchedule);
+            this.Controls.Add(this.panelDiscipline);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);

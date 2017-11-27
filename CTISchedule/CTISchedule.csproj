@@ -219,6 +219,18 @@
     <Compile Include="Export.Designer.cs">
       <DependentUpon>Export.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormModul.Designer.cs">
+      <DependentUpon>FormModul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormProfesor.Designer.cs">
+      <DependentUpon>FormProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informatii.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +312,12 @@
     </Compile>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModul.resx">
+      <DependentUpon>FormModul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfesor.resx">
+      <DependentUpon>FormProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informatii.resx">
       <DependentUpon>Informatii.cs</DependentUpon>
