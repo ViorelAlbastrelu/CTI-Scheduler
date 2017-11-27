@@ -29,23 +29,10 @@ namespace CTISchedule
             _controller = controller;
             _anStudiu = anStudiu;
             _start = start;
-
-			/*
-			this.dgvScheduler.RowHeadersVisible = false;
-			this.dgvScheduler.AllowUserToResizeRows = false;
-			this.dgvScheduler.AllowUserToResizeColumns = false;
-			this.dgvScheduler.Rows.Add("","I", "08:00 - 09:50");
-			this.dgvScheduler.Rows.Add("","II", "10:00 - 11:50");
-			this.dgvScheduler.Rows.Add("L","III", "12:00 - 13:50");
-			this.dgvScheduler.Rows.Add("U","IV", "14:00 - 15:50");
-			this.dgvScheduler.Rows.Add("","V", "16:00 - 17:50");
-			this.dgvScheduler.Rows.Add("","VI", "18:00 - 19:50");
-			*/
 		}
 
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
 		{
-			dgvScheduler.CurrentCell.Selected = false;
 
 		}
 
@@ -86,6 +73,8 @@ namespace CTISchedule
 
         private void Scheduler_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ctischeduleDataSetDisciplinaMain.Disciplina' table. You can move, or remove it, as needed.
+            this.disciplinaTableAdapter1.Fill(this.ctischeduleDataSetDisciplinaMain.Disciplina);
             // TODO: This line of code loads data into the 'ctischeduleDataSetActivitate.Activitate' table. You can move, or remove it, as needed.
             this.activitateTableAdapter.Fill(this.ctischeduleDataSetActivitate.Activitate);
             // TODO: This line of code loads data into the 'ctischeduleDataSetSala.Sala' table. You can move, or remove it, as needed.
@@ -112,7 +101,7 @@ namespace CTISchedule
             {
                 txtNumeProfesor.Text = null;
                 txtTitluProfesor.Text = null;
-                //this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
+                this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
             }
             else
             {
@@ -132,7 +121,7 @@ namespace CTISchedule
             if(txtIdProfesor.Text != "")
             {
                 _controller.DeleteProfesor(int.Parse(txtIdProfesor.Text));
-                //this.profesorTableAdapter.Fill(this.ctischeduleDataSet.Profesor);
+                this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
             }
             else
             {
@@ -143,7 +132,6 @@ namespace CTISchedule
         private void clearDisciplina()
         {
             txtIdDisciplina.Clear();
-            txtCredite.Clear();
             txtNumeDisciplina.Clear();
             cboxDAnStudiu.SelectedIndex = -1;
         }
@@ -158,7 +146,7 @@ namespace CTISchedule
             if(txtIdDisciplina.Text != "")
             {
                 _controller.DeleteDisciplina(int.Parse(txtIdDisciplina.Text));
-                //this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
             }
             else
             {
@@ -175,12 +163,14 @@ namespace CTISchedule
             {
                 Id = Id,
                 Nume = txtNumeDisciplina.Text,
-                An = int.Parse(cboxDAnStudiu.SelectedItem.ToString())
+                An = int.Parse(cboxDAnStudiu.SelectedItem.ToString()),
+                NumeScurt = txtNumeScurt.Text,
+                Semestru = int.Parse(txtSemestru.Text)
             };
             var disciplina = _controller.AddUpdateDisciplina(disciplinaReq);
             if (disciplina != null)
             {
-                //this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
                 this.clearDisciplina();
             }
             else
@@ -259,10 +249,10 @@ namespace CTISchedule
 			{
 				try
 				{
-                    this.disciplinaTableAdapter.FillByProfesorId(this.ctischeduleDataSetDisciplina.Disciplina,pid);
+                    //this.disciplinaTableAdapter.FillByProfesorId(this.ctischeduleDataSetDisciplina.Disciplina,pid);
 
-                    //lboxPDiscipline.DataSource = _controller.UpdateProfesorDisciplina(pid, _anStudiu).ToList();
-					//lboxPDiscipline.DisplayMember = "Nume";
+                    lboxPDiscipline.DataSource = _controller.UpdateProfesorDisciplina(pid, _anStudiu).ToList();
+					lboxPDiscipline.DisplayMember = "Nume";
 				}
 				catch (Exception) { }
 			}
@@ -309,9 +299,9 @@ namespace CTISchedule
 			{
 				try
 				{
-					_controller.LinkDisciplinaProfesor(pid, (cboxPDiscipline.SelectedValue as DisciplinaList).Id);
-				}
-				catch (Exception) { }
+                    _controller.LinkDisciplinaProfesor(pid, int.Parse(cboxPDiscipline.SelectedValue.ToString()));
+                }
+                catch (Exception) { }
 			}
 			UpdateProfesorModule();
 		}
@@ -344,6 +334,11 @@ namespace CTISchedule
         }
 
         private void dgvSali_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void disciplinaBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

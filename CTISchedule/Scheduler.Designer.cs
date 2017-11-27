@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +43,6 @@
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informatiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSchedule = new System.Windows.Forms.Panel();
-            this.orar1 = new CTISchedule.Orar();
             this.moduleFormContainer = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbSaptPara = new System.Windows.Forms.RadioButton();
@@ -66,32 +64,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvScheduler = new System.Windows.Forms.DataGridView();
-            this.daysColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moduleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoursColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sg1Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sg2Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelProfesori = new System.Windows.Forms.Panel();
-            this.panelSali = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ctischeduleDataSetProfesor = new CTISchedule.ctischeduleDataSetProfesor();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.dgvSali = new System.Windows.Forms.DataGridView();
             this.moduleProfesorContainer = new System.Windows.Forms.Panel();
             this.btnLinkProfesorDisciplina = new System.Windows.Forms.Button();
             this.txtIdProfesor = new System.Windows.Forms.TextBox();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetProfesor = new CTISchedule.ctischeduleDataSetProfesor();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSaveProfesor = new System.Windows.Forms.Button();
             this.btnDeleteProfesor = new System.Windows.Forms.Button();
@@ -107,58 +85,83 @@
             this.txtTitluProfesor = new System.Windows.Forms.TextBox();
             this.txtNumeProfesor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProfesori = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSali = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.activitateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetActivitate = new CTISchedule.ctischeduleDataSetActivitate();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dgvSali = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetSala = new CTISchedule.ctischeduleDataSetSala();
             this.panelDiscipline = new System.Windows.Forms.Panel();
             this.moduleDiscplinaContainer = new System.Windows.Forms.Panel();
+            this.txtNumeScurt = new System.Windows.Forms.TextBox();
+            this.disciplinaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetDisciplinaMain = new CTISchedule.ctischeduleDataSetDisciplinaMain();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtSemestru = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtIdDisciplina = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSaveDisciplina = new System.Windows.Forms.Button();
             this.btnDeleteDisciplina = new System.Windows.Forms.Button();
             this.btnCancelDisciplina = new System.Windows.Forms.Button();
-            this.txtCredite = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.cboxDAnStudiu = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtNumeDisciplina = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvDiscipline = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeScurtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semestruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profesorTableAdapter = new CTISchedule.ctischeduleDataSetProfesorTableAdapters.ProfesorTableAdapter();
             this.disciplinaTableAdapter = new CTISchedule.ctischeduleDataSetDisciplinaTableAdapters.DisciplinaTableAdapter();
-            this.ctischeduleDataSetSala = new CTISchedule.ctischeduleDataSetSala();
-            this.salaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salaTableAdapter = new CTISchedule.ctischeduleDataSetSalaTableAdapters.SalaTableAdapter();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ctischeduleDataSetActivitate = new CTISchedule.ctischeduleDataSetActivitate();
-            this.activitateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.activitateTableAdapter = new CTISchedule.ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter();
+            this.disciplinaTableAdapter1 = new CTISchedule.ctischeduleDataSetDisciplinaMainTableAdapters.DisciplinaTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.moduleFormContainer.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduler)).BeginInit();
             this.panelProfesori.SuspendLayout();
-            this.panelSali.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.moduleProfesorContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSali)).BeginInit();
-            this.moduleProfesorContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).BeginInit();
+            this.panelSali.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSali)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).BeginInit();
             this.panelDiscipline.SuspendLayout();
             this.moduleDiscplinaContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -264,23 +267,11 @@
             // panelSchedule
             // 
             this.panelSchedule.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelSchedule.Controls.Add(this.orar1);
             this.panelSchedule.Controls.Add(this.moduleFormContainer);
-            this.panelSchedule.Controls.Add(this.dgvScheduler);
             this.panelSchedule.Location = new System.Drawing.Point(9, 27);
             this.panelSchedule.Name = "panelSchedule";
             this.panelSchedule.Size = new System.Drawing.Size(860, 441);
             this.panelSchedule.TabIndex = 2;
-            // 
-            // orar1
-            // 
-            this.orar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.orar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.orar1.Location = new System.Drawing.Point(0, 1);
-            this.orar1.Name = "orar1";
-            this.orar1.Size = new System.Drawing.Size(678, 441);
-            this.orar1.TabIndex = 2;
-            this.orar1.Load += new System.EventHandler(this.orar1_Load);
             // 
             // moduleFormContainer
             // 
@@ -517,71 +508,238 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Diciplina";
             // 
-            // dgvScheduler
-            // 
-            this.dgvScheduler.AllowUserToDeleteRows = false;
-            this.dgvScheduler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScheduler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.daysColumn,
-            this.moduleColumn,
-            this.hoursColumn,
-            this.sg1Column,
-            this.sg2Column});
-            this.dgvScheduler.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgvScheduler.Location = new System.Drawing.Point(0, 0);
-            this.dgvScheduler.Name = "dgvScheduler";
-            this.dgvScheduler.Size = new System.Drawing.Size(678, 441);
-            this.dgvScheduler.TabIndex = 0;
-            this.dgvScheduler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduler_CellClick);
-            this.dgvScheduler.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvScheduler_CellPainting);
-            // 
-            // daysColumn
-            // 
-            this.daysColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.daysColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.daysColumn.HeaderText = "ZIUA";
-            this.daysColumn.Name = "daysColumn";
-            this.daysColumn.Width = 57;
-            // 
-            // moduleColumn
-            // 
-            this.moduleColumn.HeaderText = "MODUL";
-            this.moduleColumn.Name = "moduleColumn";
-            this.moduleColumn.ReadOnly = true;
-            // 
-            // hoursColumn
-            // 
-            this.hoursColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.hoursColumn.FillWeight = 20F;
-            this.hoursColumn.HeaderText = "ORA";
-            this.hoursColumn.Name = "hoursColumn";
-            this.hoursColumn.ReadOnly = true;
-            this.hoursColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hoursColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.hoursColumn.Width = 21;
-            // 
-            // sg1Column
-            // 
-            this.sg1Column.HeaderText = "22c41a";
-            this.sg1Column.Name = "sg1Column";
-            this.sg1Column.ReadOnly = true;
-            // 
-            // sg2Column
-            // 
-            this.sg2Column.HeaderText = "22c41b";
-            this.sg2Column.Name = "sg2Column";
-            this.sg2Column.ReadOnly = true;
-            // 
             // panelProfesori
             // 
             this.panelProfesori.Controls.Add(this.moduleProfesorContainer);
-            this.panelProfesori.Controls.Add(this.dataGridView1);
-            this.panelProfesori.Controls.Add(this.panelSali);
+            this.panelProfesori.Controls.Add(this.dgvProfesori);
             this.panelProfesori.Location = new System.Drawing.Point(9, 27);
             this.panelProfesori.Name = "panelProfesori";
             this.panelProfesori.Size = new System.Drawing.Size(860, 441);
             this.panelProfesori.TabIndex = 3;
+            // 
+            // moduleProfesorContainer
+            // 
+            this.moduleProfesorContainer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.moduleProfesorContainer.Controls.Add(this.btnLinkProfesorDisciplina);
+            this.moduleProfesorContainer.Controls.Add(this.txtIdProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.label9);
+            this.moduleProfesorContainer.Controls.Add(this.btnSaveProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.btnDeleteProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.btnCancelProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.lboxPModule);
+            this.moduleProfesorContainer.Controls.Add(this.label8);
+            this.moduleProfesorContainer.Controls.Add(this.cboxPDiscipline);
+            this.moduleProfesorContainer.Controls.Add(this.lboxPDiscipline);
+            this.moduleProfesorContainer.Controls.Add(this.label7);
+            this.moduleProfesorContainer.Controls.Add(this.label6);
+            this.moduleProfesorContainer.Controls.Add(this.txtTitluProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.txtNumeProfesor);
+            this.moduleProfesorContainer.Controls.Add(this.label5);
+            this.moduleProfesorContainer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.moduleProfesorContainer.Location = new System.Drawing.Point(639, 0);
+            this.moduleProfesorContainer.Name = "moduleProfesorContainer";
+            this.moduleProfesorContainer.Size = new System.Drawing.Size(221, 441);
+            this.moduleProfesorContainer.TabIndex = 1;
+            // 
+            // btnLinkProfesorDisciplina
+            // 
+            this.btnLinkProfesorDisciplina.Location = new System.Drawing.Point(126, 175);
+            this.btnLinkProfesorDisciplina.Name = "btnLinkProfesorDisciplina";
+            this.btnLinkProfesorDisciplina.Size = new System.Drawing.Size(66, 23);
+            this.btnLinkProfesorDisciplina.TabIndex = 15;
+            this.btnLinkProfesorDisciplina.Text = "Adauga";
+            this.btnLinkProfesorDisciplina.UseVisualStyleBackColor = true;
+            this.btnLinkProfesorDisciplina.Click += new System.EventHandler(this.btnLinkProfesorDisciplina_Click);
+            // 
+            // txtIdProfesor
+            // 
+            this.txtIdProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Id", true));
+            this.txtIdProfesor.Location = new System.Drawing.Point(101, 33);
+            this.txtIdProfesor.Name = "txtIdProfesor";
+            this.txtIdProfesor.ReadOnly = true;
+            this.txtIdProfesor.Size = new System.Drawing.Size(92, 20);
+            this.txtIdProfesor.TabIndex = 14;
+            this.txtIdProfesor.TextChanged += new System.EventHandler(this.txtIdProfesor_TextChanged);
+            // 
+            // profesorBindingSource
+            // 
+            this.profesorBindingSource.DataMember = "Profesor";
+            this.profesorBindingSource.DataSource = this.ctischeduleDataSetProfesor;
+            // 
+            // ctischeduleDataSetProfesor
+            // 
+            this.ctischeduleDataSetProfesor.DataSetName = "ctischeduleDataSetProfesor";
+            this.ctischeduleDataSetProfesor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(33, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Identificator";
+            // 
+            // btnSaveProfesor
+            // 
+            this.btnSaveProfesor.Location = new System.Drawing.Point(36, 394);
+            this.btnSaveProfesor.Name = "btnSaveProfesor";
+            this.btnSaveProfesor.Size = new System.Drawing.Size(157, 23);
+            this.btnSaveProfesor.TabIndex = 12;
+            this.btnSaveProfesor.Text = "Salveaza";
+            this.btnSaveProfesor.UseVisualStyleBackColor = true;
+            this.btnSaveProfesor.Click += new System.EventHandler(this.btnSaveProfesor_Click);
+            // 
+            // btnDeleteProfesor
+            // 
+            this.btnDeleteProfesor.Location = new System.Drawing.Point(118, 365);
+            this.btnDeleteProfesor.Name = "btnDeleteProfesor";
+            this.btnDeleteProfesor.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteProfesor.TabIndex = 11;
+            this.btnDeleteProfesor.Text = "Sterge";
+            this.btnDeleteProfesor.UseVisualStyleBackColor = true;
+            this.btnDeleteProfesor.Click += new System.EventHandler(this.btnDeleteProfesor_Click);
+            // 
+            // btnCancelProfesor
+            // 
+            this.btnCancelProfesor.Location = new System.Drawing.Point(36, 365);
+            this.btnCancelProfesor.Name = "btnCancelProfesor";
+            this.btnCancelProfesor.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelProfesor.TabIndex = 10;
+            this.btnCancelProfesor.Text = "Anuleaza";
+            this.btnCancelProfesor.UseVisualStyleBackColor = true;
+            this.btnCancelProfesor.Click += new System.EventHandler(this.btnCancelProfesor_Click);
+            // 
+            // lboxPModule
+            // 
+            this.lboxPModule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lboxPModule.FormattingEnabled = true;
+            this.lboxPModule.Location = new System.Drawing.Point(36, 292);
+            this.lboxPModule.Name = "lboxPModule";
+            this.lboxPModule.Size = new System.Drawing.Size(157, 67);
+            this.lboxPModule.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(33, 276);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Module";
+            // 
+            // cboxPDiscipline
+            // 
+            this.cboxPDiscipline.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.disciplinaBindingSource, "Id", true));
+            this.cboxPDiscipline.DataSource = this.disciplinaBindingSource;
+            this.cboxPDiscipline.DisplayMember = "NumeScurt";
+            this.cboxPDiscipline.FormattingEnabled = true;
+            this.cboxPDiscipline.Location = new System.Drawing.Point(36, 177);
+            this.cboxPDiscipline.Name = "cboxPDiscipline";
+            this.cboxPDiscipline.Size = new System.Drawing.Size(84, 21);
+            this.cboxPDiscipline.TabIndex = 6;
+            this.cboxPDiscipline.ValueMember = "Id";
+            // 
+            // disciplinaBindingSource
+            // 
+            this.disciplinaBindingSource.DataMember = "Disciplina";
+            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
+            this.disciplinaBindingSource.CurrentChanged += new System.EventHandler(this.disciplinaBindingSource_CurrentChanged);
+            // 
+            // ctischeduleDataSetDisciplina
+            // 
+            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
+            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lboxPDiscipline
+            // 
+            this.lboxPDiscipline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lboxPDiscipline.FormattingEnabled = true;
+            this.lboxPDiscipline.Location = new System.Drawing.Point(36, 204);
+            this.lboxPDiscipline.Name = "lboxPDiscipline";
+            this.lboxPDiscipline.Size = new System.Drawing.Size(157, 54);
+            this.lboxPDiscipline.TabIndex = 5;
+            this.lboxPDiscipline.DoubleClick += new System.EventHandler(this.lboxPDiscipline_DoubleClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Discipline";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(33, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Titlu";
+            // 
+            // txtTitluProfesor
+            // 
+            this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Titlu", true));
+            this.txtTitluProfesor.Location = new System.Drawing.Point(36, 128);
+            this.txtTitluProfesor.Name = "txtTitluProfesor";
+            this.txtTitluProfesor.Size = new System.Drawing.Size(157, 20);
+            this.txtTitluProfesor.TabIndex = 2;
+            this.txtTitluProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
+            // 
+            // txtNumeProfesor
+            // 
+            this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Nume", true));
+            this.txtNumeProfesor.Location = new System.Drawing.Point(36, 76);
+            this.txtNumeProfesor.Name = "txtNumeProfesor";
+            this.txtNumeProfesor.Size = new System.Drawing.Size(157, 20);
+            this.txtNumeProfesor.TabIndex = 1;
+            this.txtNumeProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nume";
+            // 
+            // dgvProfesori
+            // 
+            this.dgvProfesori.AllowUserToAddRows = false;
+            this.dgvProfesori.AutoGenerateColumns = false;
+            this.dgvProfesori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProfesori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.titluDataGridViewTextBoxColumn});
+            this.dgvProfesori.DataSource = this.profesorBindingSource;
+            this.dgvProfesori.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvProfesori.Location = new System.Drawing.Point(0, 0);
+            this.dgvProfesori.Name = "dgvProfesori";
+            this.dgvProfesori.Size = new System.Drawing.Size(640, 441);
+            this.dgvProfesori.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nume";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nume";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // titluDataGridViewTextBoxColumn
+            // 
+            this.titluDataGridViewTextBoxColumn.DataPropertyName = "Titlu";
+            this.titluDataGridViewTextBoxColumn.HeaderText = "Titlu";
+            this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
             // 
             // panelSali
             // 
@@ -590,7 +748,7 @@
             this.panelSali.Location = new System.Drawing.Point(0, 0);
             this.panelSali.Name = "panelSali";
             this.panelSali.Size = new System.Drawing.Size(860, 441);
-            this.panelSali.TabIndex = 2;
+            this.panelSali.TabIndex = 1;
             // 
             // panel1
             // 
@@ -621,6 +779,16 @@
             this.comboBox7.Size = new System.Drawing.Size(156, 21);
             this.comboBox7.TabIndex = 18;
             // 
+            // activitateBindingSource
+            // 
+            this.activitateBindingSource.DataMember = "Activitate";
+            this.activitateBindingSource.DataSource = this.ctischeduleDataSetActivitate;
+            // 
+            // ctischeduleDataSetActivitate
+            // 
+            this.ctischeduleDataSetActivitate.DataSetName = "ctischeduleDataSetActivitate";
+            this.ctischeduleDataSetActivitate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -637,16 +805,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(157, 20);
             this.textBox2.TabIndex = 16;
-            // 
-            // profesorBindingSource
-            // 
-            this.profesorBindingSource.DataMember = "Profesor";
-            this.profesorBindingSource.DataSource = this.ctischeduleDataSetProfesor;
-            // 
-            // ctischeduleDataSetProfesor
-            // 
-            this.ctischeduleDataSetProfesor.DataSetName = "ctischeduleDataSetProfesor";
-            this.ctischeduleDataSetProfesor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label17
             // 
@@ -735,217 +893,40 @@
             this.dgvSali.TabIndex = 0;
             this.dgvSali.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSali_CellContentClick);
             // 
-            // moduleProfesorContainer
+            // dataGridViewTextBoxColumn10
             // 
-            this.moduleProfesorContainer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.moduleProfesorContainer.Controls.Add(this.btnLinkProfesorDisciplina);
-            this.moduleProfesorContainer.Controls.Add(this.txtIdProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.label9);
-            this.moduleProfesorContainer.Controls.Add(this.btnSaveProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.btnDeleteProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.btnCancelProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.lboxPModule);
-            this.moduleProfesorContainer.Controls.Add(this.label8);
-            this.moduleProfesorContainer.Controls.Add(this.cboxPDiscipline);
-            this.moduleProfesorContainer.Controls.Add(this.lboxPDiscipline);
-            this.moduleProfesorContainer.Controls.Add(this.label7);
-            this.moduleProfesorContainer.Controls.Add(this.label6);
-            this.moduleProfesorContainer.Controls.Add(this.txtTitluProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.txtNumeProfesor);
-            this.moduleProfesorContainer.Controls.Add(this.label5);
-            this.moduleProfesorContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleProfesorContainer.Location = new System.Drawing.Point(639, 0);
-            this.moduleProfesorContainer.Name = "moduleProfesorContainer";
-            this.moduleProfesorContainer.Size = new System.Drawing.Size(221, 441);
-            this.moduleProfesorContainer.TabIndex = 1;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // btnLinkProfesorDisciplina
+            // dataGridViewTextBoxColumn11
             // 
-            this.btnLinkProfesorDisciplina.Location = new System.Drawing.Point(126, 175);
-            this.btnLinkProfesorDisciplina.Name = "btnLinkProfesorDisciplina";
-            this.btnLinkProfesorDisciplina.Size = new System.Drawing.Size(66, 23);
-            this.btnLinkProfesorDisciplina.TabIndex = 15;
-            this.btnLinkProfesorDisciplina.Text = "Adauga";
-            this.btnLinkProfesorDisciplina.UseVisualStyleBackColor = true;
-            this.btnLinkProfesorDisciplina.Click += new System.EventHandler(this.btnLinkProfesorDisciplina_Click);
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Nume";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Nume";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // txtIdProfesor
+            // dataGridViewTextBoxColumn12
             // 
-            this.txtIdProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Id", true));
-            this.txtIdProfesor.Location = new System.Drawing.Point(101, 33);
-            this.txtIdProfesor.Name = "txtIdProfesor";
-            this.txtIdProfesor.ReadOnly = true;
-            this.txtIdProfesor.Size = new System.Drawing.Size(92, 20);
-            this.txtIdProfesor.TabIndex = 14;
-            this.txtIdProfesor.TextChanged += new System.EventHandler(this.txtIdProfesor_TextChanged);
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Capacitate";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Capacitate";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // label9
+            // dataGridViewTextBoxColumn13
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(33, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Identificator";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Activitate";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Activitate";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // btnSaveProfesor
+            // salaBindingSource
             // 
-            this.btnSaveProfesor.Location = new System.Drawing.Point(36, 394);
-            this.btnSaveProfesor.Name = "btnSaveProfesor";
-            this.btnSaveProfesor.Size = new System.Drawing.Size(157, 23);
-            this.btnSaveProfesor.TabIndex = 12;
-            this.btnSaveProfesor.Text = "Salveaza";
-            this.btnSaveProfesor.UseVisualStyleBackColor = true;
-            this.btnSaveProfesor.Click += new System.EventHandler(this.btnSaveProfesor_Click);
+            this.salaBindingSource.DataMember = "Sala";
+            this.salaBindingSource.DataSource = this.ctischeduleDataSetSala;
             // 
-            // btnDeleteProfesor
+            // ctischeduleDataSetSala
             // 
-            this.btnDeleteProfesor.Location = new System.Drawing.Point(118, 365);
-            this.btnDeleteProfesor.Name = "btnDeleteProfesor";
-            this.btnDeleteProfesor.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteProfesor.TabIndex = 11;
-            this.btnDeleteProfesor.Text = "Sterge";
-            this.btnDeleteProfesor.UseVisualStyleBackColor = true;
-            this.btnDeleteProfesor.Click += new System.EventHandler(this.btnDeleteProfesor_Click);
-            // 
-            // btnCancelProfesor
-            // 
-            this.btnCancelProfesor.Location = new System.Drawing.Point(36, 365);
-            this.btnCancelProfesor.Name = "btnCancelProfesor";
-            this.btnCancelProfesor.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelProfesor.TabIndex = 10;
-            this.btnCancelProfesor.Text = "Anuleaza";
-            this.btnCancelProfesor.UseVisualStyleBackColor = true;
-            this.btnCancelProfesor.Click += new System.EventHandler(this.btnCancelProfesor_Click);
-            // 
-            // lboxPModule
-            // 
-            this.lboxPModule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lboxPModule.FormattingEnabled = true;
-            this.lboxPModule.Location = new System.Drawing.Point(36, 292);
-            this.lboxPModule.Name = "lboxPModule";
-            this.lboxPModule.Size = new System.Drawing.Size(157, 67);
-            this.lboxPModule.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 276);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Module";
-            // 
-            // cboxPDiscipline
-            // 
-            this.cboxPDiscipline.DataSource = this.disciplinaBindingSource;
-            this.cboxPDiscipline.DisplayMember = "NumeScurt";
-            this.cboxPDiscipline.FormattingEnabled = true;
-            this.cboxPDiscipline.Location = new System.Drawing.Point(36, 177);
-            this.cboxPDiscipline.Name = "cboxPDiscipline";
-            this.cboxPDiscipline.Size = new System.Drawing.Size(84, 21);
-            this.cboxPDiscipline.TabIndex = 6;
-            this.cboxPDiscipline.ValueMember = "Id";
-            // 
-            // disciplinaBindingSource
-            // 
-            this.disciplinaBindingSource.DataMember = "Disciplina";
-            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
-            // 
-            // ctischeduleDataSetDisciplina
-            // 
-            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
-            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lboxPDiscipline
-            // 
-            this.lboxPDiscipline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lboxPDiscipline.FormattingEnabled = true;
-            this.lboxPDiscipline.Location = new System.Drawing.Point(36, 204);
-            this.lboxPDiscipline.Name = "lboxPDiscipline";
-            this.lboxPDiscipline.Size = new System.Drawing.Size(157, 54);
-            this.lboxPDiscipline.TabIndex = 5;
-            this.lboxPDiscipline.DoubleClick += new System.EventHandler(this.lboxPDiscipline_DoubleClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(33, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Discipline";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Titlu";
-            // 
-            // txtTitluProfesor
-            // 
-            this.txtTitluProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Titlu", true));
-            this.txtTitluProfesor.Location = new System.Drawing.Point(36, 128);
-            this.txtTitluProfesor.Name = "txtTitluProfesor";
-            this.txtTitluProfesor.Size = new System.Drawing.Size(157, 20);
-            this.txtTitluProfesor.TabIndex = 2;
-            this.txtTitluProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
-            // 
-            // txtNumeProfesor
-            // 
-            this.txtNumeProfesor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profesorBindingSource, "Nume", true));
-            this.txtNumeProfesor.Location = new System.Drawing.Point(36, 76);
-            this.txtNumeProfesor.Name = "txtNumeProfesor";
-            this.txtNumeProfesor.Size = new System.Drawing.Size(157, 20);
-            this.txtNumeProfesor.TabIndex = 1;
-            this.txtNumeProfesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyLetter_Restriction);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nume";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.titluDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.profesorBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(640, 441);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nume";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nume";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // titluDataGridViewTextBoxColumn
-            // 
-            this.titluDataGridViewTextBoxColumn.DataPropertyName = "Titlu";
-            this.titluDataGridViewTextBoxColumn.HeaderText = "Titlu";
-            this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
+            this.ctischeduleDataSetSala.DataSetName = "ctischeduleDataSetSala";
+            this.ctischeduleDataSetSala.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelDiscipline
             // 
@@ -959,13 +940,15 @@
             // moduleDiscplinaContainer
             // 
             this.moduleDiscplinaContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.moduleDiscplinaContainer.Controls.Add(this.txtNumeScurt);
+            this.moduleDiscplinaContainer.Controls.Add(this.label21);
+            this.moduleDiscplinaContainer.Controls.Add(this.txtSemestru);
+            this.moduleDiscplinaContainer.Controls.Add(this.label19);
             this.moduleDiscplinaContainer.Controls.Add(this.txtIdDisciplina);
             this.moduleDiscplinaContainer.Controls.Add(this.label13);
             this.moduleDiscplinaContainer.Controls.Add(this.btnSaveDisciplina);
             this.moduleDiscplinaContainer.Controls.Add(this.btnDeleteDisciplina);
             this.moduleDiscplinaContainer.Controls.Add(this.btnCancelDisciplina);
-            this.moduleDiscplinaContainer.Controls.Add(this.txtCredite);
-            this.moduleDiscplinaContainer.Controls.Add(this.label12);
             this.moduleDiscplinaContainer.Controls.Add(this.cboxDAnStudiu);
             this.moduleDiscplinaContainer.Controls.Add(this.label11);
             this.moduleDiscplinaContainer.Controls.Add(this.txtNumeDisciplina);
@@ -975,6 +958,50 @@
             this.moduleDiscplinaContainer.Name = "moduleDiscplinaContainer";
             this.moduleDiscplinaContainer.Size = new System.Drawing.Size(221, 441);
             this.moduleDiscplinaContainer.TabIndex = 1;
+            // 
+            // txtNumeScurt
+            // 
+            this.txtNumeScurt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.disciplinaBindingSource1, "NumeScurt", true));
+            this.txtNumeScurt.Location = new System.Drawing.Point(113, 136);
+            this.txtNumeScurt.Name = "txtNumeScurt";
+            this.txtNumeScurt.Size = new System.Drawing.Size(79, 20);
+            this.txtNumeScurt.TabIndex = 20;
+            // 
+            // disciplinaBindingSource1
+            // 
+            this.disciplinaBindingSource1.DataMember = "Disciplina";
+            this.disciplinaBindingSource1.DataSource = this.ctischeduleDataSetDisciplinaMain;
+            // 
+            // ctischeduleDataSetDisciplinaMain
+            // 
+            this.ctischeduleDataSetDisciplinaMain.DataSetName = "ctischeduleDataSetDisciplinaMain";
+            this.ctischeduleDataSetDisciplinaMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(32, 139);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(63, 13);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Nume Scurt";
+            // 
+            // txtSemestru
+            // 
+            this.txtSemestru.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.disciplinaBindingSource1, "Semestru", true));
+            this.txtSemestru.Location = new System.Drawing.Point(113, 167);
+            this.txtSemestru.Name = "txtSemestru";
+            this.txtSemestru.Size = new System.Drawing.Size(79, 20);
+            this.txtSemestru.TabIndex = 18;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(34, 171);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 13);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Semestru";
             // 
             // txtIdDisciplina
             // 
@@ -1023,32 +1050,16 @@
             this.btnCancelDisciplina.UseVisualStyleBackColor = true;
             this.btnCancelDisciplina.Click += new System.EventHandler(this.btnCancelDisciplina_Click);
             // 
-            // txtCredite
-            // 
-            this.txtCredite.Location = new System.Drawing.Point(114, 133);
-            this.txtCredite.Name = "txtCredite";
-            this.txtCredite.Size = new System.Drawing.Size(79, 20);
-            this.txtCredite.TabIndex = 6;
-            this.txtCredite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyDigit_Restriction);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(34, 133);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Credite";
-            // 
             // cboxDAnStudiu
             // 
+            this.cboxDAnStudiu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.disciplinaBindingSource1, "An", true));
             this.cboxDAnStudiu.FormattingEnabled = true;
             this.cboxDAnStudiu.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.cboxDAnStudiu.Location = new System.Drawing.Point(114, 101);
+            this.cboxDAnStudiu.Location = new System.Drawing.Point(113, 104);
             this.cboxDAnStudiu.Name = "cboxDAnStudiu";
             this.cboxDAnStudiu.Size = new System.Drawing.Size(79, 21);
             this.cboxDAnStudiu.TabIndex = 4;
@@ -1064,6 +1075,7 @@
             // 
             // txtNumeDisciplina
             // 
+            this.txtNumeDisciplina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.disciplinaBindingSource1, "Nume", true));
             this.txtNumeDisciplina.Location = new System.Drawing.Point(36, 75);
             this.txtNumeDisciplina.Name = "txtNumeDisciplina";
             this.txtNumeDisciplina.Size = new System.Drawing.Size(156, 20);
@@ -1073,7 +1085,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(34, 104);
+            this.label10.Location = new System.Drawing.Point(33, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 1;
@@ -1081,12 +1093,51 @@
             // 
             // dgvDiscipline
             // 
+            this.dgvDiscipline.AutoGenerateColumns = false;
             this.dgvDiscipline.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiscipline.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.numeScurtDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn16,
+            this.semestruDataGridViewTextBoxColumn});
+            this.dgvDiscipline.DataSource = this.disciplinaBindingSource1;
             this.dgvDiscipline.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvDiscipline.Location = new System.Drawing.Point(0, 0);
             this.dgvDiscipline.Name = "dgvDiscipline";
             this.dgvDiscipline.Size = new System.Drawing.Size(640, 441);
             this.dgvDiscipline.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Nume";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Nume";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // numeScurtDataGridViewTextBoxColumn
+            // 
+            this.numeScurtDataGridViewTextBoxColumn.DataPropertyName = "NumeScurt";
+            this.numeScurtDataGridViewTextBoxColumn.HeaderText = "NumeScurt";
+            this.numeScurtDataGridViewTextBoxColumn.Name = "numeScurtDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "An";
+            this.dataGridViewTextBoxColumn16.HeaderText = "An";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // semestruDataGridViewTextBoxColumn
+            // 
+            this.semestruDataGridViewTextBoxColumn.DataPropertyName = "Semestru";
+            this.semestruDataGridViewTextBoxColumn.HeaderText = "Semestru";
+            this.semestruDataGridViewTextBoxColumn.Name = "semestruDataGridViewTextBoxColumn";
             // 
             // profesorTableAdapter
             // 
@@ -1096,58 +1147,17 @@
             // 
             this.disciplinaTableAdapter.ClearBeforeFill = true;
             // 
-            // ctischeduleDataSetSala
-            // 
-            this.ctischeduleDataSetSala.DataSetName = "ctischeduleDataSetSala";
-            this.ctischeduleDataSetSala.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salaBindingSource
-            // 
-            this.salaBindingSource.DataMember = "Sala";
-            this.salaBindingSource.DataSource = this.ctischeduleDataSetSala;
-            // 
             // salaTableAdapter
             // 
             this.salaTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Nume";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Nume";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Capacitate";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Capacitate";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Activitate";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Activitate";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // ctischeduleDataSetActivitate
-            // 
-            this.ctischeduleDataSetActivitate.DataSetName = "ctischeduleDataSetActivitate";
-            this.ctischeduleDataSetActivitate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // activitateBindingSource
-            // 
-            this.activitateBindingSource.DataMember = "Activitate";
-            this.activitateBindingSource.DataSource = this.ctischeduleDataSetActivitate;
-            // 
             // activitateTableAdapter
             // 
             this.activitateTableAdapter.ClearBeforeFill = true;
+            // 
+            // disciplinaTableAdapter1
+            // 
+            this.disciplinaTableAdapter1.ClearBeforeFill = true;
             // 
             // Scheduler
             // 
@@ -1156,9 +1166,9 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(875, 473);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.panelDiscipline);
+            this.Controls.Add(this.panelProfesori);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
@@ -1170,27 +1180,28 @@
             this.moduleFormContainer.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduler)).EndInit();
             this.panelProfesori.ResumeLayout(false);
+            this.moduleProfesorContainer.ResumeLayout(false);
+            this.moduleProfesorContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetProfesor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).EndInit();
             this.panelSali.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetProfesor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSali)).EndInit();
-            this.moduleProfesorContainer.ResumeLayout(false);
-            this.moduleProfesorContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).EndInit();
             this.panelDiscipline.ResumeLayout(false);
             this.moduleDiscplinaContainer.ResumeLayout(false);
             this.moduleDiscplinaContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetActivitate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1211,12 +1222,6 @@
 		private System.Windows.Forms.ToolStripMenuItem ajutorToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem informatiiToolStripMenuItem;
 		private System.Windows.Forms.Panel panelSchedule;
-		private System.Windows.Forms.DataGridView dgvScheduler;
-		private System.Windows.Forms.DataGridViewTextBoxColumn daysColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn moduleColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn hoursColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn sg1Column;
-		private System.Windows.Forms.DataGridViewTextBoxColumn sg2Column;
         private System.Windows.Forms.Panel moduleFormContainer;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label4;
@@ -1228,12 +1233,7 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelProfesori;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modulsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn disciplinasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvProfesori;
         private System.Windows.Forms.ToolStripMenuItem orarToolStripMenuItem;
         private System.Windows.Forms.Panel moduleProfesorContainer;
         private System.Windows.Forms.ListBox lboxPDiscipline;
@@ -1245,9 +1245,6 @@
         private System.Windows.Forms.ComboBox cboxPDiscipline;
         private System.Windows.Forms.ListBox lboxPModule;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button btnSaveProfesor;
         private System.Windows.Forms.Button btnDeleteProfesor;
         private System.Windows.Forms.Button btnCancelProfesor;
@@ -1258,8 +1255,6 @@
         private System.Windows.Forms.Button btnSaveDisciplina;
         private System.Windows.Forms.Button btnDeleteDisciplina;
         private System.Windows.Forms.Button btnCancelDisciplina;
-        private System.Windows.Forms.TextBox txtCredite;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cboxDAnStudiu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNumeDisciplina;
@@ -1291,7 +1286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn titluDataGridViewTextBoxColumn;
         private ctischeduleDataSetDisciplina ctischeduleDataSetDisciplina;
-        private System.Windows.Forms.BindingSource disciplinaBindingSource;
         private ctischeduleDataSetDisciplinaTableAdapters.DisciplinaTableAdapter disciplinaTableAdapter;
         private System.Windows.Forms.Panel panelSali;
         private System.Windows.Forms.DataGridView dgvSali;
@@ -1307,10 +1301,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacitateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activitateDataGridViewTextBoxColumn;
         private ctischeduleDataSetSala ctischeduleDataSetSala;
         private System.Windows.Forms.BindingSource salaBindingSource;
         private ctischeduleDataSetSalaTableAdapters.SalaTableAdapter salaTableAdapter;
@@ -1321,5 +1311,18 @@
         private ctischeduleDataSetActivitate ctischeduleDataSetActivitate;
         private System.Windows.Forms.BindingSource activitateBindingSource;
         private ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter activitateTableAdapter;
+        private System.Windows.Forms.TextBox txtNumeScurt;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtSemestru;
+        private System.Windows.Forms.Label label19;
+        protected internal System.Windows.Forms.BindingSource disciplinaBindingSource;
+        private ctischeduleDataSetDisciplinaMain ctischeduleDataSetDisciplinaMain;
+        private System.Windows.Forms.BindingSource disciplinaBindingSource1;
+        private ctischeduleDataSetDisciplinaMainTableAdapters.DisciplinaTableAdapter disciplinaTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeScurtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semestruDataGridViewTextBoxColumn;
     }
 }

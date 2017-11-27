@@ -29,7 +29,6 @@ namespace CTISchedule
 				profesor.Titlu = req.Titlu;
 			}
 			else profesor = _context.Profesors.Add(new Profesor(req));
-			
 			_context.SaveChanges();
 			return profesor;
 		}
@@ -108,14 +107,18 @@ namespace CTISchedule
             {
                 disciplina = _context.Disciplinas.Find(req.Id);
                 disciplina.Nume = req.Nume;
+                disciplina.NumeScurt = req.NumeScurt;
                 disciplina.An = req.An;
+                disciplina.Semestru = req.Semestru;
             }
             else
             {
                 disciplina = _context.Disciplinas.Add(new Disciplina()
                 {
                     An = req.An,
-                    Nume = req.Nume
+                    Nume = req.Nume,
+                    NumeScurt = req.NumeScurt,
+                    Semestru = req.Semestru
                 });
             }
             _context.SaveChanges();

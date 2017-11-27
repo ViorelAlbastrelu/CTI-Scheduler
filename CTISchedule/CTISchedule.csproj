@@ -190,10 +190,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetActivitate.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ctischeduleDataSetDisciplina.cs">
+      <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ctischeduleDataSetDisciplina.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctischeduleDataSetDisciplinaMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctischeduleDataSetDisciplinaMain.xsd</DependentUpon>
     </Compile>
     <Compile Include="ctischeduleDataSetProfesor.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -330,6 +338,17 @@
     </None>
     <None Include="ctischeduleDataSetDisciplina.xss">
       <DependentUpon>ctischeduleDataSetDisciplina.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetDisciplinaMain.xsc">
+      <DependentUpon>ctischeduleDataSetDisciplinaMain.xsd</DependentUpon>
+    </None>
+    <None Include="ctischeduleDataSetDisciplinaMain.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctischeduleDataSetDisciplinaMain.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctischeduleDataSetDisciplinaMain.xss">
+      <DependentUpon>ctischeduleDataSetDisciplinaMain.xsd</DependentUpon>
     </None>
     <None Include="ctischeduleDataSetProfesor.xsc">
       <DependentUpon>ctischeduleDataSetProfesor.xsd</DependentUpon>
