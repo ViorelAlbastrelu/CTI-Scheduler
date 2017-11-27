@@ -131,5 +131,36 @@ namespace CTISchedule
             if (disciplina != null) _context.Disciplinas.Remove(disciplina);
             _context.SaveChanges();
         }
-	}
+
+        /*
+         * Sali
+         */
+
+        public Sala AddSala(Sala req)
+        {
+            var sala = _context.Salas.Add(req);
+
+            //Sala sala;
+            //sala = _context.Salas.Add(new Sala()
+            //    {
+          
+            //        Nume = req.Nume,
+            //        Capacitate = req.Capacitate,
+            //        Activitate = req.Activitate,
+                    
+            //});
+          
+            _context.SaveChanges();
+            return sala;
+        }
+
+
+        public void DeleteSala(int idSala)
+        {
+            var sala = _context.Disciplinas.Find(idSala);
+            if (sala != null) _context.Disciplinas.Remove(sala);
+            _context.SaveChanges();
+        }
+
+    }
 }
