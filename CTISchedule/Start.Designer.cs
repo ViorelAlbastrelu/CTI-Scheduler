@@ -79,6 +79,7 @@
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
             this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -94,28 +95,28 @@
             // exportAnToolStripMenuItem
             // 
             this.exportAnToolStripMenuItem.Name = "exportAnToolStripMenuItem";
-            this.exportAnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportAnToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.exportAnToolStripMenuItem.Text = "An";
             this.exportAnToolStripMenuItem.Click += new System.EventHandler(this.exportAnToolStripMenuItem_Click);
             // 
             // exportProfesorToolStripMenuItem
             // 
             this.exportProfesorToolStripMenuItem.Name = "exportProfesorToolStripMenuItem";
-            this.exportProfesorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportProfesorToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.exportProfesorToolStripMenuItem.Text = "Profesor";
             this.exportProfesorToolStripMenuItem.Click += new System.EventHandler(this.exportProfesorToolStripMenuItem_Click);
             // 
             // exportGrupaToolStripMenuItem
             // 
             this.exportGrupaToolStripMenuItem.Name = "exportGrupaToolStripMenuItem";
-            this.exportGrupaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportGrupaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.exportGrupaToolStripMenuItem.Text = "Grupa";
             this.exportGrupaToolStripMenuItem.Click += new System.EventHandler(this.exportGrupaToolStripMenuItem_Click);
             // 
             // exportDisciplinaToolStripMenuItem
             // 
             this.exportDisciplinaToolStripMenuItem.Name = "exportDisciplinaToolStripMenuItem";
-            this.exportDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.exportDisciplinaToolStripMenuItem.Text = "Disciplina";
             this.exportDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.exportDisciplinaToolStripMenuItem_Click);
             // 

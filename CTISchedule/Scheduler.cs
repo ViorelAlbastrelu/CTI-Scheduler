@@ -58,7 +58,7 @@ namespace CTISchedule
 
         private void saliToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel2.BringToFront();
+            panel2Sala.BringToFront();
         }
 
         private void Scheduler_Load(object sender, EventArgs e)

@@ -213,6 +213,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ctischeduleDataSetSala.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export.Designer.cs">
+      <DependentUpon>Export.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informatii.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Export.resx">
+      <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informatii.resx">
       <DependentUpon>Informatii.cs</DependentUpon>
     </EmbeddedResource>

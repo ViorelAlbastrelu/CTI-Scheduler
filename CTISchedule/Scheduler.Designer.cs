@@ -139,7 +139,7 @@
             this.salaTableAdapter = new CTISchedule.ctischeduleDataSetSalaTableAdapters.SalaTableAdapter();
             this.activitateTableAdapter = new CTISchedule.ctischeduleDataSetActivitateTableAdapters.ActivitateTableAdapter();
             this.disciplinaTableAdapter1 = new CTISchedule.ctischeduleDataSetDisciplinaMainTableAdapters.DisciplinaTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2Sala = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -181,7 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel2Sala.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSalaBindingSource)).BeginInit();
@@ -195,7 +195,7 @@
             this.ajutorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1039, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(876, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1181,14 +1181,14 @@
             // 
             this.disciplinaTableAdapter1.ClearBeforeFill = true;
             // 
-            // panel2
+            // panel2Sala
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(9, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 441);
-            this.panel2.TabIndex = 4;
+            this.panel2Sala.Controls.Add(this.panel3);
+            this.panel2Sala.Controls.Add(this.dataGridView1);
+            this.panel2Sala.Location = new System.Drawing.Point(9, 27);
+            this.panel2Sala.Name = "panel2Sala";
+            this.panel2Sala.Size = new System.Drawing.Size(860, 441);
+            this.panel2Sala.TabIndex = 4;
             // 
             // panel3
             // 
@@ -1361,9 +1361,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1039, 582);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(876, 475);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2Sala);
             this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelSchedule);
@@ -1400,7 +1400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panel2Sala.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1527,7 +1527,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeScurtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn semestruDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel2Sala;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
