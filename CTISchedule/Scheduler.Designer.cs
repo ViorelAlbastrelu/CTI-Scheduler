@@ -215,6 +215,7 @@
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
             this.importToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -653,8 +654,8 @@
             // 
             // cboxPDiscipline
             // 
-            this.cboxPDiscipline.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.disciplinaBindingSource, "Id", true));
-            this.cboxPDiscipline.DataSource = this.disciplinaBindingSource;
+            this.cboxPDiscipline.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.disciplinaBindingSource1, "Id", true));
+            this.cboxPDiscipline.DataSource = this.disciplinaBindingSource1;
             this.cboxPDiscipline.DisplayMember = "NumeScurt";
             this.cboxPDiscipline.FormattingEnabled = true;
             this.cboxPDiscipline.Location = new System.Drawing.Point(36, 177);
@@ -1367,8 +1368,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(885, 477);
-            this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
+            this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.panel2Sala);

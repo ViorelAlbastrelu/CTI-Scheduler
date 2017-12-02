@@ -237,6 +237,12 @@
     <Compile Include="FormProfesor.Designer.cs">
       <DependentUpon>FormProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import.Designer.cs">
+      <DependentUpon>Import.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informatii.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfesor.resx">
       <DependentUpon>FormProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import.resx">
+      <DependentUpon>Import.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informatii.resx">
       <DependentUpon>Informatii.cs</DependentUpon>

@@ -19,6 +19,7 @@ namespace CTISchedule
         public static Scheduler scheduler;
         public static Export export;
         public static Start start;
+        public static Import import;
         public Start()
 		{
 			InitializeComponent();
@@ -91,6 +92,12 @@ namespace CTISchedule
         {
             new Informatii().Show();
 
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            import = new Import(controller);
+            import.Show();
         }
     }
 }

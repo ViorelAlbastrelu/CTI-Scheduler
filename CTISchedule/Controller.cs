@@ -17,6 +17,81 @@ namespace CTISchedule
 			_context = context;
 		}
 
+        public void TruncateDB()
+        {
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [DisciplinaProfesor]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('DisciplinaProfesor', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [DisciplinaActivitate]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('DisciplinaActivitate', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Profesor]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Profesor', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Disciplina]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Disciplina', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Sala]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Sala', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [SubGrupa]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('SubGrupa', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Grupa]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Grupa', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Generatie]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Generatie', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Zile]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Zile', RESEED, 0)");
+            _context.Database.ExecuteSqlCommand("DELETE FROM  [Activitate]");
+            _context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Activitate', RESEED, 0)");
+
+            Zile[] zile = new Zile[]
+            {
+                new Zile() { Nume = "Luni"},
+                new Zile() { Nume = "Marti" },
+                new Zile() { Nume = "Miercuri" },
+                new Zile() { Nume = "Joi" },
+                new Zile() { Nume = "Vineri" },
+            };
+
+            Activitate[] activitate = new Activitate[]
+            {
+                new Activitate() { Nume = "Curs" },
+                new Activitate() { Nume = "Seminar" },
+                new Activitate() { Nume = "Laborator" },
+                new Activitate() { Nume = "Proiect" }
+            };
+
+            Generatie[] generatie = new Generatie[]
+            {
+                new Generatie()
+                {
+                    AnStart = DateTime.Now.Year,
+                    AnStop = DateTime.Now.Year+1,
+                    AnStudiu = 1
+                },
+                new Generatie()
+                {
+                    AnStart = DateTime.Now.Year,
+                    AnStop = DateTime.Now.Year+1,
+                    AnStudiu = 2
+                },
+                new Generatie()
+                {
+                    AnStart = DateTime.Now.Year,
+                    AnStop = DateTime.Now.Year+1,
+                    AnStudiu = 3
+                },
+                new Generatie()
+                {
+                    AnStart = DateTime.Now.Year,
+                    AnStop = DateTime.Now.Year+1,
+                    AnStudiu = 4
+                },
+            };
+
+            _context.Ziles.AddRange(zile);
+            _context.Activitates.AddRange(activitate);
+            _context.Generaties.AddRange(generatie);
+
+            _context.SaveChanges();
+        }
+
 		/*
 		 * Profesor */
 
@@ -132,6 +207,13 @@ namespace CTISchedule
             _context.SaveChanges();
         }
 
+        public DisciplinaActivitate AddDisciplinaActivitate(DisciplinaActivitate req)
+        {
+            var disciplinaActivitate = _context.DisciplinaActivitates.Add(req);
+            _context.SaveChanges();
+            return disciplinaActivitate;
+        }
+
         /*
          * Sali
          */
@@ -160,6 +242,35 @@ namespace CTISchedule
             var sala = _context.Disciplinas.Find(idSala);
             if (sala != null) _context.Disciplinas.Remove(sala);
             _context.SaveChanges();
+        }
+
+        /*
+         * EOF Sali
+         */
+
+
+        /*
+         * Generatie/Grupa/Subgrupa
+         */
+
+        public Grupa AddGrupa(Grupa req)
+        {
+            var grupa = _context.Grupas.Add(req);
+            _context.SaveChanges();
+            return grupa;
+        }
+
+        public Grupa CheckIfExists(string name)
+        {
+            var grupa = _context.Grupas.FirstOrDefault(x => x.Nume.Equals(name));
+            return grupa;
+        }
+
+        public SubGrupa AddSubGrupa(SubGrupa req)
+        {
+            var subGrupa = _context.SubGrupas.Add(req);
+            _context.SaveChanges();
+            return subGrupa;
         }
 
     }

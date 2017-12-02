@@ -23,7 +23,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nume" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="NumeScurt" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="An" Type="int" Nullable="false" />
           <Property Name="Semestru" Type="int" Nullable="false" />
@@ -380,7 +380,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nume" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NumeScurt" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="An" Type="Int32" Nullable="false" />
           <Property Name="Semestru" Type="Int32" Nullable="false" />

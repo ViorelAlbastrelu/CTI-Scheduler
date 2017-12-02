@@ -21,6 +21,7 @@ namespace CTISchedule
         private Controller _controller;
         private int _anStudiu;
         private Start _start;
+        private static Import Import;
         private int pid;
 
         public Scheduler(Controller controller, Start start, int anStudiu)
@@ -75,6 +76,8 @@ namespace CTISchedule
         private void Scheduler_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ctischeduleDataSetDisciplinaMain.Disciplina' table. You can move, or remove it, as needed.
+            ctischeduleDataSetDisciplinaMain.EnforceConstraints = false;
+            ctischeduleDataSetDisciplina.EnforceConstraints = false;
             this.disciplinaTableAdapter1.Fill(this.ctischeduleDataSetDisciplinaMain.Disciplina);
             // TODO: This line of code loads data into the 'ctischeduleDataSetActivitate.Activitate' table. You can move, or remove it, as needed.
             this.activitateTableAdapter.Fill(this.ctischeduleDataSetActivitate.Activitate);
@@ -87,6 +90,14 @@ namespace CTISchedule
             // TODO: This line of code loads data into the 'ctischeduleDataSetZile.Zile' table. You can move, or remove it, as needed.
         }
 
+        private void clearProfesor()
+        {
+            dgvProfesori.CurrentCell.Selected = false;
+            txtIdProfesor.Clear();
+            txtNumeProfesor.Clear();
+            txtTitluProfesor.Clear();
+            this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
+        }
         private void btnSaveProfesor_Click(object sender, EventArgs e)
         {
             int Id = 0;
@@ -100,9 +111,7 @@ namespace CTISchedule
             var profesor = _controller.AddUpdateProfesor(profesorReq);
             if (profesor != null)
             {
-                txtNumeProfesor.Text = null;
-                txtTitluProfesor.Text = null;
-                this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
+                this.clearProfesor();
             }
             else
             {
@@ -112,9 +121,7 @@ namespace CTISchedule
 
         private void btnCancelProfesor_Click(object sender, EventArgs e)
         {
-            txtIdProfesor.Clear();
-            txtNumeProfesor.Clear();
-            txtTitluProfesor.Clear();
+            this.clearProfesor();
         }
 
         private void btnDeleteProfesor_Click(object sender, EventArgs e)
@@ -122,7 +129,7 @@ namespace CTISchedule
             if(txtIdProfesor.Text != "")
             {
                 _controller.DeleteProfesor(int.Parse(txtIdProfesor.Text));
-                this.profesorTableAdapter.Fill(this.ctischeduleDataSetProfesor.Profesor);
+                this.clearProfesor();
             }
             else
             {
@@ -135,6 +142,7 @@ namespace CTISchedule
             txtIdDisciplina.Clear();
             txtNumeDisciplina.Clear();
             cboxDAnStudiu.SelectedIndex = -1;
+            this.disciplinaTableAdapter1.Fill(this.ctischeduleDataSetDisciplinaMain.Disciplina);
         }
 
         private void btnCancelDisciplina_Click(object sender, EventArgs e)
@@ -147,7 +155,7 @@ namespace CTISchedule
             if(txtIdDisciplina.Text != "")
             {
                 _controller.DeleteDisciplina(int.Parse(txtIdDisciplina.Text));
-                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
+                this.clearDisciplina();
             }
             else
             {
@@ -171,7 +179,6 @@ namespace CTISchedule
             var disciplina = _controller.AddUpdateDisciplina(disciplinaReq);
             if (disciplina != null)
             {
-                this.disciplinaTableAdapter.Fill(this.ctischeduleDataSetDisciplina.Disciplina);
                 this.clearDisciplina();
             }
             else
@@ -382,6 +389,12 @@ namespace CTISchedule
         private void dgvDiscipline_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Import = new Import(_controller);
+            Import.Show();
         }
     }
 }
