@@ -184,6 +184,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentaZi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentaZi.Designer.cs">
+      <DependentUpon>ComponentaZi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="ctischeduleDataSetActivitate.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -322,6 +328,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ComponentaZi.resx">
+      <DependentUpon>ComponentaZi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.cs</DependentUpon>
     </EmbeddedResource>

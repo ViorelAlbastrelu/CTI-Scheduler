@@ -273,5 +273,11 @@ namespace CTISchedule
             return subGrupa;
         }
 
+        public int getCountSubgrupa(int An)
+        {
+            var countSubgrupa = _context.SubGrupas.Distinct();
+            return countSubgrupa.Count();
+        }
+
     }
 }
