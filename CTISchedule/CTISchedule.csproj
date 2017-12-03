@@ -95,6 +95,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
     </Reference>
@@ -225,6 +226,18 @@
     <Compile Include="Export.Designer.cs">
       <DependentUpon>Export.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportOrarProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExportOrarProfesor.Designer.cs">
+      <DependentUpon>ExportOrarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportOrarSala.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExportOrarSala.Designer.cs">
+      <DependentUpon>ExportOrarSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDisciplina.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -333,6 +346,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportOrarProfesor.resx">
+      <DependentUpon>ExportOrarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportOrarSala.resx">
+      <DependentUpon>ExportOrarSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDisciplina.resx">
       <DependentUpon>FormDisciplina.cs</DependentUpon>

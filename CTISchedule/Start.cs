@@ -68,6 +68,10 @@ namespace CTISchedule
             startExport("Disciplina");
         }
 
+        private void exportSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            startExport("Sala");
+        }
         public void StartSchedule(int anStudiu)
         {
             scheduler = new Scheduler(controller,this, anStudiu);

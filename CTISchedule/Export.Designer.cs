@@ -71,8 +71,10 @@
             // 
             // activeComboBox
             // 
+            this.activeComboBox.DropDownHeight = 150;
             this.activeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeComboBox.FormattingEnabled = true;
+            this.activeComboBox.IntegralHeight = false;
             this.activeComboBox.Location = new System.Drawing.Point(48, 125);
             this.activeComboBox.Name = "activeComboBox";
             this.activeComboBox.Size = new System.Drawing.Size(276, 28);

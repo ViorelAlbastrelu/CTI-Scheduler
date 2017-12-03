@@ -48,6 +48,7 @@
             this.btnYear2 = new System.Windows.Forms.Button();
             this.btnYear3 = new System.Windows.Forms.Button();
             this.btnYear4 = new System.Windows.Forms.Button();
+            this.salaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,8 @@
             this.exportAnToolStripMenuItem,
             this.exportProfesorToolStripMenuItem,
             this.exportGrupaToolStripMenuItem,
-            this.exportDisciplinaToolStripMenuItem});
+            this.exportDisciplinaToolStripMenuItem,
+            this.salaToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "Export";
@@ -95,28 +97,28 @@
             // exportAnToolStripMenuItem
             // 
             this.exportAnToolStripMenuItem.Name = "exportAnToolStripMenuItem";
-            this.exportAnToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.exportAnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportAnToolStripMenuItem.Text = "An";
             this.exportAnToolStripMenuItem.Click += new System.EventHandler(this.exportAnToolStripMenuItem_Click);
             // 
             // exportProfesorToolStripMenuItem
             // 
             this.exportProfesorToolStripMenuItem.Name = "exportProfesorToolStripMenuItem";
-            this.exportProfesorToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.exportProfesorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportProfesorToolStripMenuItem.Text = "Profesor";
             this.exportProfesorToolStripMenuItem.Click += new System.EventHandler(this.exportProfesorToolStripMenuItem_Click);
             // 
             // exportGrupaToolStripMenuItem
             // 
             this.exportGrupaToolStripMenuItem.Name = "exportGrupaToolStripMenuItem";
-            this.exportGrupaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.exportGrupaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportGrupaToolStripMenuItem.Text = "Grupa";
             this.exportGrupaToolStripMenuItem.Click += new System.EventHandler(this.exportGrupaToolStripMenuItem_Click);
             // 
             // exportDisciplinaToolStripMenuItem
             // 
             this.exportDisciplinaToolStripMenuItem.Name = "exportDisciplinaToolStripMenuItem";
-            this.exportDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.exportDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportDisciplinaToolStripMenuItem.Text = "Disciplina";
             this.exportDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.exportDisciplinaToolStripMenuItem_Click);
             // 
@@ -214,6 +216,13 @@
             this.btnYear4.UseVisualStyleBackColor = true;
             this.btnYear4.Click += new System.EventHandler(this.btnYear_Click);
             // 
+            // salaToolStripMenuItem
+            // 
+            this.salaToolStripMenuItem.Name = "salaToolStripMenuItem";
+            this.salaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salaToolStripMenuItem.Text = "Sala";
+            this.salaToolStripMenuItem.Click += new System.EventHandler(this.exportSalaToolStripMenuItem_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem exportProfesorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportGrupaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportDisciplinaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salaToolStripMenuItem;
     }
 }
