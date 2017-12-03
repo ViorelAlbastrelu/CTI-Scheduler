@@ -275,8 +275,10 @@ namespace CTISchedule
 
         public int getCountSubgrupa(int An)
         {
+            //TODO adu nr de subgrupe pentru un an anume
             var countSubgrupa = _context.SubGrupas.Distinct();
-            return countSubgrupa.Count();
+            //return countSubgrupa.Count();
+            return 6;
         }
 
     }

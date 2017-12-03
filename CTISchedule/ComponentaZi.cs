@@ -19,21 +19,35 @@ namespace CTISchedule
         {
             this.controller = controller;
             InitializeComponent();
+
+            adaugaColoaneDinamic("luni");
         }
 
-        public void adaugaColoaneDinamic()
+        public void adaugaColoaneDinamic(string zi)
         {
-            tabelModuleZi.ColumnCount = 6;
+            tabelModuleZi.ColumnCount = controller.getCountSubgrupa(1);
+
             for (int i = 0; i < tabelModuleZi.ColumnCount; i++)
             {
-                for(int j = 0; j < tabelModuleZi.RowCount; j++)
+                for (int j = 0; j < tabelModuleZi.RowCount; j++)
                 {
-                    tabelModuleZi.Controls.Add(setNewLabelForDay("luni"), i, j);
+                    tabelModuleZi.Controls.Add(setNewLabelForDay(zi, i, j), i, j);
                 }
             }
-            //tabelModuleZi.Controls.Add(this.luni_00, 0, 0);
+        }
 
-              
+        private Label setNewLabelForDay(string zi, int i, int j)
+        {
+            Label label = new System.Windows.Forms.Label();
+            label.AutoSize = true;
+            label.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            label.Dock = System.Windows.Forms.DockStyle.Fill;
+            label.Name = zi + i + "" + j;
+            label.Size = new System.Drawing.Size(176, 46);
+            label.TabIndex = tabIndex++;
+            label.MouseEnter += new System.EventHandler(this.moduleCell_MouseEnter);
+            label.MouseLeave += new System.EventHandler(this.moduleCell_MouseLeave);
+            return label;
         }
 
         private void moduleCell_MouseEnter(object sender, EventArgs e)
@@ -48,18 +62,5 @@ namespace CTISchedule
             l.BackColor = System.Drawing.SystemColors.ControlLightLight;
         }
 
-        private Label setNewLabelForDay(string zi)
-        {
-            Label label = new System.Windows.Forms.Label();
-            label.AutoSize = true;
-            label.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.Name = zi + i + "" + j;
-            label.Size = new System.Drawing.Size(176, 46);
-            label.TabIndex = tabIndex++;
-            label.MouseEnter += new System.EventHandler(this.moduleCell_MouseEnter);
-            label.MouseLeave += new System.EventHandler(this.moduleCell_MouseLeave);
-            return label;
-        }
     }
 }
