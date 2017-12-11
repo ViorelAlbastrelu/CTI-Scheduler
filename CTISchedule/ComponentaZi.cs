@@ -12,23 +12,24 @@ namespace CTISchedule
 {
     public partial class ComponentaZi : UserControl
     {
-        private Controller controller;
+
+        //private Controller controller;
         private int tabIndex = 0;
 
-        public ComponentaZi(Controller controller)
+        public ComponentaZi(string zi)
         {
-            this.controller = controller;
             InitializeComponent();
-
-            adaugaColoaneDinamic("luni");
+            adaugaColoaneDinamic(zi);
         }
 
         public void adaugaColoaneDinamic(string zi)
         {
-            tabelModuleZi.ColumnCount = controller.getCountSubgrupa(1);
+            //tabelModuleZi.ColumnCount = controller.getCountSubgrupa(1);
+            tabelModuleZi.ColumnCount = 6;
 
             for (int i = 0; i < tabelModuleZi.ColumnCount; i++)
             {
+                tabelModuleZi.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
                 for (int j = 0; j < tabelModuleZi.RowCount; j++)
                 {
                     tabelModuleZi.Controls.Add(setNewLabelForDay(zi, i, j), i, j);
@@ -38,29 +39,30 @@ namespace CTISchedule
 
         private Label setNewLabelForDay(string zi, int i, int j)
         {
-            Label label = new System.Windows.Forms.Label();
+            Label label = new Label();
+            label.Text = j + "" + i;
             label.AutoSize = true;
-            label.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.Name = zi + i + "" + j;
-            label.Size = new System.Drawing.Size(176, 46);
+            label.BackColor = SystemColors.ControlLightLight;
+            label.Dock = DockStyle.Fill;
+            label.Name = zi + j + "" + i;
+            label.Size = new Size(176, 46);
             label.TabIndex = tabIndex++;
-            label.MouseEnter += new System.EventHandler(this.moduleCell_MouseEnter);
-            label.MouseLeave += new System.EventHandler(this.moduleCell_MouseLeave);
+            label.Margin = new Padding(0);
+            label.MouseEnter += new EventHandler(this.moduleCell_MouseEnter);
+            label.MouseLeave += new EventHandler(this.moduleCell_MouseLeave);
             return label;
         }
 
         private void moduleCell_MouseEnter(object sender, EventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            l.BackColor = SystemColors.GradientActiveCaption;
         }
 
         private void moduleCell_MouseLeave(object sender, EventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            l.BackColor = SystemColors.ControlLightLight;
         }
-
     }
 }
