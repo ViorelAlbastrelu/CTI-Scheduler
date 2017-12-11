@@ -43,6 +43,7 @@
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informatiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSchedule = new System.Windows.Forms.Panel();
+            this.orar2 = new CTISchedule.Orar();
             this.moduleFormContainer = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbSaptPara = new System.Windows.Forms.RadioButton();
@@ -77,8 +78,8 @@
             this.lboxPModule = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboxPDiscipline = new System.Windows.Forms.ComboBox();
-            this.disciplinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ctischeduleDataSetDisciplina = new CTISchedule.ctischeduleDataSetDisciplina();
+            this.disciplinaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetDisciplinaMain = new CTISchedule.ctischeduleDataSetDisciplinaMain();
             this.lboxPDiscipline = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,6 +90,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.disciplinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ctischeduleDataSetDisciplina = new CTISchedule.ctischeduleDataSetDisciplina();
             this.panelSali = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
@@ -114,8 +117,6 @@
             this.panelDiscipline = new System.Windows.Forms.Panel();
             this.moduleDiscplinaContainer = new System.Windows.Forms.Panel();
             this.txtNumeScurt = new System.Windows.Forms.TextBox();
-            this.disciplinaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ctischeduleDataSetDisciplinaMain = new CTISchedule.ctischeduleDataSetDisciplinaMain();
             this.label21 = new System.Windows.Forms.Label();
             this.txtSemestru = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -166,9 +167,11 @@
             this.moduleProfesorContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetProfesor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).BeginInit();
             this.panelSali.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activitateBindingSource)).BeginInit();
@@ -178,8 +181,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSala)).BeginInit();
             this.panelDiscipline.SuspendLayout();
             this.moduleDiscplinaContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).BeginInit();
             this.panel2Sala.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -195,7 +196,7 @@
             this.ajutorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(885, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(899, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -291,11 +292,23 @@
             // panelSchedule
             // 
             this.panelSchedule.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelSchedule.Controls.Add(this.orar2);
             this.panelSchedule.Controls.Add(this.moduleFormContainer);
             this.panelSchedule.Location = new System.Drawing.Point(9, 27);
             this.panelSchedule.Name = "panelSchedule";
-            this.panelSchedule.Size = new System.Drawing.Size(860, 441);
+            this.panelSchedule.Size = new System.Drawing.Size(887, 441);
             this.panelSchedule.TabIndex = 2;
+            // 
+            // orar2
+            // 
+            this.orar2.AutoScroll = true;
+            this.orar2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.orar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orar2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orar2.Location = new System.Drawing.Point(0, 0);
+            this.orar2.Name = "orar2";
+            this.orar2.Size = new System.Drawing.Size(702, 441);
+            this.orar2.TabIndex = 2;
             // 
             // moduleFormContainer
             // 
@@ -318,7 +331,7 @@
             this.moduleFormContainer.Controls.Add(this.splitter1);
             this.moduleFormContainer.Controls.Add(this.label1);
             this.moduleFormContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleFormContainer.Location = new System.Drawing.Point(675, 0);
+            this.moduleFormContainer.Location = new System.Drawing.Point(702, 0);
             this.moduleFormContainer.Name = "moduleFormContainer";
             this.moduleFormContainer.Size = new System.Drawing.Size(185, 441);
             this.moduleFormContainer.TabIndex = 1;
@@ -664,15 +677,15 @@
             this.cboxPDiscipline.TabIndex = 6;
             this.cboxPDiscipline.ValueMember = "Id";
             // 
-            // disciplinaBindingSource
+            // disciplinaBindingSource1
             // 
-            this.disciplinaBindingSource.DataMember = "Disciplina";
-            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
+            this.disciplinaBindingSource1.DataMember = "Disciplina";
+            this.disciplinaBindingSource1.DataSource = this.ctischeduleDataSetDisciplinaMain;
             // 
-            // ctischeduleDataSetDisciplina
+            // ctischeduleDataSetDisciplinaMain
             // 
-            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
-            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ctischeduleDataSetDisciplinaMain.DataSetName = "ctischeduleDataSetDisciplinaMain";
+            this.ctischeduleDataSetDisciplinaMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lboxPDiscipline
             // 
@@ -763,6 +776,16 @@
             this.titluDataGridViewTextBoxColumn.DataPropertyName = "Titlu";
             this.titluDataGridViewTextBoxColumn.HeaderText = "Titlu";
             this.titluDataGridViewTextBoxColumn.Name = "titluDataGridViewTextBoxColumn";
+            // 
+            // disciplinaBindingSource
+            // 
+            this.disciplinaBindingSource.DataMember = "Disciplina";
+            this.disciplinaBindingSource.DataSource = this.ctischeduleDataSetDisciplina;
+            // 
+            // ctischeduleDataSetDisciplina
+            // 
+            this.ctischeduleDataSetDisciplina.DataSetName = "ctischeduleDataSetDisciplina";
+            this.ctischeduleDataSetDisciplina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelSali
             // 
@@ -988,16 +1011,6 @@
             this.txtNumeScurt.Name = "txtNumeScurt";
             this.txtNumeScurt.Size = new System.Drawing.Size(79, 20);
             this.txtNumeScurt.TabIndex = 20;
-            // 
-            // disciplinaBindingSource1
-            // 
-            this.disciplinaBindingSource1.DataMember = "Disciplina";
-            this.disciplinaBindingSource1.DataSource = this.ctischeduleDataSetDisciplinaMain;
-            // 
-            // ctischeduleDataSetDisciplinaMain
-            // 
-            this.ctischeduleDataSetDisciplinaMain.DataSetName = "ctischeduleDataSetDisciplinaMain";
-            this.ctischeduleDataSetDisciplinaMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label21
             // 
@@ -1367,11 +1380,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(885, 477);
-            this.Controls.Add(this.panelProfesori);
-            this.Controls.Add(this.panelDiscipline);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(899, 470);
             this.Controls.Add(this.panelSchedule);
+            this.Controls.Add(this.panelDiscipline);
+            this.Controls.Add(this.panelProfesori);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
@@ -1389,9 +1402,11 @@
             this.moduleProfesorContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetProfesor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesori)).EndInit();
             this.panelSali.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1403,8 +1418,6 @@
             this.panelDiscipline.ResumeLayout(false);
             this.moduleDiscplinaContainer.ResumeLayout(false);
             this.moduleDiscplinaContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplinaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetDisciplinaMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscipline)).EndInit();
             this.panel2Sala.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1552,5 +1565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn capacitateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activitateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ctischeduleDataSetSalaBindingSource;
+        private Orar orar2;
     }
 }
