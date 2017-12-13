@@ -297,7 +297,7 @@
             this.panelSchedule.Location = new System.Drawing.Point(9, 27);
             this.panelSchedule.Name = "panelSchedule";
             this.panelSchedule.Size = new System.Drawing.Size(887, 441);
-            this.panelSchedule.TabIndex = 2;
+            this.panelSchedule.TabIndex = 4;
             // 
             // orar2
             // 
@@ -551,7 +551,7 @@
             this.panelProfesori.Controls.Add(this.dgvProfesori);
             this.panelProfesori.Location = new System.Drawing.Point(9, 27);
             this.panelProfesori.Name = "panelProfesori";
-            this.panelProfesori.Size = new System.Drawing.Size(860, 441);
+            this.panelProfesori.Size = new System.Drawing.Size(887, 441);
             this.panelProfesori.TabIndex = 3;
             // 
             // moduleProfesorContainer
@@ -573,7 +573,7 @@
             this.moduleProfesorContainer.Controls.Add(this.txtNumeProfesor);
             this.moduleProfesorContainer.Controls.Add(this.label5);
             this.moduleProfesorContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleProfesorContainer.Location = new System.Drawing.Point(639, 0);
+            this.moduleProfesorContainer.Location = new System.Drawing.Point(666, 0);
             this.moduleProfesorContainer.Name = "moduleProfesorContainer";
             this.moduleProfesorContainer.Size = new System.Drawing.Size(221, 441);
             this.moduleProfesorContainer.TabIndex = 1;
@@ -791,9 +791,9 @@
             // 
             this.panelSali.Controls.Add(this.panel1);
             this.panelSali.Controls.Add(this.dgvSali);
-            this.panelSali.Location = new System.Drawing.Point(0, 0);
+            this.panelSali.Location = new System.Drawing.Point(9, 27);
             this.panelSali.Name = "panelSali";
-            this.panelSali.Size = new System.Drawing.Size(860, 441);
+            this.panelSali.Size = new System.Drawing.Size(887, 441);
             this.panelSali.TabIndex = 1;
             // 
             // panel1
@@ -811,7 +811,7 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(639, 0);
+            this.panel1.Location = new System.Drawing.Point(666, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 441);
             this.panel1.TabIndex = 2;
@@ -979,7 +979,7 @@
             this.panelDiscipline.Controls.Add(this.dgvDiscipline);
             this.panelDiscipline.Location = new System.Drawing.Point(9, 27);
             this.panelDiscipline.Name = "panelDiscipline";
-            this.panelDiscipline.Size = new System.Drawing.Size(860, 441);
+            this.panelDiscipline.Size = new System.Drawing.Size(887, 441);
             this.panelDiscipline.TabIndex = 2;
             // 
             // moduleDiscplinaContainer
@@ -999,7 +999,7 @@
             this.moduleDiscplinaContainer.Controls.Add(this.txtNumeDisciplina);
             this.moduleDiscplinaContainer.Controls.Add(this.label10);
             this.moduleDiscplinaContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleDiscplinaContainer.Location = new System.Drawing.Point(639, 0);
+            this.moduleDiscplinaContainer.Location = new System.Drawing.Point(666, 0);
             this.moduleDiscplinaContainer.Name = "moduleDiscplinaContainer";
             this.moduleDiscplinaContainer.Size = new System.Drawing.Size(221, 441);
             this.moduleDiscplinaContainer.TabIndex = 1;
@@ -1381,12 +1381,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(899, 470);
-            this.Controls.Add(this.panelSchedule);
-            this.Controls.Add(this.panelDiscipline);
             this.Controls.Add(this.panelProfesori);
+            this.Controls.Add(this.panelDiscipline);
+            this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Scheduler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Scheduler_FormClosed);
             this.Load += new System.EventHandler(this.Scheduler_Load_1);

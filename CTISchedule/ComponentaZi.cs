@@ -48,21 +48,31 @@ namespace CTISchedule
             label.Size = new Size(176, 46);
             label.TabIndex = tabIndex++;
             label.Margin = new Padding(0);
-            label.MouseEnter += new EventHandler(this.moduleCell_MouseEnter);
-            label.MouseLeave += new EventHandler(this.moduleCell_MouseLeave);
+            label.MouseEnter += new EventHandler(moduleCell_MouseEnter);
+            label.MouseLeave += new EventHandler(moduleCell_MouseLeave);
+            label.MouseClick += new MouseEventHandler(moduleCell_MouseClick);
             return label;
         }
 
         private void moduleCell_MouseEnter(object sender, EventArgs e)
         {
-            Label l = (Label)sender;
-            l.BackColor = SystemColors.GradientActiveCaption;
+            Label label = (Label)sender;
+            label.BackColor = SystemColors.GradientActiveCaption;
         }
 
         private void moduleCell_MouseLeave(object sender, EventArgs e)
         {
-            Label l = (Label)sender;
-            l.BackColor = SystemColors.ControlLightLight;
+            Label label = (Label)sender;
+            label.BackColor = SystemColors.ControlLightLight;
+        }
+
+        private void moduleCell_MouseClick(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            label.BackColor = SystemColors.HotTrack;
+            label.Text = label.Name;
+            label.MouseEnter -= new EventHandler(moduleCell_MouseEnter);
+            label.MouseLeave -= new EventHandler(moduleCell_MouseLeave);
         }
     }
 }
