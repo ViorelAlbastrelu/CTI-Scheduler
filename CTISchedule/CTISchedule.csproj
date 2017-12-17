@@ -256,6 +256,18 @@
     <Compile Include="FormProfesor.Designer.cs">
       <DependentUpon>FormProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpExport.Designer.cs">
+      <DependentUpon>HelpExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpImport.Designer.cs">
+      <DependentUpon>HelpImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Import.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +373,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfesor.resx">
       <DependentUpon>FormProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpExport.resx">
+      <DependentUpon>HelpExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpImport.resx">
+      <DependentUpon>HelpImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Import.resx">
       <DependentUpon>Import.cs</DependentUpon>
