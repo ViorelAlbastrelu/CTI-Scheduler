@@ -71,6 +71,8 @@
           <Property Name="IdDisciplina" Type="int" Nullable="false" />
           <Property Name="IdActivitate" Type="int" Nullable="false" />
           <Property Name="IdProfesor" Type="int" Nullable="false" />
+          <Property Name="IdSubGrupa" Type="int" Nullable="false" />
+          <Property Name="IdSala" Type="int" Nullable="false" />
           <Property Name="OraStart" Type="time" Precision="7" Nullable="false" />
           <Property Name="OraStop" Type="time" Precision="7" Nullable="false" />
           <Property Name="SaptPara" Type="bit" />
@@ -203,6 +205,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Modul_Sala">
+          <End Role="Sala" Type="Self.Sala" Multiplicity="1" />
+          <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="IdSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modul_SubGrupa">
+          <End Role="SubGrupa" Type="Self.SubGrupa" Multiplicity="1" />
+          <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubGrupa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="IdSubGrupa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Modul_ZI">
           <End Role="Zile" Type="Self.Zile" Multiplicity="1" />
           <End Role="Modul" Type="Self.Modul" Multiplicity="*" />
@@ -284,6 +310,14 @@
             <End Role="Profesor" EntitySet="Profesor" />
             <End Role="Modul" EntitySet="Modul" />
           </AssociationSet>
+          <AssociationSet Name="FK_Modul_Sala" Association="Self.FK_Modul_Sala">
+            <End Role="Sala" EntitySet="Sala" />
+            <End Role="Modul" EntitySet="Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modul_SubGrupa" Association="Self.FK_Modul_SubGrupa">
+            <End Role="SubGrupa" EntitySet="SubGrupa" />
+            <End Role="Modul" EntitySet="Modul" />
+          </AssociationSet>
           <AssociationSet Name="FK_Modul_ZI" Association="Self.FK_Modul_ZI">
             <End Role="Zile" EntitySet="Zile" />
             <End Role="Modul" EntitySet="Modul" />
@@ -352,6 +386,14 @@
           </AssociationSet>
           <AssociationSet Name="FK_Modul_Profesor" Association="CTIScheduleDBModel.FK_Modul_Profesor">
             <End Role="Profesor" EntitySet="Profesors" />
+            <End Role="Modul" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modul_Sala" Association="CTIScheduleDBModel.FK_Modul_Sala">
+            <End Role="Sala" EntitySet="Salas" />
+            <End Role="Modul" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modul_SubGrupa" Association="CTIScheduleDBModel.FK_Modul_SubGrupa">
+            <End Role="SubGrupa" EntitySet="SubGrupas" />
             <End Role="Modul" EntitySet="Moduls" />
           </AssociationSet>
           <AssociationSet Name="FK_Modul_ZI" Association="CTIScheduleDBModel.FK_Modul_ZI">
@@ -438,12 +480,16 @@
           <Property Name="IdDisciplina" Type="Int32" Nullable="false" />
           <Property Name="IdActivitate" Type="Int32" Nullable="false" />
           <Property Name="IdProfesor" Type="Int32" Nullable="false" />
+          <Property Name="IdSubGrupa" Type="Int32" Nullable="false" />
+          <Property Name="IdSala" Type="Int32" Nullable="false" />
           <Property Name="OraStart" Type="Time" Nullable="false" Precision="7" />
           <Property Name="OraStop" Type="Time" Nullable="false" Precision="7" />
           <Property Name="SaptPara" Type="Boolean" />
           <NavigationProperty Name="Activitate" Relationship="CTIScheduleDBModel.FK_Modul_Activitate" FromRole="Modul" ToRole="Activitate" />
           <NavigationProperty Name="Disciplina" Relationship="CTIScheduleDBModel.FK_Modul_Disciplina" FromRole="Modul" ToRole="Disciplina" />
           <NavigationProperty Name="Profesor" Relationship="CTIScheduleDBModel.FK_Modul_Profesor" FromRole="Modul" ToRole="Profesor" />
+          <NavigationProperty Name="Sala" Relationship="CTIScheduleDBModel.FK_Modul_Sala" FromRole="Modul" ToRole="Sala" />
+          <NavigationProperty Name="SubGrupa" Relationship="CTIScheduleDBModel.FK_Modul_SubGrupa" FromRole="Modul" ToRole="SubGrupa" />
           <NavigationProperty Name="Zile" Relationship="CTIScheduleDBModel.FK_Modul_ZI" FromRole="Modul" ToRole="Zile" />
         </EntityType>
         <EntityType Name="Profesor">
@@ -465,6 +511,7 @@
           <Property Name="Capacitate" Type="Int32" Nullable="false" />
           <Property Name="Activitate" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Activitate1" Relationship="CTIScheduleDBModel.FK_Sala_Activitate" FromRole="Sala" ToRole="Activitate" />
+          <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_Sala" FromRole="Sala" ToRole="Modul" />
         </EntityType>
         <EntityType Name="SubGrupa">
           <Key>
@@ -474,6 +521,7 @@
           <Property Name="Nume" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IdGrupa" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Grupa" Relationship="CTIScheduleDBModel.FK_SubGrupa_Grupa" FromRole="SubGrupa" ToRole="Grupa" />
+          <NavigationProperty Name="Moduls" Relationship="CTIScheduleDBModel.FK_Modul_SubGrupa" FromRole="SubGrupa" ToRole="Modul" />
         </EntityType>
         <EntityType Name="Zile">
           <Key>
@@ -603,6 +651,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Modul_Sala">
+          <End Type="CTIScheduleDBModel.Sala" Role="Sala" Multiplicity="1" />
+          <End Type="CTIScheduleDBModel.Modul" Role="Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="IdSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modul_SubGrupa">
+          <End Type="CTIScheduleDBModel.SubGrupa" Role="SubGrupa" Multiplicity="1" />
+          <End Type="CTIScheduleDBModel.Modul" Role="Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubGrupa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modul">
+              <PropertyRef Name="IdSubGrupa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Modul_ZI">
           <End Type="CTIScheduleDBModel.Zile" Role="Zile" Multiplicity="1" />
           <End Type="CTIScheduleDBModel.Modul" Role="Modul" Multiplicity="*" />
@@ -691,6 +763,8 @@
                 <ScalarProperty Name="SaptPara" ColumnName="SaptPara" />
                 <ScalarProperty Name="OraStop" ColumnName="OraStop" />
                 <ScalarProperty Name="OraStart" ColumnName="OraStart" />
+                <ScalarProperty Name="IdSala" ColumnName="IdSala" />
+                <ScalarProperty Name="IdSubGrupa" ColumnName="IdSubGrupa" />
                 <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
                 <ScalarProperty Name="IdActivitate" ColumnName="IdActivitate" />
                 <ScalarProperty Name="IdDisciplina" ColumnName="IdDisciplina" />

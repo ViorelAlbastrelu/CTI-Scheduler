@@ -30,43 +30,75 @@
         {
             this.tableLayoutPanelOrar = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelVineri18_20 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri18 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri16_18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri16 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri14_16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri14 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri12_14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri12 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri10_12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri8_10 = new System.Windows.Forms.TableLayoutPanel();
+            this.Vineri08 = new System.Windows.Forms.Label();
             this.tableLayoutPanelVineri = new System.Windows.Forms.TableLayoutPanel();
             this.labelVineri = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi18_20 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi18 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi16_18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi16 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi14_16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi14 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi12_14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi12 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi10_12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi8_10 = new System.Windows.Forms.TableLayoutPanel();
+            this.Joi08 = new System.Windows.Forms.Label();
             this.tableLayoutPanelJoi = new System.Windows.Forms.TableLayoutPanel();
             this.labelJoi = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri18_20 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri18 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri16_18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri16 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri14_16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri14 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri12_14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri12 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri10_12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri8_10 = new System.Windows.Forms.TableLayoutPanel();
+            this.Miercuri08 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMiercuri = new System.Windows.Forms.TableLayoutPanel();
             this.labelMiercuri = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti18_20 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti18 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti16_18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti16 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti14_16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti14 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti12_14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti12 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti10_12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti8_10 = new System.Windows.Forms.TableLayoutPanel();
+            this.Marti08 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMarti = new System.Windows.Forms.TableLayoutPanel();
             this.labelMarti = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni18_20 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni18 = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni16_18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni16 = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni14_16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni14 = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni12_14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni12 = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni10_12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelLuni8_10 = new System.Windows.Forms.TableLayoutPanel();
+            this.Luni08 = new System.Windows.Forms.Label();
+            this.tableLayoutPanelLuni = new System.Windows.Forms.TableLayoutPanel();
+            this.labelLuni = new System.Windows.Forms.Label();
             this.tableLayoutPanel18_20 = new System.Windows.Forms.TableLayoutPanel();
             this.label18_20 = new System.Windows.Forms.Label();
             this.tableLayoutPanel16_18 = new System.Windows.Forms.TableLayoutPanel();
@@ -81,13 +113,42 @@
             this.label8_10 = new System.Windows.Forms.Label();
             this.tableLayoutPanelZi = new System.Windows.Forms.TableLayoutPanel();
             this.labelZi = new System.Windows.Forms.Label();
-            this.tableLayoutPanelLuni = new System.Windows.Forms.TableLayoutPanel();
-            this.labelLuni = new System.Windows.Forms.Label();
             this.tableLayoutPanelOrar.SuspendLayout();
+            this.tableLayoutPanelVineri18_20.SuspendLayout();
+            this.tableLayoutPanelVineri16_18.SuspendLayout();
+            this.tableLayoutPanelVineri14_16.SuspendLayout();
+            this.tableLayoutPanelVineri12_14.SuspendLayout();
+            this.tableLayoutPanelVineri10_12.SuspendLayout();
+            this.tableLayoutPanelVineri8_10.SuspendLayout();
             this.tableLayoutPanelVineri.SuspendLayout();
+            this.tableLayoutPanelJoi18_20.SuspendLayout();
+            this.tableLayoutPanelJoi16_18.SuspendLayout();
+            this.tableLayoutPanelJoi14_16.SuspendLayout();
+            this.tableLayoutPanelJoi12_14.SuspendLayout();
+            this.tableLayoutPanelJoi10_12.SuspendLayout();
+            this.tableLayoutPanelJoi8_10.SuspendLayout();
             this.tableLayoutPanelJoi.SuspendLayout();
+            this.tableLayoutPanelMiercuri18_20.SuspendLayout();
+            this.tableLayoutPanelMiercuri16_18.SuspendLayout();
+            this.tableLayoutPanelMiercuri14_16.SuspendLayout();
+            this.tableLayoutPanelMiercuri12_14.SuspendLayout();
+            this.tableLayoutPanelMiercuri10_12.SuspendLayout();
+            this.tableLayoutPanelMiercuri8_10.SuspendLayout();
             this.tableLayoutPanelMiercuri.SuspendLayout();
+            this.tableLayoutPanelMarti18_20.SuspendLayout();
+            this.tableLayoutPanelMarti16_18.SuspendLayout();
+            this.tableLayoutPanelMarti14_16.SuspendLayout();
+            this.tableLayoutPanelMarti12_14.SuspendLayout();
+            this.tableLayoutPanelMarti10_12.SuspendLayout();
+            this.tableLayoutPanelMarti8_10.SuspendLayout();
             this.tableLayoutPanelMarti.SuspendLayout();
+            this.tableLayoutPanelLuni18_20.SuspendLayout();
+            this.tableLayoutPanelLuni16_18.SuspendLayout();
+            this.tableLayoutPanelLuni14_16.SuspendLayout();
+            this.tableLayoutPanelLuni12_14.SuspendLayout();
+            this.tableLayoutPanelLuni10_12.SuspendLayout();
+            this.tableLayoutPanelLuni8_10.SuspendLayout();
+            this.tableLayoutPanelLuni.SuspendLayout();
             this.tableLayoutPanel18_20.SuspendLayout();
             this.tableLayoutPanel16_18.SuspendLayout();
             this.tableLayoutPanel14_16.SuspendLayout();
@@ -95,7 +156,6 @@
             this.tableLayoutPanel10_12.SuspendLayout();
             this.tableLayoutPanel8_10.SuspendLayout();
             this.tableLayoutPanelZi.SuspendLayout();
-            this.tableLayoutPanelLuni.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelOrar
@@ -170,6 +230,7 @@
             this.tableLayoutPanelVineri18_20.ColumnCount = 1;
             this.tableLayoutPanelVineri18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri18_20.Controls.Add(this.Vineri18, 0, 0);
             this.tableLayoutPanelVineri18_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri18_20.Location = new System.Drawing.Point(1065, 411);
             this.tableLayoutPanelVineri18_20.Name = "tableLayoutPanelVineri18_20";
@@ -179,12 +240,23 @@
             this.tableLayoutPanelVineri18_20.Size = new System.Drawing.Size(172, 86);
             this.tableLayoutPanelVineri18_20.TabIndex = 41;
             // 
+            // Vineri18
+            // 
+            this.Vineri18.AutoSize = true;
+            this.Vineri18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri18.Location = new System.Drawing.Point(3, 0);
+            this.Vineri18.Name = "Vineri18";
+            this.Vineri18.Size = new System.Drawing.Size(166, 86);
+            this.Vineri18.TabIndex = 2;
+            this.Vineri18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelVineri16_18
             // 
             this.tableLayoutPanelVineri16_18.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelVineri16_18.ColumnCount = 1;
             this.tableLayoutPanelVineri16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri16_18.Controls.Add(this.Vineri16, 0, 0);
             this.tableLayoutPanelVineri16_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri16_18.Location = new System.Drawing.Point(888, 411);
             this.tableLayoutPanelVineri16_18.Name = "tableLayoutPanelVineri16_18";
@@ -194,12 +266,23 @@
             this.tableLayoutPanelVineri16_18.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelVineri16_18.TabIndex = 40;
             // 
+            // Vineri16
+            // 
+            this.Vineri16.AutoSize = true;
+            this.Vineri16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri16.Location = new System.Drawing.Point(3, 0);
+            this.Vineri16.Name = "Vineri16";
+            this.Vineri16.Size = new System.Drawing.Size(165, 86);
+            this.Vineri16.TabIndex = 2;
+            this.Vineri16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelVineri14_16
             // 
             this.tableLayoutPanelVineri14_16.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelVineri14_16.ColumnCount = 1;
             this.tableLayoutPanelVineri14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri14_16.Controls.Add(this.Vineri14, 0, 0);
             this.tableLayoutPanelVineri14_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri14_16.Location = new System.Drawing.Point(711, 411);
             this.tableLayoutPanelVineri14_16.Name = "tableLayoutPanelVineri14_16";
@@ -209,12 +292,23 @@
             this.tableLayoutPanelVineri14_16.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelVineri14_16.TabIndex = 39;
             // 
+            // Vineri14
+            // 
+            this.Vineri14.AutoSize = true;
+            this.Vineri14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri14.Location = new System.Drawing.Point(3, 0);
+            this.Vineri14.Name = "Vineri14";
+            this.Vineri14.Size = new System.Drawing.Size(165, 86);
+            this.Vineri14.TabIndex = 2;
+            this.Vineri14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelVineri12_14
             // 
             this.tableLayoutPanelVineri12_14.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelVineri12_14.ColumnCount = 1;
             this.tableLayoutPanelVineri12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri12_14.Controls.Add(this.Vineri12, 0, 0);
             this.tableLayoutPanelVineri12_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri12_14.Location = new System.Drawing.Point(534, 411);
             this.tableLayoutPanelVineri12_14.Name = "tableLayoutPanelVineri12_14";
@@ -224,12 +318,23 @@
             this.tableLayoutPanelVineri12_14.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelVineri12_14.TabIndex = 38;
             // 
+            // Vineri12
+            // 
+            this.Vineri12.AutoSize = true;
+            this.Vineri12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri12.Location = new System.Drawing.Point(3, 0);
+            this.Vineri12.Name = "Vineri12";
+            this.Vineri12.Size = new System.Drawing.Size(165, 86);
+            this.Vineri12.TabIndex = 2;
+            this.Vineri12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelVineri10_12
             // 
             this.tableLayoutPanelVineri10_12.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelVineri10_12.ColumnCount = 1;
             this.tableLayoutPanelVineri10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri10_12.Controls.Add(this.Vineri10, 0, 0);
             this.tableLayoutPanelVineri10_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri10_12.Location = new System.Drawing.Point(357, 411);
             this.tableLayoutPanelVineri10_12.Name = "tableLayoutPanelVineri10_12";
@@ -239,12 +344,23 @@
             this.tableLayoutPanelVineri10_12.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelVineri10_12.TabIndex = 37;
             // 
+            // Vineri10
+            // 
+            this.Vineri10.AutoSize = true;
+            this.Vineri10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri10.Location = new System.Drawing.Point(3, 0);
+            this.Vineri10.Name = "Vineri10";
+            this.Vineri10.Size = new System.Drawing.Size(165, 86);
+            this.Vineri10.TabIndex = 2;
+            this.Vineri10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelVineri8_10
             // 
             this.tableLayoutPanelVineri8_10.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelVineri8_10.ColumnCount = 1;
             this.tableLayoutPanelVineri8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelVineri8_10.Controls.Add(this.Vineri08, 0, 0);
             this.tableLayoutPanelVineri8_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelVineri8_10.Location = new System.Drawing.Point(180, 411);
             this.tableLayoutPanelVineri8_10.Name = "tableLayoutPanelVineri8_10";
@@ -253,6 +369,16 @@
             this.tableLayoutPanelVineri8_10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelVineri8_10.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelVineri8_10.TabIndex = 36;
+            // 
+            // Vineri08
+            // 
+            this.Vineri08.AutoSize = true;
+            this.Vineri08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vineri08.Location = new System.Drawing.Point(3, 0);
+            this.Vineri08.Name = "Vineri08";
+            this.Vineri08.Size = new System.Drawing.Size(165, 86);
+            this.Vineri08.TabIndex = 2;
+            this.Vineri08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelVineri
             // 
@@ -287,6 +413,7 @@
             this.tableLayoutPanelJoi18_20.ColumnCount = 1;
             this.tableLayoutPanelJoi18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi18_20.Controls.Add(this.Joi18, 0, 0);
             this.tableLayoutPanelJoi18_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi18_20.Location = new System.Drawing.Point(1065, 319);
             this.tableLayoutPanelJoi18_20.Name = "tableLayoutPanelJoi18_20";
@@ -296,12 +423,23 @@
             this.tableLayoutPanelJoi18_20.Size = new System.Drawing.Size(172, 86);
             this.tableLayoutPanelJoi18_20.TabIndex = 34;
             // 
+            // Joi18
+            // 
+            this.Joi18.AutoSize = true;
+            this.Joi18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi18.Location = new System.Drawing.Point(3, 0);
+            this.Joi18.Name = "Joi18";
+            this.Joi18.Size = new System.Drawing.Size(166, 86);
+            this.Joi18.TabIndex = 2;
+            this.Joi18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelJoi16_18
             // 
             this.tableLayoutPanelJoi16_18.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelJoi16_18.ColumnCount = 1;
             this.tableLayoutPanelJoi16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi16_18.Controls.Add(this.Joi16, 0, 0);
             this.tableLayoutPanelJoi16_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi16_18.Location = new System.Drawing.Point(888, 319);
             this.tableLayoutPanelJoi16_18.Name = "tableLayoutPanelJoi16_18";
@@ -311,12 +449,23 @@
             this.tableLayoutPanelJoi16_18.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelJoi16_18.TabIndex = 33;
             // 
+            // Joi16
+            // 
+            this.Joi16.AutoSize = true;
+            this.Joi16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi16.Location = new System.Drawing.Point(3, 0);
+            this.Joi16.Name = "Joi16";
+            this.Joi16.Size = new System.Drawing.Size(165, 86);
+            this.Joi16.TabIndex = 2;
+            this.Joi16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelJoi14_16
             // 
             this.tableLayoutPanelJoi14_16.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelJoi14_16.ColumnCount = 1;
             this.tableLayoutPanelJoi14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi14_16.Controls.Add(this.Joi14, 0, 0);
             this.tableLayoutPanelJoi14_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi14_16.Location = new System.Drawing.Point(711, 319);
             this.tableLayoutPanelJoi14_16.Name = "tableLayoutPanelJoi14_16";
@@ -326,12 +475,23 @@
             this.tableLayoutPanelJoi14_16.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelJoi14_16.TabIndex = 32;
             // 
+            // Joi14
+            // 
+            this.Joi14.AutoSize = true;
+            this.Joi14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi14.Location = new System.Drawing.Point(3, 0);
+            this.Joi14.Name = "Joi14";
+            this.Joi14.Size = new System.Drawing.Size(165, 86);
+            this.Joi14.TabIndex = 2;
+            this.Joi14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelJoi12_14
             // 
             this.tableLayoutPanelJoi12_14.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelJoi12_14.ColumnCount = 1;
             this.tableLayoutPanelJoi12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi12_14.Controls.Add(this.Joi12, 0, 0);
             this.tableLayoutPanelJoi12_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi12_14.Location = new System.Drawing.Point(534, 319);
             this.tableLayoutPanelJoi12_14.Name = "tableLayoutPanelJoi12_14";
@@ -341,12 +501,23 @@
             this.tableLayoutPanelJoi12_14.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelJoi12_14.TabIndex = 31;
             // 
+            // Joi12
+            // 
+            this.Joi12.AutoSize = true;
+            this.Joi12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi12.Location = new System.Drawing.Point(3, 0);
+            this.Joi12.Name = "Joi12";
+            this.Joi12.Size = new System.Drawing.Size(165, 86);
+            this.Joi12.TabIndex = 2;
+            this.Joi12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelJoi10_12
             // 
             this.tableLayoutPanelJoi10_12.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelJoi10_12.ColumnCount = 1;
             this.tableLayoutPanelJoi10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi10_12.Controls.Add(this.Joi10, 0, 0);
             this.tableLayoutPanelJoi10_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi10_12.Location = new System.Drawing.Point(357, 319);
             this.tableLayoutPanelJoi10_12.Name = "tableLayoutPanelJoi10_12";
@@ -356,12 +527,23 @@
             this.tableLayoutPanelJoi10_12.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelJoi10_12.TabIndex = 30;
             // 
+            // Joi10
+            // 
+            this.Joi10.AutoSize = true;
+            this.Joi10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi10.Location = new System.Drawing.Point(3, 0);
+            this.Joi10.Name = "Joi10";
+            this.Joi10.Size = new System.Drawing.Size(165, 86);
+            this.Joi10.TabIndex = 2;
+            this.Joi10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelJoi8_10
             // 
             this.tableLayoutPanelJoi8_10.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelJoi8_10.ColumnCount = 1;
             this.tableLayoutPanelJoi8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelJoi8_10.Controls.Add(this.Joi08, 0, 0);
             this.tableLayoutPanelJoi8_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelJoi8_10.Location = new System.Drawing.Point(180, 319);
             this.tableLayoutPanelJoi8_10.Name = "tableLayoutPanelJoi8_10";
@@ -370,6 +552,16 @@
             this.tableLayoutPanelJoi8_10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelJoi8_10.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelJoi8_10.TabIndex = 29;
+            // 
+            // Joi08
+            // 
+            this.Joi08.AutoSize = true;
+            this.Joi08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Joi08.Location = new System.Drawing.Point(3, 0);
+            this.Joi08.Name = "Joi08";
+            this.Joi08.Size = new System.Drawing.Size(165, 86);
+            this.Joi08.TabIndex = 2;
+            this.Joi08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelJoi
             // 
@@ -404,6 +596,7 @@
             this.tableLayoutPanelMiercuri18_20.ColumnCount = 1;
             this.tableLayoutPanelMiercuri18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri18_20.Controls.Add(this.Miercuri18, 0, 0);
             this.tableLayoutPanelMiercuri18_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri18_20.Location = new System.Drawing.Point(1065, 227);
             this.tableLayoutPanelMiercuri18_20.Name = "tableLayoutPanelMiercuri18_20";
@@ -413,12 +606,23 @@
             this.tableLayoutPanelMiercuri18_20.Size = new System.Drawing.Size(172, 86);
             this.tableLayoutPanelMiercuri18_20.TabIndex = 27;
             // 
+            // Miercuri18
+            // 
+            this.Miercuri18.AutoSize = true;
+            this.Miercuri18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri18.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri18.Name = "Miercuri18";
+            this.Miercuri18.Size = new System.Drawing.Size(166, 86);
+            this.Miercuri18.TabIndex = 2;
+            this.Miercuri18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMiercuri16_18
             // 
             this.tableLayoutPanelMiercuri16_18.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMiercuri16_18.ColumnCount = 1;
             this.tableLayoutPanelMiercuri16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri16_18.Controls.Add(this.Miercuri16, 0, 0);
             this.tableLayoutPanelMiercuri16_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri16_18.Location = new System.Drawing.Point(888, 227);
             this.tableLayoutPanelMiercuri16_18.Name = "tableLayoutPanelMiercuri16_18";
@@ -428,12 +632,23 @@
             this.tableLayoutPanelMiercuri16_18.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMiercuri16_18.TabIndex = 26;
             // 
+            // Miercuri16
+            // 
+            this.Miercuri16.AutoSize = true;
+            this.Miercuri16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri16.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri16.Name = "Miercuri16";
+            this.Miercuri16.Size = new System.Drawing.Size(165, 86);
+            this.Miercuri16.TabIndex = 2;
+            this.Miercuri16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMiercuri14_16
             // 
             this.tableLayoutPanelMiercuri14_16.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMiercuri14_16.ColumnCount = 1;
             this.tableLayoutPanelMiercuri14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri14_16.Controls.Add(this.Miercuri14, 0, 0);
             this.tableLayoutPanelMiercuri14_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri14_16.Location = new System.Drawing.Point(711, 227);
             this.tableLayoutPanelMiercuri14_16.Name = "tableLayoutPanelMiercuri14_16";
@@ -443,12 +658,23 @@
             this.tableLayoutPanelMiercuri14_16.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMiercuri14_16.TabIndex = 25;
             // 
+            // Miercuri14
+            // 
+            this.Miercuri14.AutoSize = true;
+            this.Miercuri14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri14.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri14.Name = "Miercuri14";
+            this.Miercuri14.Size = new System.Drawing.Size(165, 86);
+            this.Miercuri14.TabIndex = 2;
+            this.Miercuri14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMiercuri12_14
             // 
             this.tableLayoutPanelMiercuri12_14.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMiercuri12_14.ColumnCount = 1;
             this.tableLayoutPanelMiercuri12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri12_14.Controls.Add(this.Miercuri12, 0, 0);
             this.tableLayoutPanelMiercuri12_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri12_14.Location = new System.Drawing.Point(534, 227);
             this.tableLayoutPanelMiercuri12_14.Name = "tableLayoutPanelMiercuri12_14";
@@ -458,12 +684,23 @@
             this.tableLayoutPanelMiercuri12_14.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMiercuri12_14.TabIndex = 24;
             // 
+            // Miercuri12
+            // 
+            this.Miercuri12.AutoSize = true;
+            this.Miercuri12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri12.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri12.Name = "Miercuri12";
+            this.Miercuri12.Size = new System.Drawing.Size(165, 86);
+            this.Miercuri12.TabIndex = 2;
+            this.Miercuri12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMiercuri10_12
             // 
             this.tableLayoutPanelMiercuri10_12.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMiercuri10_12.ColumnCount = 1;
             this.tableLayoutPanelMiercuri10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri10_12.Controls.Add(this.Miercuri10, 0, 0);
             this.tableLayoutPanelMiercuri10_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri10_12.Location = new System.Drawing.Point(357, 227);
             this.tableLayoutPanelMiercuri10_12.Name = "tableLayoutPanelMiercuri10_12";
@@ -473,12 +710,23 @@
             this.tableLayoutPanelMiercuri10_12.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMiercuri10_12.TabIndex = 23;
             // 
+            // Miercuri10
+            // 
+            this.Miercuri10.AutoSize = true;
+            this.Miercuri10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri10.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri10.Name = "Miercuri10";
+            this.Miercuri10.Size = new System.Drawing.Size(165, 86);
+            this.Miercuri10.TabIndex = 2;
+            this.Miercuri10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMiercuri8_10
             // 
             this.tableLayoutPanelMiercuri8_10.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMiercuri8_10.ColumnCount = 1;
             this.tableLayoutPanelMiercuri8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMiercuri8_10.Controls.Add(this.Miercuri08, 0, 0);
             this.tableLayoutPanelMiercuri8_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMiercuri8_10.Location = new System.Drawing.Point(180, 227);
             this.tableLayoutPanelMiercuri8_10.Name = "tableLayoutPanelMiercuri8_10";
@@ -487,6 +735,16 @@
             this.tableLayoutPanelMiercuri8_10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMiercuri8_10.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMiercuri8_10.TabIndex = 22;
+            // 
+            // Miercuri08
+            // 
+            this.Miercuri08.AutoSize = true;
+            this.Miercuri08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Miercuri08.Location = new System.Drawing.Point(3, 0);
+            this.Miercuri08.Name = "Miercuri08";
+            this.Miercuri08.Size = new System.Drawing.Size(165, 86);
+            this.Miercuri08.TabIndex = 2;
+            this.Miercuri08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelMiercuri
             // 
@@ -521,6 +779,7 @@
             this.tableLayoutPanelMarti18_20.ColumnCount = 1;
             this.tableLayoutPanelMarti18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti18_20.Controls.Add(this.Marti18, 0, 0);
             this.tableLayoutPanelMarti18_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti18_20.Location = new System.Drawing.Point(1065, 135);
             this.tableLayoutPanelMarti18_20.Name = "tableLayoutPanelMarti18_20";
@@ -530,12 +789,23 @@
             this.tableLayoutPanelMarti18_20.Size = new System.Drawing.Size(172, 86);
             this.tableLayoutPanelMarti18_20.TabIndex = 20;
             // 
+            // Marti18
+            // 
+            this.Marti18.AutoSize = true;
+            this.Marti18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti18.Location = new System.Drawing.Point(3, 0);
+            this.Marti18.Name = "Marti18";
+            this.Marti18.Size = new System.Drawing.Size(166, 86);
+            this.Marti18.TabIndex = 2;
+            this.Marti18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMarti16_18
             // 
             this.tableLayoutPanelMarti16_18.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMarti16_18.ColumnCount = 1;
             this.tableLayoutPanelMarti16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti16_18.Controls.Add(this.Marti16, 0, 0);
             this.tableLayoutPanelMarti16_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti16_18.Location = new System.Drawing.Point(888, 135);
             this.tableLayoutPanelMarti16_18.Name = "tableLayoutPanelMarti16_18";
@@ -545,12 +815,23 @@
             this.tableLayoutPanelMarti16_18.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMarti16_18.TabIndex = 19;
             // 
+            // Marti16
+            // 
+            this.Marti16.AutoSize = true;
+            this.Marti16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti16.Location = new System.Drawing.Point(3, 0);
+            this.Marti16.Name = "Marti16";
+            this.Marti16.Size = new System.Drawing.Size(165, 86);
+            this.Marti16.TabIndex = 2;
+            this.Marti16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMarti14_16
             // 
             this.tableLayoutPanelMarti14_16.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMarti14_16.ColumnCount = 1;
             this.tableLayoutPanelMarti14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti14_16.Controls.Add(this.Marti14, 0, 0);
             this.tableLayoutPanelMarti14_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti14_16.Location = new System.Drawing.Point(711, 135);
             this.tableLayoutPanelMarti14_16.Name = "tableLayoutPanelMarti14_16";
@@ -560,12 +841,23 @@
             this.tableLayoutPanelMarti14_16.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMarti14_16.TabIndex = 18;
             // 
+            // Marti14
+            // 
+            this.Marti14.AutoSize = true;
+            this.Marti14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti14.Location = new System.Drawing.Point(3, 0);
+            this.Marti14.Name = "Marti14";
+            this.Marti14.Size = new System.Drawing.Size(165, 86);
+            this.Marti14.TabIndex = 2;
+            this.Marti14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMarti12_14
             // 
             this.tableLayoutPanelMarti12_14.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMarti12_14.ColumnCount = 1;
             this.tableLayoutPanelMarti12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti12_14.Controls.Add(this.Marti12, 0, 0);
             this.tableLayoutPanelMarti12_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti12_14.Location = new System.Drawing.Point(534, 135);
             this.tableLayoutPanelMarti12_14.Name = "tableLayoutPanelMarti12_14";
@@ -575,12 +867,23 @@
             this.tableLayoutPanelMarti12_14.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMarti12_14.TabIndex = 17;
             // 
+            // Marti12
+            // 
+            this.Marti12.AutoSize = true;
+            this.Marti12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti12.Location = new System.Drawing.Point(3, 0);
+            this.Marti12.Name = "Marti12";
+            this.Marti12.Size = new System.Drawing.Size(165, 86);
+            this.Marti12.TabIndex = 2;
+            this.Marti12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMarti10_12
             // 
             this.tableLayoutPanelMarti10_12.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMarti10_12.ColumnCount = 1;
             this.tableLayoutPanelMarti10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti10_12.Controls.Add(this.Marti10, 0, 0);
             this.tableLayoutPanelMarti10_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti10_12.Location = new System.Drawing.Point(357, 135);
             this.tableLayoutPanelMarti10_12.Name = "tableLayoutPanelMarti10_12";
@@ -590,12 +893,23 @@
             this.tableLayoutPanelMarti10_12.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMarti10_12.TabIndex = 16;
             // 
+            // Marti10
+            // 
+            this.Marti10.AutoSize = true;
+            this.Marti10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti10.Location = new System.Drawing.Point(3, 0);
+            this.Marti10.Name = "Marti10";
+            this.Marti10.Size = new System.Drawing.Size(165, 86);
+            this.Marti10.TabIndex = 2;
+            this.Marti10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelMarti8_10
             // 
             this.tableLayoutPanelMarti8_10.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelMarti8_10.ColumnCount = 1;
             this.tableLayoutPanelMarti8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelMarti8_10.Controls.Add(this.Marti08, 0, 0);
             this.tableLayoutPanelMarti8_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMarti8_10.Location = new System.Drawing.Point(180, 135);
             this.tableLayoutPanelMarti8_10.Name = "tableLayoutPanelMarti8_10";
@@ -604,6 +918,16 @@
             this.tableLayoutPanelMarti8_10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMarti8_10.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelMarti8_10.TabIndex = 15;
+            // 
+            // Marti08
+            // 
+            this.Marti08.AutoSize = true;
+            this.Marti08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Marti08.Location = new System.Drawing.Point(3, 0);
+            this.Marti08.Name = "Marti08";
+            this.Marti08.Size = new System.Drawing.Size(165, 86);
+            this.Marti08.TabIndex = 2;
+            this.Marti08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelMarti
             // 
@@ -638,6 +962,7 @@
             this.tableLayoutPanelLuni18_20.ColumnCount = 1;
             this.tableLayoutPanelLuni18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni18_20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni18_20.Controls.Add(this.Luni18, 0, 0);
             this.tableLayoutPanelLuni18_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni18_20.Location = new System.Drawing.Point(1065, 43);
             this.tableLayoutPanelLuni18_20.Name = "tableLayoutPanelLuni18_20";
@@ -647,12 +972,23 @@
             this.tableLayoutPanelLuni18_20.Size = new System.Drawing.Size(172, 86);
             this.tableLayoutPanelLuni18_20.TabIndex = 13;
             // 
+            // Luni18
+            // 
+            this.Luni18.AutoSize = true;
+            this.Luni18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni18.Location = new System.Drawing.Point(3, 0);
+            this.Luni18.Name = "Luni18";
+            this.Luni18.Size = new System.Drawing.Size(166, 86);
+            this.Luni18.TabIndex = 2;
+            this.Luni18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelLuni16_18
             // 
             this.tableLayoutPanelLuni16_18.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelLuni16_18.ColumnCount = 1;
             this.tableLayoutPanelLuni16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni16_18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni16_18.Controls.Add(this.Luni16, 0, 0);
             this.tableLayoutPanelLuni16_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni16_18.Location = new System.Drawing.Point(888, 43);
             this.tableLayoutPanelLuni16_18.Name = "tableLayoutPanelLuni16_18";
@@ -662,12 +998,23 @@
             this.tableLayoutPanelLuni16_18.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelLuni16_18.TabIndex = 12;
             // 
+            // Luni16
+            // 
+            this.Luni16.AutoSize = true;
+            this.Luni16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni16.Location = new System.Drawing.Point(3, 0);
+            this.Luni16.Name = "Luni16";
+            this.Luni16.Size = new System.Drawing.Size(165, 86);
+            this.Luni16.TabIndex = 2;
+            this.Luni16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelLuni14_16
             // 
             this.tableLayoutPanelLuni14_16.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelLuni14_16.ColumnCount = 1;
             this.tableLayoutPanelLuni14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni14_16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni14_16.Controls.Add(this.Luni14, 0, 0);
             this.tableLayoutPanelLuni14_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni14_16.Location = new System.Drawing.Point(711, 43);
             this.tableLayoutPanelLuni14_16.Name = "tableLayoutPanelLuni14_16";
@@ -677,12 +1024,23 @@
             this.tableLayoutPanelLuni14_16.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelLuni14_16.TabIndex = 11;
             // 
+            // Luni14
+            // 
+            this.Luni14.AutoSize = true;
+            this.Luni14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni14.Location = new System.Drawing.Point(3, 0);
+            this.Luni14.Name = "Luni14";
+            this.Luni14.Size = new System.Drawing.Size(165, 86);
+            this.Luni14.TabIndex = 2;
+            this.Luni14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelLuni12_14
             // 
             this.tableLayoutPanelLuni12_14.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelLuni12_14.ColumnCount = 1;
             this.tableLayoutPanelLuni12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni12_14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni12_14.Controls.Add(this.Luni12, 0, 0);
             this.tableLayoutPanelLuni12_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni12_14.Location = new System.Drawing.Point(534, 43);
             this.tableLayoutPanelLuni12_14.Name = "tableLayoutPanelLuni12_14";
@@ -692,12 +1050,23 @@
             this.tableLayoutPanelLuni12_14.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelLuni12_14.TabIndex = 10;
             // 
+            // Luni12
+            // 
+            this.Luni12.AutoSize = true;
+            this.Luni12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni12.Location = new System.Drawing.Point(3, 0);
+            this.Luni12.Name = "Luni12";
+            this.Luni12.Size = new System.Drawing.Size(165, 86);
+            this.Luni12.TabIndex = 2;
+            this.Luni12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelLuni10_12
             // 
             this.tableLayoutPanelLuni10_12.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelLuni10_12.ColumnCount = 1;
             this.tableLayoutPanelLuni10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni10_12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni10_12.Controls.Add(this.Luni10, 0, 0);
             this.tableLayoutPanelLuni10_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni10_12.Location = new System.Drawing.Point(357, 43);
             this.tableLayoutPanelLuni10_12.Name = "tableLayoutPanelLuni10_12";
@@ -707,12 +1076,23 @@
             this.tableLayoutPanelLuni10_12.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelLuni10_12.TabIndex = 9;
             // 
+            // Luni10
+            // 
+            this.Luni10.AutoSize = true;
+            this.Luni10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni10.Location = new System.Drawing.Point(3, 0);
+            this.Luni10.Name = "Luni10";
+            this.Luni10.Size = new System.Drawing.Size(165, 86);
+            this.Luni10.TabIndex = 1;
+            this.Luni10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanelLuni8_10
             // 
             this.tableLayoutPanelLuni8_10.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanelLuni8_10.ColumnCount = 1;
             this.tableLayoutPanelLuni8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni8_10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni8_10.Controls.Add(this.Luni08, 0, 0);
             this.tableLayoutPanelLuni8_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLuni8_10.Location = new System.Drawing.Point(180, 43);
             this.tableLayoutPanelLuni8_10.Name = "tableLayoutPanelLuni8_10";
@@ -721,6 +1101,43 @@
             this.tableLayoutPanelLuni8_10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLuni8_10.Size = new System.Drawing.Size(171, 86);
             this.tableLayoutPanelLuni8_10.TabIndex = 8;
+            // 
+            // Luni08
+            // 
+            this.Luni08.AutoSize = true;
+            this.Luni08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Luni08.Location = new System.Drawing.Point(3, 0);
+            this.Luni08.Name = "Luni08";
+            this.Luni08.Size = new System.Drawing.Size(165, 86);
+            this.Luni08.TabIndex = 0;
+            this.Luni08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanelLuni
+            // 
+            this.tableLayoutPanelLuni.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanelLuni.ColumnCount = 1;
+            this.tableLayoutPanelLuni.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni.Controls.Add(this.labelLuni, 0, 0);
+            this.tableLayoutPanelLuni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelLuni.Location = new System.Drawing.Point(3, 43);
+            this.tableLayoutPanelLuni.Name = "tableLayoutPanelLuni";
+            this.tableLayoutPanelLuni.RowCount = 1;
+            this.tableLayoutPanelLuni.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLuni.Size = new System.Drawing.Size(171, 86);
+            this.tableLayoutPanelLuni.TabIndex = 7;
+            // 
+            // labelLuni
+            // 
+            this.labelLuni.AutoSize = true;
+            this.labelLuni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLuni.Location = new System.Drawing.Point(3, 0);
+            this.labelLuni.Name = "labelLuni";
+            this.labelLuni.Size = new System.Drawing.Size(165, 86);
+            this.labelLuni.TabIndex = 1;
+            this.labelLuni.Text = "LUNI";
+            this.labelLuni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel18_20
             // 
@@ -911,33 +1328,6 @@
             this.labelZi.Text = "Zi";
             this.labelZi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanelLuni
-            // 
-            this.tableLayoutPanelLuni.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLayoutPanelLuni.ColumnCount = 1;
-            this.tableLayoutPanelLuni.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelLuni.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelLuni.Controls.Add(this.labelLuni, 0, 0);
-            this.tableLayoutPanelLuni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelLuni.Location = new System.Drawing.Point(3, 43);
-            this.tableLayoutPanelLuni.Name = "tableLayoutPanelLuni";
-            this.tableLayoutPanelLuni.RowCount = 1;
-            this.tableLayoutPanelLuni.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelLuni.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelLuni.Size = new System.Drawing.Size(171, 86);
-            this.tableLayoutPanelLuni.TabIndex = 7;
-            // 
-            // labelLuni
-            // 
-            this.labelLuni.AutoSize = true;
-            this.labelLuni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLuni.Location = new System.Drawing.Point(3, 0);
-            this.labelLuni.Name = "labelLuni";
-            this.labelLuni.Size = new System.Drawing.Size(165, 86);
-            this.labelLuni.TabIndex = 1;
-            this.labelLuni.Text = "LUNI";
-            this.labelLuni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ExportOrarProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -947,14 +1337,76 @@
             this.Name = "ExportOrarProfesor";
             this.Size = new System.Drawing.Size(1240, 500);
             this.tableLayoutPanelOrar.ResumeLayout(false);
+            this.tableLayoutPanelVineri18_20.ResumeLayout(false);
+            this.tableLayoutPanelVineri18_20.PerformLayout();
+            this.tableLayoutPanelVineri16_18.ResumeLayout(false);
+            this.tableLayoutPanelVineri16_18.PerformLayout();
+            this.tableLayoutPanelVineri14_16.ResumeLayout(false);
+            this.tableLayoutPanelVineri14_16.PerformLayout();
+            this.tableLayoutPanelVineri12_14.ResumeLayout(false);
+            this.tableLayoutPanelVineri12_14.PerformLayout();
+            this.tableLayoutPanelVineri10_12.ResumeLayout(false);
+            this.tableLayoutPanelVineri10_12.PerformLayout();
+            this.tableLayoutPanelVineri8_10.ResumeLayout(false);
+            this.tableLayoutPanelVineri8_10.PerformLayout();
             this.tableLayoutPanelVineri.ResumeLayout(false);
             this.tableLayoutPanelVineri.PerformLayout();
+            this.tableLayoutPanelJoi18_20.ResumeLayout(false);
+            this.tableLayoutPanelJoi18_20.PerformLayout();
+            this.tableLayoutPanelJoi16_18.ResumeLayout(false);
+            this.tableLayoutPanelJoi16_18.PerformLayout();
+            this.tableLayoutPanelJoi14_16.ResumeLayout(false);
+            this.tableLayoutPanelJoi14_16.PerformLayout();
+            this.tableLayoutPanelJoi12_14.ResumeLayout(false);
+            this.tableLayoutPanelJoi12_14.PerformLayout();
+            this.tableLayoutPanelJoi10_12.ResumeLayout(false);
+            this.tableLayoutPanelJoi10_12.PerformLayout();
+            this.tableLayoutPanelJoi8_10.ResumeLayout(false);
+            this.tableLayoutPanelJoi8_10.PerformLayout();
             this.tableLayoutPanelJoi.ResumeLayout(false);
             this.tableLayoutPanelJoi.PerformLayout();
+            this.tableLayoutPanelMiercuri18_20.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri18_20.PerformLayout();
+            this.tableLayoutPanelMiercuri16_18.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri16_18.PerformLayout();
+            this.tableLayoutPanelMiercuri14_16.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri14_16.PerformLayout();
+            this.tableLayoutPanelMiercuri12_14.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri12_14.PerformLayout();
+            this.tableLayoutPanelMiercuri10_12.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri10_12.PerformLayout();
+            this.tableLayoutPanelMiercuri8_10.ResumeLayout(false);
+            this.tableLayoutPanelMiercuri8_10.PerformLayout();
             this.tableLayoutPanelMiercuri.ResumeLayout(false);
             this.tableLayoutPanelMiercuri.PerformLayout();
+            this.tableLayoutPanelMarti18_20.ResumeLayout(false);
+            this.tableLayoutPanelMarti18_20.PerformLayout();
+            this.tableLayoutPanelMarti16_18.ResumeLayout(false);
+            this.tableLayoutPanelMarti16_18.PerformLayout();
+            this.tableLayoutPanelMarti14_16.ResumeLayout(false);
+            this.tableLayoutPanelMarti14_16.PerformLayout();
+            this.tableLayoutPanelMarti12_14.ResumeLayout(false);
+            this.tableLayoutPanelMarti12_14.PerformLayout();
+            this.tableLayoutPanelMarti10_12.ResumeLayout(false);
+            this.tableLayoutPanelMarti10_12.PerformLayout();
+            this.tableLayoutPanelMarti8_10.ResumeLayout(false);
+            this.tableLayoutPanelMarti8_10.PerformLayout();
             this.tableLayoutPanelMarti.ResumeLayout(false);
             this.tableLayoutPanelMarti.PerformLayout();
+            this.tableLayoutPanelLuni18_20.ResumeLayout(false);
+            this.tableLayoutPanelLuni18_20.PerformLayout();
+            this.tableLayoutPanelLuni16_18.ResumeLayout(false);
+            this.tableLayoutPanelLuni16_18.PerformLayout();
+            this.tableLayoutPanelLuni14_16.ResumeLayout(false);
+            this.tableLayoutPanelLuni14_16.PerformLayout();
+            this.tableLayoutPanelLuni12_14.ResumeLayout(false);
+            this.tableLayoutPanelLuni12_14.PerformLayout();
+            this.tableLayoutPanelLuni10_12.ResumeLayout(false);
+            this.tableLayoutPanelLuni10_12.PerformLayout();
+            this.tableLayoutPanelLuni8_10.ResumeLayout(false);
+            this.tableLayoutPanelLuni8_10.PerformLayout();
+            this.tableLayoutPanelLuni.ResumeLayout(false);
+            this.tableLayoutPanelLuni.PerformLayout();
             this.tableLayoutPanel18_20.ResumeLayout(false);
             this.tableLayoutPanel18_20.PerformLayout();
             this.tableLayoutPanel16_18.ResumeLayout(false);
@@ -969,8 +1421,6 @@
             this.tableLayoutPanel8_10.PerformLayout();
             this.tableLayoutPanelZi.ResumeLayout(false);
             this.tableLayoutPanelZi.PerformLayout();
-            this.tableLayoutPanelLuni.ResumeLayout(false);
-            this.tableLayoutPanelLuni.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1033,5 +1483,35 @@
         private System.Windows.Forms.Label labelMarti;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLuni;
         private System.Windows.Forms.Label labelLuni;
+        private System.Windows.Forms.Label Vineri18;
+        private System.Windows.Forms.Label Vineri16;
+        private System.Windows.Forms.Label Vineri14;
+        private System.Windows.Forms.Label Vineri12;
+        private System.Windows.Forms.Label Vineri10;
+        private System.Windows.Forms.Label Vineri08;
+        private System.Windows.Forms.Label Joi18;
+        private System.Windows.Forms.Label Joi16;
+        private System.Windows.Forms.Label Joi14;
+        private System.Windows.Forms.Label Joi12;
+        private System.Windows.Forms.Label Joi10;
+        private System.Windows.Forms.Label Joi08;
+        private System.Windows.Forms.Label Miercuri18;
+        private System.Windows.Forms.Label Miercuri16;
+        private System.Windows.Forms.Label Miercuri14;
+        private System.Windows.Forms.Label Miercuri12;
+        private System.Windows.Forms.Label Miercuri10;
+        private System.Windows.Forms.Label Miercuri08;
+        private System.Windows.Forms.Label Marti18;
+        private System.Windows.Forms.Label Marti16;
+        private System.Windows.Forms.Label Marti14;
+        private System.Windows.Forms.Label Marti12;
+        private System.Windows.Forms.Label Marti10;
+        private System.Windows.Forms.Label Marti08;
+        private System.Windows.Forms.Label Luni18;
+        private System.Windows.Forms.Label Luni16;
+        private System.Windows.Forms.Label Luni14;
+        private System.Windows.Forms.Label Luni12;
+        private System.Windows.Forms.Label Luni10;
+        private System.Windows.Forms.Label Luni08;
     }
 }

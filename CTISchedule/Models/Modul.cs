@@ -19,6 +19,8 @@ namespace CTISchedule.Models
         public int IdDisciplina { get; set; }
         public int IdActivitate { get; set; }
         public int IdProfesor { get; set; }
+        public int IdSubGrupa { get; set; }
+        public int IdSala { get; set; }
         public System.TimeSpan OraStart { get; set; }
         public System.TimeSpan OraStop { get; set; }
         public Nullable<bool> SaptPara { get; set; }
@@ -26,6 +28,8 @@ namespace CTISchedule.Models
         public virtual Activitate Activitate { get; set; }
         public virtual Disciplina Disciplina { get; set; }
         public virtual Profesor Profesor { get; set; }
+        public virtual Sala Sala { get; set; }
+        public virtual SubGrupa SubGrupa { get; set; }
         public virtual Zile Zile { get; set; }
     }
 }

@@ -14,10 +14,18 @@ namespace CTISchedule.Models
     
     public partial class SubGrupa
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SubGrupa()
+        {
+            this.Moduls = new HashSet<Modul>();
+        }
+    
         public int Id { get; set; }
         public string Nume { get; set; }
         public int IdGrupa { get; set; }
     
         public virtual Grupa Grupa { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Modul> Moduls { get; set; }
     }
 }

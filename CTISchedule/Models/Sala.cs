@@ -14,11 +14,19 @@ namespace CTISchedule.Models
     
     public partial class Sala
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sala()
+        {
+            this.Moduls = new HashSet<Modul>();
+        }
+    
         public int Id { get; set; }
         public string Nume { get; set; }
         public int Capacitate { get; set; }
         public int Activitate { get; set; }
     
         public virtual Activitate Activitate1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Modul> Moduls { get; set; }
     }
 }

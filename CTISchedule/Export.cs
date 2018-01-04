@@ -117,11 +117,11 @@ namespace CTISchedule
             {
                 if (_name == "Profesorul")
                 {
-                    ExportOrarProfesor exportOrarProfesor = new ExportOrarProfesor();
+                    ExportOrarProfesor exportOrarProfesor = new ExportOrarProfesor((string) activeComboBox.SelectedItem);
                     string startupPath = Environment.CurrentDirectory;
                     string newPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(startupPath, "..\\..\\..\\"));
                     string imgName = "OrarProfesorImage.jpg";
-                    string pdfName = "OrarProfesor.pdf";
+                    string pdfName = "Orar Profesor " + activeComboBox.SelectedItem + ".pdf";
 
                     using (Graphics graphics = exportOrarProfesor.CreateGraphics())
                     {
@@ -141,6 +141,7 @@ namespace CTISchedule
                         iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
                         orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
                         orarImage.SetWidthPercent(100);
+                        document.Add(new Paragraph((string)activeComboBox.SelectedItem + "\n").SetTextAlignment(TextAlignment.CENTER));
                         document.Add(orarImage);
                         document.Close();
                         File.Delete(newPath + "\\" + imgName);
