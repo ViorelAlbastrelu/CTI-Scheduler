@@ -211,11 +211,45 @@ namespace CTISchedule
                         MessageBox.Show("The schedule has been exported successfully in the folder " + newPath);
                     }
                 }
+                if (_name == "Disciplina")
+                {
+                    ExportOrarDisciplina exportOrarDisciplina = new ExportOrarDisciplina((string)activeComboBox.SelectedItem);
+                    string startupPath = Environment.CurrentDirectory;
+                    string newPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(startupPath, "..\\..\\..\\"));
+                    string imgName = "OrarDisciplinaImage.jpg";
+                    string pdfName = "Orar Disciplina " + activeComboBox.SelectedItem + ".pdf";
+
+                    using (Graphics graphics = exportOrarDisciplina.CreateGraphics())
+                    {
+
+                        using (Bitmap bitmapImage = new Bitmap(exportOrarDisciplina.Width, exportOrarDisciplina.Height, graphics))
+                        {
+                            exportOrarDisciplina.DrawToBitmap(bitmapImage, new System.Drawing.Rectangle(0, 0, exportOrarDisciplina.Width, exportOrarDisciplina.Height));
+                            bitmapImage.Save(newPath + imgName);
+                        }
+                    }
+
+                    if (File.Exists(newPath + imgName))
+                    {
+                        string orarImagePath = newPath + "\\" + imgName;
+                        var pdf = new PdfDocument(new PdfWriter(newPath + "\\" + pdfName));
+                        var document = new Document(pdf, PageSize.A3);
+                        iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
+                        orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
+                        orarImage.SetWidthPercent(100);
+                        document.Add(orarImage);
+                        document.Close();
+                        File.Delete(newPath + "\\" + imgName);
+                        MessageBox.Show("The schedule has been exported successfully in the folder " + newPath);
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Selectati " + _name);
             }
+
+
         }
 
     }
