@@ -179,6 +179,38 @@ namespace CTISchedule
                         MessageBox.Show("The schedule has been exported successfully in the folder " + newPath);
                     }
                 }
+                if (_name == "Grupa")
+                {
+                    ExportOrarGrupa exportOrarGrupa = new ExportOrarGrupa((string)activeComboBox.SelectedItem);
+                    string startupPath = Environment.CurrentDirectory;
+                    string newPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(startupPath, "..\\..\\..\\"));
+                    string imgName = "OrarGrupaImage.jpg";
+                    string pdfName = "Orar Grupa " + activeComboBox.SelectedItem + ".pdf";
+
+                    using (Graphics graphics = exportOrarGrupa.CreateGraphics())
+                    {
+
+                        using (Bitmap bitmapImage = new Bitmap(exportOrarGrupa.Width, exportOrarGrupa.Height, graphics))
+                        {
+                            exportOrarGrupa.DrawToBitmap(bitmapImage, new System.Drawing.Rectangle(0, 0, exportOrarGrupa.Width, exportOrarGrupa.Height));
+                            bitmapImage.Save(newPath + imgName);
+                        }
+                    }
+
+                    if (File.Exists(newPath + imgName))
+                    {
+                        string orarImagePath = newPath + "\\" + imgName;
+                        var pdf = new PdfDocument(new PdfWriter(newPath + "\\" + pdfName));
+                        var document = new Document(pdf, PageSize.A3);
+                        iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
+                        orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
+                        orarImage.SetWidthPercent(100);
+                        document.Add(orarImage);
+                        document.Close();
+                        File.Delete(newPath + "\\" + imgName);
+                        MessageBox.Show("The schedule has been exported successfully in the folder " + newPath);
+                    }
+                }
             }
             else
             {

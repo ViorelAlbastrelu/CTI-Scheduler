@@ -226,6 +226,12 @@
     <Compile Include="Export.Designer.cs">
       <DependentUpon>Export.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportOrarGrupa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExportOrarGrupa.Designer.cs">
+      <DependentUpon>ExportOrarGrupa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExportOrarProfesor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportOrarGrupa.resx">
+      <DependentUpon>ExportOrarGrupa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExportOrarProfesor.resx">
       <DependentUpon>ExportOrarProfesor.cs</DependentUpon>

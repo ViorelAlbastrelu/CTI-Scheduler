@@ -12,15 +12,15 @@ using System.Data.SqlClient;
 
 namespace CTISchedule
 {
-    public partial class ExportOrarProfesor : UserControl
+    public partial class ExportOrarGrupa : UserControl
     {
         private string[] zile = new string[] { "Luni", "Marti", "Miercuri", "Joi", "Vineri" };
         private string[] oraStart = new string[] { "08:00:00", "10:00:00", "12:00:00", "14:00:00", "16:00:00", "18:00:00" };
         private string connectionString = ConfigurationManager.ConnectionStrings["CTISchedule.Properties.Settings.CTIScheduleDBConnectionString"].ConnectionString;
-        public ExportOrarProfesor(string name)
+        public ExportOrarGrupa(string name)
         {
             InitializeComponent();
-            string query = $@"select Zile.Nume, Modul.OraStart, Profesor.Nume,Disciplina.An, Disciplina.Nume, Activitate.Nume, Sala.Nume, Subgrupa.Nume, Grupa.Nume
+            string query = $@"select Zile.Nume, Modul.OraStart, Grupa.Nume, Profesor.Nume, Disciplina.An, Disciplina.Nume, Activitate.Nume, Sala.Nume, Subgrupa.Nume
                             from Profesor
                             join Modul on Modul.IdProfesor = Profesor.Id
                             join Zile on Zile.Id = Modul.IdZi
@@ -29,7 +29,7 @@ namespace CTISchedule
                             join Sala on Sala.Id = Modul.IdSala
                             join SubGrupa on SubGrupa.Id = Modul.IdSubGrupa
                             join Grupa on Grupa.Id = SubGrupa.IdGrupa
-                            where Profesor.Nume = '{name}'";
+                            where Grupa.Nume = '{name}'";
             sqlInterogation(query);
         }
 
@@ -64,13 +64,9 @@ namespace CTISchedule
                                     if (reader.GetValue(0).ToString() == zile[j] && reader.GetValue(1).ToString() == oraStart[k] && 
                                         (labels[z].Name == reader.GetValue(0).ToString() + reader.GetValue(1).ToString().Substring(0,2) ))
                                     {
-                                        if (reader.GetValue(5).ToString() == "Seminar")
+                                        if (reader.GetValue(6).ToString() == "Seminar" || reader.GetValue(6).ToString() == "Curs")
                                         {
-                                            if (i == 3)
-                                            {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
-                                            }
-                                            if (i >= 4 && i != 7) //Gets the group without the subgroup
+                                            if (i >= 3 && i != 8 && i != 4) //Gets everything from Profesor.Nume excluding the year and the subgroup
                                             {
                                                 Console.WriteLine(reader.GetValue(i));
                                                 labels[z].Text += reader.GetValue(i) + "\n";
@@ -80,29 +76,9 @@ namespace CTISchedule
                                                 }
                                             }
                                         }
-                                        if (reader.GetValue(5).ToString() == "Laborator")
+                                        if (reader.GetValue(6).ToString() == "Laborator")
                                         {
-                                            if (i == 3)
-                                            {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
-                                            }
-                                            if (i >= 4 && i != 8) //Gets the group without the subgroup
-                                            {
-                                                Console.WriteLine(reader.GetValue(i));
-                                                labels[z].Text += reader.GetValue(i) + "\n";
-                                                if (i == count - 1)
-                                                {
-                                                    Console.WriteLine("END OF LINE"); //Tests to see if it finishes after all columns
-                                                }
-                                            }
-                                        }
-                                        if (reader.GetValue(5).ToString() == "Curs")
-                                        {
-                                            if (i == 3)
-                                            {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
-                                            }
-                                            if (i >= 4 && i < 7) //Doesn't get the subgroup and group
+                                            if (i >= 3 && i != 4) //Gets everything from Profesor.Nume excluding the year
                                             {
                                                 Console.WriteLine(reader.GetValue(i));
                                                 labels[z].Text += reader.GetValue(i) + "\n";

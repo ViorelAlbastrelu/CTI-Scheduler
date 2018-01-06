@@ -65,13 +65,13 @@ namespace CTISchedule
                                         {
                                             if(i == 3)
                                             {
-                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets nume activitate and puts it in the label
+                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets Activitate.Nume value and puts it in the label
                                             }
                                             if (i == 4)
                                             {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
                                             }
-                                            if (i >= 5 && i != 6) //Gets grupa without subgrupa
+                                            if (i >= 5 && i != 6) //Gets the group without subgroup
                                             {
                                                 Console.WriteLine(reader.GetValue(i));
                                                 labels[z].Text += reader.GetValue(i) + "\n";
@@ -85,13 +85,13 @@ namespace CTISchedule
                                         {
                                             if (i == 3) 
                                             {
-                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets nume activitate and puts it in the label
+                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets Activitate.Nume value and puts it in the label
                                             }
                                             if (i == 4) 
                                             {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
                                             }
-                                            if (i >= 5 && i != 7) //Gets subgrupa without grupa
+                                            if (i >= 5 && i != 7) //Gets the subgroup without group
                                             {
                                                 Console.WriteLine(reader.GetValue(i));
                                                 labels[z].Text += reader.GetValue(i) + "\n";
@@ -105,13 +105,13 @@ namespace CTISchedule
                                         {
                                             if (i == 3)
                                             {
-                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets nume activitate and puts it in the label
+                                                labels[z].Text += reader.GetValue(i) + "\n"; //Gets Activitate.Nume value and puts it in the label
                                             }
                                             if (i == 4)
                                             {
-                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets the year and puts it in the label
                                             }
-                                            if (i >= 5 && i < 6) //Doesn't get subgrupa and grupa
+                                            if (i >= 5 && i < 6) //Doesn't get the subgroup and group
                                             {
                                                 Console.WriteLine(reader.GetValue(i));
                                                 labels[z].Text += reader.GetValue(i) + "\n";
