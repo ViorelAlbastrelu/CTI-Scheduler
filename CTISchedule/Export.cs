@@ -141,7 +141,6 @@ namespace CTISchedule
                         iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
                         orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
                         orarImage.SetWidthPercent(100);
-                        document.Add(new Paragraph((string)activeComboBox.SelectedItem + "\n").SetTextAlignment(TextAlignment.CENTER));
                         document.Add(orarImage);
                         document.Close();
                         File.Delete(newPath + "\\" + imgName);
@@ -150,11 +149,11 @@ namespace CTISchedule
                 }
                 if (_name == "Sala")
                 {
-                    ExportOrarSala exportOrarSala = new ExportOrarSala();
+                    ExportOrarSala exportOrarSala = new ExportOrarSala((string)activeComboBox.SelectedItem);
                     string startupPath = Environment.CurrentDirectory;
                     string newPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(startupPath, "..\\..\\..\\"));
                     string imgName = "OrarSalaImage.jpg";
-                    string pdfName = "OrarSala.pdf";
+                    string pdfName = "Orar Sala " + activeComboBox.SelectedItem + ".pdf";
 
                     using (Graphics graphics = exportOrarSala.CreateGraphics())
                     {
@@ -170,7 +169,7 @@ namespace CTISchedule
                     {
                         string orarImagePath = newPath + "\\" + imgName;
                         var pdf = new PdfDocument(new PdfWriter(newPath + "\\" + pdfName));
-                        var document = new Document(pdf, PageSize.A3);
+                        var document = new Document(pdf, PageSize.A1);
                         iText.Layout.Element.Image orarImage = new iText.Layout.Element.Image(ImageDataFactory.Create(orarImagePath));
                         orarImage.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
                         orarImage.SetWidthPercent(100);

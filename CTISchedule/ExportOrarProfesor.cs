@@ -20,7 +20,7 @@ namespace CTISchedule
         public ExportOrarProfesor(string name)
         {
             InitializeComponent();
-            string query = $@"select Zile.Nume, Modul.OraStart, Profesor.Nume,Disciplina.An, Disciplina.Nume, Activitate.Nume, Sala.Nume, Grupa.Nume
+            string query = $@"select Zile.Nume, Modul.OraStart, Profesor.Nume,Disciplina.An, Disciplina.Nume, Activitate.Nume, Sala.Nume, Subgrupa.Nume, Grupa.Nume
                             from Profesor
                             join Modul on Modul.IdProfesor = Profesor.Id
                             join Zile on Zile.Id = Modul.IdZi
@@ -63,17 +63,52 @@ namespace CTISchedule
                                     if (reader.GetValue(0).ToString() == zile[j] && reader.GetValue(1).ToString() == oraStart[k] && 
                                         (labels[z].Name == reader.GetValue(0).ToString() + reader.GetValue(1).ToString().Substring(0,2) ))
                                     {
-                                        if (i == 3)
+                                        if (reader.GetValue(5).ToString() == "Seminar")
                                         {
-                                            labels[z].Text += "Anul " + reader.GetValue(i) + "\n";
-                                        }
-                                        if (i >= 4)
-                                        {
-                                            Console.WriteLine(reader.GetValue(i));
-                                            labels[z].Text += reader.GetValue(i) + "\n";
-                                            if (i == count - 1)
+                                            if (i == 3)
                                             {
-                                                Console.WriteLine("END OF LINE");
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                            }
+                                            if (i >= 4 && i != 7) //Gets grupa without subgrupa
+                                            {
+                                                Console.WriteLine(reader.GetValue(i));
+                                                labels[z].Text += reader.GetValue(i) + "\n";
+                                                if (i == count - 1)
+                                                {
+                                                    Console.WriteLine("END OF LINE"); //Tests to see if it finishes after all columns
+                                                }
+                                            }
+                                        }
+                                        if (reader.GetValue(5).ToString() == "Laborator")
+                                        {
+                                            if (i == 3)
+                                            {
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                            }
+                                            if (i >= 4 && i != 8) //Gets subgrupa without grupa
+                                            {
+                                                Console.WriteLine(reader.GetValue(i));
+                                                labels[z].Text += reader.GetValue(i) + "\n";
+                                                if (i == count - 1)
+                                                {
+                                                    Console.WriteLine("END OF LINE"); //Tests to see if it finishes after all columns
+                                                }
+                                            }
+                                        }
+                                        if (reader.GetValue(5).ToString() == "Curs")
+                                        {
+                                            if (i == 3)
+                                            {
+                                                labels[z].Text += "Anul " + reader.GetValue(i) + "\n"; //Gets year and puts it in the label
+                                            }
+                                            if (i >= 4 && i < 7) //Doesn't get subgrupa and grupa
+                                            {
+                                                Console.WriteLine(reader.GetValue(i));
+                                                labels[z].Text += reader.GetValue(i) + "\n";
+                                                if (i == count - 1)
+                                                {
+                                                    Console.WriteLine("END OF LINE"); //Tests to see if it finishes after all columns
+                                                }
                                             }
                                         }
                                     }
