@@ -281,12 +281,12 @@ namespace CTISchedule
             return 6;
         }
 
-        public void DeleteModul(int idModul)
-        {
-            var modul = _context.Moduls.Find(idModul);
-            if (modul != null) _context.Moduls.Remove(modul);
-            _context.SaveChanges();
-        }
+        //public void DeleteModul(int idModul)
+        //{
+        //    var modul = _context.Moduls.Find(idModul);
+        //    if (modul != null) _context.Moduls.Remove(modul);
+        //    _context.SaveChanges();
+        //}
 
     }
 }

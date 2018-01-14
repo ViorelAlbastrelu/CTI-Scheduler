@@ -146,7 +146,7 @@
             this.btnSaveModule.TabIndex = 19;
             this.btnSaveModule.Text = "Salveaza";
             this.btnSaveModule.UseVisualStyleBackColor = false;
-            this.btnSaveModule.Click += new System.EventHandler(this.btnSaveModule_Click);
+//            this.btnSaveModule.Click += new System.EventHandler(this.btnSaveModule_Click);
             // 
             // btnDeleteModule
             // 
@@ -160,7 +160,7 @@
             this.btnDeleteModule.TabIndex = 18;
             this.btnDeleteModule.Text = "Sterge";
             this.btnDeleteModule.UseVisualStyleBackColor = false;
-            this.btnDeleteModule.Click += new System.EventHandler(this.btnDeleteModule_Click);
+//            this.btnDeleteModule.Click += new System.EventHandler(this.btnDeleteModule_Click);
             // 
             // btnCancelModule
             // 
@@ -172,7 +172,7 @@
             this.btnCancelModule.TabIndex = 17;
             this.btnCancelModule.Text = "Anuleaza";
             this.btnCancelModule.UseVisualStyleBackColor = true;
-            this.btnCancelModule.Click += new System.EventHandler(this.btnCancelModule_Click);
+//            this.btnCancelModule.Click += new System.EventHandler(this.btnCancelModule_Click);
             // 
             // optZiua
             // 

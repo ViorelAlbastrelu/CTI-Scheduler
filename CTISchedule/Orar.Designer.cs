@@ -74,11 +74,11 @@
             this.label_V1 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.tabelOrar = new System.Windows.Forms.TableLayoutPanel();
-            this.componentaZi1 = new CTISchedule.ComponentaZi("luni");
-            this.componentaZi2 = new CTISchedule.ComponentaZi("marti");
-            this.componentaZi3 = new CTISchedule.ComponentaZi("miercuri");
-            this.componentaZi4 = new CTISchedule.ComponentaZi("joi");
-            this.componentaZi5 = new CTISchedule.ComponentaZi("vineri");
+            this.componentaZi1 = new ComponentaZi("luni");
+            this.componentaZi2 = new ComponentaZi("marti");
+            this.componentaZi3 = new ComponentaZi("miercuri");
+            this.componentaZi4 = new ComponentaZi("joi");
+            this.componentaZi5 = new ComponentaZi("vineri");
             this.tabelZiLuni.SuspendLayout();
             this.tabelOreLuni.SuspendLayout();
             this.tabelZiMarti.SuspendLayout();

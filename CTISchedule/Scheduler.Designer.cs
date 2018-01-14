@@ -42,29 +42,6 @@
             this.orarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informatiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelSchedule = new System.Windows.Forms.Panel();
-            this.orar2 = new CTISchedule.Orar();
-            this.moduleFormContainer = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbSaptPara = new System.Windows.Forms.RadioButton();
-            this.rbSaptImpara = new System.Windows.Forms.RadioButton();
-            this.rbSapt = new System.Windows.Forms.RadioButton();
-            this.btnSaveModule = new System.Windows.Forms.Button();
-            this.btnDeleteModule = new System.Windows.Forms.Button();
-            this.btnCancelModule = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelProfesori = new System.Windows.Forms.Panel();
             this.moduleProfesorContainer = new System.Windows.Forms.Panel();
             this.btnLinkProfesorDisciplina = new System.Windows.Forms.Button();
@@ -159,10 +136,10 @@
             this.capacitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ctischeduleDataSetSalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orar2 = new CTISchedule.Orar();
+            this.panelSchedule = new System.Windows.Forms.Panel();
+            this.formModul1 = new CTISchedule.FormModul();
             this.menuStrip1.SuspendLayout();
-            this.panelSchedule.SuspendLayout();
-            this.moduleFormContainer.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panelProfesori.SuspendLayout();
             this.moduleProfesorContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
@@ -186,6 +163,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSalaBindingSource)).BeginInit();
+            this.panelSchedule.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -288,262 +266,6 @@
             this.informatiiToolStripMenuItem.Name = "informatiiToolStripMenuItem";
             this.informatiiToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.informatiiToolStripMenuItem.Text = "Informatii";
-            // 
-            // panelSchedule
-            // 
-            this.panelSchedule.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelSchedule.Controls.Add(this.orar2);
-            this.panelSchedule.Controls.Add(this.moduleFormContainer);
-            this.panelSchedule.Location = new System.Drawing.Point(9, 27);
-            this.panelSchedule.Name = "panelSchedule";
-            this.panelSchedule.Size = new System.Drawing.Size(887, 441);
-            this.panelSchedule.TabIndex = 4;
-            // 
-            // orar2
-            // 
-            this.orar2.AutoScroll = true;
-            this.orar2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.orar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.orar2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orar2.Location = new System.Drawing.Point(0, 0);
-            this.orar2.Name = "orar2";
-            this.orar2.Size = new System.Drawing.Size(702, 441);
-            this.orar2.TabIndex = 2;
-            // 
-            // moduleFormContainer
-            // 
-            this.moduleFormContainer.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.moduleFormContainer.Controls.Add(this.groupBox1);
-            this.moduleFormContainer.Controls.Add(this.btnSaveModule);
-            this.moduleFormContainer.Controls.Add(this.btnDeleteModule);
-            this.moduleFormContainer.Controls.Add(this.btnCancelModule);
-            this.moduleFormContainer.Controls.Add(this.comboBox6);
-            this.moduleFormContainer.Controls.Add(this.label15);
-            this.moduleFormContainer.Controls.Add(this.comboBox5);
-            this.moduleFormContainer.Controls.Add(this.label14);
-            this.moduleFormContainer.Controls.Add(this.comboBox4);
-            this.moduleFormContainer.Controls.Add(this.label4);
-            this.moduleFormContainer.Controls.Add(this.comboBox3);
-            this.moduleFormContainer.Controls.Add(this.label3);
-            this.moduleFormContainer.Controls.Add(this.comboBox2);
-            this.moduleFormContainer.Controls.Add(this.label2);
-            this.moduleFormContainer.Controls.Add(this.comboBox1);
-            this.moduleFormContainer.Controls.Add(this.splitter1);
-            this.moduleFormContainer.Controls.Add(this.label1);
-            this.moduleFormContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.moduleFormContainer.Location = new System.Drawing.Point(702, 0);
-            this.moduleFormContainer.Name = "moduleFormContainer";
-            this.moduleFormContainer.Size = new System.Drawing.Size(185, 441);
-            this.moduleFormContainer.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbSaptPara);
-            this.groupBox1.Controls.Add(this.rbSaptImpara);
-            this.groupBox1.Controls.Add(this.rbSapt);
-            this.groupBox1.Location = new System.Drawing.Point(19, 238);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(156, 94);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Saptamana";
-            // 
-            // rbSaptPara
-            // 
-            this.rbSaptPara.AutoSize = true;
-            this.rbSaptPara.Location = new System.Drawing.Point(8, 69);
-            this.rbSaptPara.Name = "rbSaptPara";
-            this.rbSaptPara.Size = new System.Drawing.Size(47, 17);
-            this.rbSaptPara.TabIndex = 13;
-            this.rbSaptPara.TabStop = true;
-            this.rbSaptPara.Text = "Para";
-            this.rbSaptPara.UseVisualStyleBackColor = true;
-            // 
-            // rbSaptImpara
-            // 
-            this.rbSaptImpara.AutoSize = true;
-            this.rbSaptImpara.Location = new System.Drawing.Point(8, 46);
-            this.rbSaptImpara.Name = "rbSaptImpara";
-            this.rbSaptImpara.Size = new System.Drawing.Size(57, 17);
-            this.rbSaptImpara.TabIndex = 14;
-            this.rbSaptImpara.TabStop = true;
-            this.rbSaptImpara.Text = "Impara";
-            this.rbSaptImpara.UseVisualStyleBackColor = true;
-            // 
-            // rbSapt
-            // 
-            this.rbSapt.AutoSize = true;
-            this.rbSapt.Location = new System.Drawing.Point(9, 23);
-            this.rbSapt.Name = "rbSapt";
-            this.rbSapt.Size = new System.Drawing.Size(64, 17);
-            this.rbSapt.TabIndex = 15;
-            this.rbSapt.TabStop = true;
-            this.rbSapt.Text = "Normala";
-            this.rbSapt.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveModule
-            // 
-            this.btnSaveModule.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSaveModule.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnSaveModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSaveModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSaveModule.Location = new System.Drawing.Point(19, 404);
-            this.btnSaveModule.Name = "btnSaveModule";
-            this.btnSaveModule.Size = new System.Drawing.Size(157, 23);
-            this.btnSaveModule.TabIndex = 19;
-            this.btnSaveModule.Text = "Salveaza";
-            this.btnSaveModule.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteModule
-            // 
-            this.btnDeleteModule.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDeleteModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDeleteModule.Location = new System.Drawing.Point(100, 375);
-            this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteModule.TabIndex = 18;
-            this.btnDeleteModule.Text = "Sterge";
-            this.btnDeleteModule.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelModule
-            // 
-            this.btnCancelModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelModule.Location = new System.Drawing.Point(20, 375);
-            this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelModule.TabIndex = 17;
-            this.btnCancelModule.Text = "Anuleaza";
-            this.btnCancelModule.UseVisualStyleBackColor = true;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.DisplayMember = "Id";
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(59, 211);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(117, 21);
-            this.comboBox6.TabIndex = 12;
-            this.comboBox6.ValueMember = "Id";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 214);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(28, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Ziua";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III",
-            "IV",
-            "V",
-            "VI"});
-            this.comboBox5.Location = new System.Drawing.Point(59, 184);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(117, 21);
-            this.comboBox5.TabIndex = 10;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 187);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Modul";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DisplayMember = "Id";
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(20, 152);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(156, 21);
-            this.comboBox4.TabIndex = 8;
-            this.comboBox4.ValueMember = "Id";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Sala";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DisplayMember = "Id";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(19, 110);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(156, 21);
-            this.comboBox3.TabIndex = 6;
-            this.comboBox3.ValueMember = "Id";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Profesor";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DisplayMember = "Id";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(19, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(156, 21);
-            this.comboBox2.TabIndex = 4;
-            this.comboBox2.ValueMember = "Id";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Activitate";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DisplayMember = "Id";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.ValueMember = "Id";
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 441);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Diciplina";
             // 
             // panelProfesori
             // 
@@ -1375,15 +1097,43 @@
             this.ctischeduleDataSetSalaBindingSource.DataSource = this.ctischeduleDataSetSala;
             this.ctischeduleDataSetSalaBindingSource.Position = 0;
             // 
+            // orar2
+            // 
+            this.orar2.AutoScroll = true;
+            this.orar2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.orar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orar2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orar2.Location = new System.Drawing.Point(0, 0);
+            this.orar2.Name = "orar2";
+            this.orar2.Size = new System.Drawing.Size(887, 441);
+            this.orar2.TabIndex = 2;
+            // 
+            // panelSchedule
+            // 
+            this.panelSchedule.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelSchedule.Controls.Add(this.formModul1);
+            this.panelSchedule.Controls.Add(this.orar2);
+            this.panelSchedule.Location = new System.Drawing.Point(9, 27);
+            this.panelSchedule.Name = "panelSchedule";
+            this.panelSchedule.Size = new System.Drawing.Size(887, 441);
+            this.panelSchedule.TabIndex = 4;
+            // 
+            // formModul1
+            // 
+            this.formModul1.Location = new System.Drawing.Point(682, 3);
+            this.formModul1.Name = "formModul1";
+            this.formModul1.Size = new System.Drawing.Size(185, 440);
+            this.formModul1.TabIndex = 3;
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(899, 470);
+            this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.panelProfesori);
             this.Controls.Add(this.panelDiscipline);
-            this.Controls.Add(this.panelSchedule);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2Sala);
             this.Name = "Scheduler";
@@ -1393,11 +1143,6 @@
             this.Load += new System.EventHandler(this.Scheduler_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panelSchedule.ResumeLayout(false);
-            this.moduleFormContainer.ResumeLayout(false);
-            this.moduleFormContainer.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panelProfesori.ResumeLayout(false);
             this.moduleProfesorContainer.ResumeLayout(false);
             this.moduleProfesorContainer.PerformLayout();
@@ -1425,6 +1170,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctischeduleDataSetSalaBindingSource)).EndInit();
+            this.panelSchedule.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1444,17 +1190,6 @@
 		private System.Windows.Forms.ToolStripMenuItem saliToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem ajutorToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem informatiiToolStripMenuItem;
-		private System.Windows.Forms.Panel panelSchedule;
-        private System.Windows.Forms.Panel moduleFormContainer;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelProfesori;
         private System.Windows.Forms.DataGridView dgvProfesori;
         private System.Windows.Forms.ToolStripMenuItem orarToolStripMenuItem;
@@ -1489,17 +1224,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn crediteDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtIdDisciplina;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton rbSapt;
-        private System.Windows.Forms.RadioButton rbSaptImpara;
-        private System.Windows.Forms.RadioButton rbSaptPara;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnSaveModule;
-        private System.Windows.Forms.Button btnDeleteModule;
-        private System.Windows.Forms.Button btnCancelModule;
         private Orar orar1;
 		private System.Windows.Forms.Button btnLinkProfesorDisciplina;
         private ctischeduleDataSetProfesor ctischeduleDataSetProfesor;
@@ -1567,5 +1291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn activitateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ctischeduleDataSetSalaBindingSource;
         private Orar orar2;
+        private System.Windows.Forms.Panel panelSchedule;
+        private FormModul formModul1;
     }
 }
