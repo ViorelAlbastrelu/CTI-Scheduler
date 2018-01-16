@@ -117,22 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Programa scolara reprezinta un document oficial de planificare a continutului invatamantului bazat pe "un ansamblu de actiuni proiectate special pentru a suscita instruirea":
-•	definirea obiectivelor generale si specifice; 
-•	stabilirea continuturilor care trebuie predate-invatate-evaluate;
-•	anticiparea metodelor si a tehnicilor de evaluare;  
-•	precizarea dispozitiilor necesare pentru formarea initiala si continua a cadrelor didactice.
-
- Proiectarea programei scolare in perspectiva curriculara presupune : 
-                - stabilirea criteriilor de elaborare a programei prin raportare la finalitatile macrostructurale (scopuri pedagogice);
-
-                - alegerea continuturilor programei in raport cu obiectivele pedagogice generale si specifice (definite la nivel de politica a educatiei) si cu cerintele pedagogice (definite in termeni de coerenta interna);
-
- 	- structurarea continuturilor programei in raport cu posibilitatile minime-medii-maxime de invatare ale elevului, in termenii optimizarii corelatiei dintre informare-formare-dezvoltare;
-
- Programele scolare modulare sunt structurate pe baza unor seturi de cunostinte, situatii de invatare, strategii speciale de predare-invatare-evaluare, care faciliteaza realizarea independenta a sarcinilor de instruire intr-un timp pedagogic optim.
-
- Elaborarea modulelor presupune definirea unui set de situatii didactice, pe de o parte independente, iar pe de alta parte, interdependente in raport cu sarcinile de invatare trecute si viitoare. Aceast tip de programa scolara are o structura tridimensionala bazata pe: continuturi specificate, cu precizarea cunostintelor anterioare necesare si a diverselor itinerarii curriculare posibile;</value>
-  </data>
 </root>
