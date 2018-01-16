@@ -76,9 +76,8 @@
             this.moduleFormContainer.Controls.Add(this.labelDisciplina);
             this.moduleFormContainer.Dock = System.Windows.Forms.DockStyle.Right;
             this.moduleFormContainer.Location = new System.Drawing.Point(0, 0);
-            this.moduleFormContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.moduleFormContainer.Name = "moduleFormContainer";
-            this.moduleFormContainer.Size = new System.Drawing.Size(247, 542);
+            this.moduleFormContainer.Size = new System.Drawing.Size(185, 440);
             this.moduleFormContainer.TabIndex = 2;
             // 
             // groupSaptamana
@@ -86,11 +85,9 @@
             this.groupSaptamana.Controls.Add(this.rbSaptPara);
             this.groupSaptamana.Controls.Add(this.rbSaptImpara);
             this.groupSaptamana.Controls.Add(this.rbSapt);
-            this.groupSaptamana.Location = new System.Drawing.Point(12, 293);
-            this.groupSaptamana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupSaptamana.Location = new System.Drawing.Point(9, 238);
             this.groupSaptamana.Name = "groupSaptamana";
-            this.groupSaptamana.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupSaptamana.Size = new System.Drawing.Size(208, 116);
+            this.groupSaptamana.Size = new System.Drawing.Size(156, 94);
             this.groupSaptamana.TabIndex = 20;
             this.groupSaptamana.TabStop = false;
             this.groupSaptamana.Text = "Saptamana";
@@ -98,10 +95,9 @@
             // rbSaptPara
             // 
             this.rbSaptPara.AutoSize = true;
-            this.rbSaptPara.Location = new System.Drawing.Point(11, 85);
-            this.rbSaptPara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbSaptPara.Location = new System.Drawing.Point(8, 69);
             this.rbSaptPara.Name = "rbSaptPara";
-            this.rbSaptPara.Size = new System.Drawing.Size(59, 21);
+            this.rbSaptPara.Size = new System.Drawing.Size(47, 17);
             this.rbSaptPara.TabIndex = 13;
             this.rbSaptPara.TabStop = true;
             this.rbSaptPara.Text = "Para";
@@ -110,10 +106,9 @@
             // rbSaptImpara
             // 
             this.rbSaptImpara.AutoSize = true;
-            this.rbSaptImpara.Location = new System.Drawing.Point(11, 57);
-            this.rbSaptImpara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbSaptImpara.Location = new System.Drawing.Point(8, 46);
             this.rbSaptImpara.Name = "rbSaptImpara";
-            this.rbSaptImpara.Size = new System.Drawing.Size(72, 21);
+            this.rbSaptImpara.Size = new System.Drawing.Size(57, 17);
             this.rbSaptImpara.TabIndex = 14;
             this.rbSaptImpara.TabStop = true;
             this.rbSaptImpara.Text = "Impara";
@@ -122,10 +117,9 @@
             // rbSapt
             // 
             this.rbSapt.AutoSize = true;
-            this.rbSapt.Location = new System.Drawing.Point(12, 28);
-            this.rbSapt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbSapt.Location = new System.Drawing.Point(9, 23);
             this.rbSapt.Name = "rbSapt";
-            this.rbSapt.Size = new System.Drawing.Size(82, 21);
+            this.rbSapt.Size = new System.Drawing.Size(64, 17);
             this.rbSapt.TabIndex = 15;
             this.rbSapt.TabStop = true;
             this.rbSapt.Text = "Normala";
@@ -139,59 +133,52 @@
             this.btnSaveModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSaveModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSaveModule.Location = new System.Drawing.Point(12, 497);
-            this.btnSaveModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveModule.Location = new System.Drawing.Point(9, 404);
             this.btnSaveModule.Name = "btnSaveModule";
-            this.btnSaveModule.Size = new System.Drawing.Size(227, 28);
+            this.btnSaveModule.Size = new System.Drawing.Size(170, 23);
             this.btnSaveModule.TabIndex = 19;
             this.btnSaveModule.Text = "Salveaza";
             this.btnSaveModule.UseVisualStyleBackColor = false;
-//            this.btnSaveModule.Click += new System.EventHandler(this.btnSaveModule_Click);
+            this.btnSaveModule.Click += new System.EventHandler(this.btnSaveModule_Click);
             // 
             // btnDeleteModule
             // 
             this.btnDeleteModule.BackColor = System.Drawing.Color.Firebrick;
             this.btnDeleteModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteModule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDeleteModule.Location = new System.Drawing.Point(129, 462);
-            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteModule.Location = new System.Drawing.Point(97, 375);
             this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(109, 28);
+            this.btnDeleteModule.Size = new System.Drawing.Size(82, 23);
             this.btnDeleteModule.TabIndex = 18;
             this.btnDeleteModule.Text = "Sterge";
             this.btnDeleteModule.UseVisualStyleBackColor = false;
-//            this.btnDeleteModule.Click += new System.EventHandler(this.btnDeleteModule_Click);
             // 
             // btnCancelModule
             // 
             this.btnCancelModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelModule.Location = new System.Drawing.Point(13, 462);
-            this.btnCancelModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelModule.Location = new System.Drawing.Point(10, 375);
             this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(109, 28);
+            this.btnCancelModule.Size = new System.Drawing.Size(82, 23);
             this.btnCancelModule.TabIndex = 17;
             this.btnCancelModule.Text = "Anuleaza";
             this.btnCancelModule.UseVisualStyleBackColor = true;
-//            this.btnCancelModule.Click += new System.EventHandler(this.btnCancelModule_Click);
             // 
             // optZiua
             // 
             this.optZiua.DisplayMember = "Id";
             this.optZiua.FormattingEnabled = true;
-            this.optZiua.Location = new System.Drawing.Point(65, 260);
-            this.optZiua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optZiua.Location = new System.Drawing.Point(49, 211);
             this.optZiua.Name = "optZiua";
-            this.optZiua.Size = new System.Drawing.Size(155, 24);
+            this.optZiua.Size = new System.Drawing.Size(117, 21);
             this.optZiua.TabIndex = 12;
             this.optZiua.ValueMember = "Id";
             // 
             // labelZiua
             // 
             this.labelZiua.AutoSize = true;
-            this.labelZiua.Location = new System.Drawing.Point(9, 263);
-            this.labelZiua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelZiua.Location = new System.Drawing.Point(7, 214);
             this.labelZiua.Name = "labelZiua";
-            this.labelZiua.Size = new System.Drawing.Size(36, 17);
+            this.labelZiua.Size = new System.Drawing.Size(28, 13);
             this.labelZiua.TabIndex = 11;
             this.labelZiua.Text = "Ziua";
             // 
@@ -205,19 +192,17 @@
             "IV",
             "V",
             "VI"});
-            this.optModul.Location = new System.Drawing.Point(65, 226);
-            this.optModul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optModul.Location = new System.Drawing.Point(49, 184);
             this.optModul.Name = "optModul";
-            this.optModul.Size = new System.Drawing.Size(155, 24);
+            this.optModul.Size = new System.Drawing.Size(117, 21);
             this.optModul.TabIndex = 10;
             // 
             // labelModul
             // 
             this.labelModul.AutoSize = true;
-            this.labelModul.Location = new System.Drawing.Point(9, 230);
-            this.labelModul.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelModul.Location = new System.Drawing.Point(7, 187);
             this.labelModul.Name = "labelModul";
-            this.labelModul.Size = new System.Drawing.Size(46, 17);
+            this.labelModul.Size = new System.Drawing.Size(36, 13);
             this.labelModul.TabIndex = 9;
             this.labelModul.Text = "Modul";
             // 
@@ -225,20 +210,18 @@
             // 
             this.optSala.DisplayMember = "Id";
             this.optSala.FormattingEnabled = true;
-            this.optSala.Location = new System.Drawing.Point(13, 187);
-            this.optSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optSala.Location = new System.Drawing.Point(10, 152);
             this.optSala.Name = "optSala";
-            this.optSala.Size = new System.Drawing.Size(207, 24);
+            this.optSala.Size = new System.Drawing.Size(156, 21);
             this.optSala.TabIndex = 8;
             this.optSala.ValueMember = "Id";
             // 
             // labelSala
             // 
             this.labelSala.AutoSize = true;
-            this.labelSala.Location = new System.Drawing.Point(9, 167);
-            this.labelSala.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSala.Location = new System.Drawing.Point(7, 136);
             this.labelSala.Name = "labelSala";
-            this.labelSala.Size = new System.Drawing.Size(36, 17);
+            this.labelSala.Size = new System.Drawing.Size(28, 13);
             this.labelSala.TabIndex = 7;
             this.labelSala.Text = "Sala";
             // 
@@ -246,20 +229,18 @@
             // 
             this.optProfesor.DisplayMember = "Id";
             this.optProfesor.FormattingEnabled = true;
-            this.optProfesor.Location = new System.Drawing.Point(12, 135);
-            this.optProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optProfesor.Location = new System.Drawing.Point(9, 110);
             this.optProfesor.Name = "optProfesor";
-            this.optProfesor.Size = new System.Drawing.Size(207, 24);
+            this.optProfesor.Size = new System.Drawing.Size(156, 21);
             this.optProfesor.TabIndex = 6;
             this.optProfesor.ValueMember = "Id";
             // 
             // labelProfesor
             // 
             this.labelProfesor.AutoSize = true;
-            this.labelProfesor.Location = new System.Drawing.Point(8, 116);
-            this.labelProfesor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelProfesor.Location = new System.Drawing.Point(6, 94);
             this.labelProfesor.Name = "labelProfesor";
-            this.labelProfesor.Size = new System.Drawing.Size(62, 17);
+            this.labelProfesor.Size = new System.Drawing.Size(46, 13);
             this.labelProfesor.TabIndex = 5;
             this.labelProfesor.Text = "Profesor";
             // 
@@ -267,20 +248,18 @@
             // 
             this.optActivitate.DisplayMember = "Id";
             this.optActivitate.FormattingEnabled = true;
-            this.optActivitate.Location = new System.Drawing.Point(12, 80);
-            this.optActivitate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optActivitate.Location = new System.Drawing.Point(9, 65);
             this.optActivitate.Name = "optActivitate";
-            this.optActivitate.Size = new System.Drawing.Size(207, 24);
+            this.optActivitate.Size = new System.Drawing.Size(156, 21);
             this.optActivitate.TabIndex = 4;
             this.optActivitate.ValueMember = "Id";
             // 
             // labelActivitate
             // 
             this.labelActivitate.AutoSize = true;
-            this.labelActivitate.Location = new System.Drawing.Point(8, 60);
-            this.labelActivitate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelActivitate.Location = new System.Drawing.Point(6, 49);
             this.labelActivitate.Name = "labelActivitate";
-            this.labelActivitate.Size = new System.Drawing.Size(65, 17);
+            this.labelActivitate.Size = new System.Drawing.Size(51, 13);
             this.labelActivitate.TabIndex = 3;
             this.labelActivitate.Text = "Activitate";
             // 
@@ -288,40 +267,36 @@
             // 
             this.optDisciplina.DisplayMember = "Nume";
             this.optDisciplina.FormattingEnabled = true;
-            this.optDisciplina.Location = new System.Drawing.Point(12, 31);
-            this.optDisciplina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optDisciplina.Location = new System.Drawing.Point(9, 25);
             this.optDisciplina.Name = "optDisciplina";
-            this.optDisciplina.Size = new System.Drawing.Size(208, 24);
+            this.optDisciplina.Size = new System.Drawing.Size(157, 21);
             this.optDisciplina.TabIndex = 2;
             this.optDisciplina.ValueMember = "Id";
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 542);
+            this.splitter1.Size = new System.Drawing.Size(3, 440);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
             // labelDisciplina
             // 
             this.labelDisciplina.AutoSize = true;
-            this.labelDisciplina.Location = new System.Drawing.Point(8, 11);
-            this.labelDisciplina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDisciplina.Location = new System.Drawing.Point(6, 9);
             this.labelDisciplina.Name = "labelDisciplina";
-            this.labelDisciplina.Size = new System.Drawing.Size(61, 17);
+            this.labelDisciplina.Size = new System.Drawing.Size(47, 13);
             this.labelDisciplina.TabIndex = 0;
             this.labelDisciplina.Text = "Diciplina";
             // 
             // FormModul
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.moduleFormContainer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormModul";
-            this.Size = new System.Drawing.Size(247, 542);
+            this.Size = new System.Drawing.Size(185, 440);
             this.moduleFormContainer.ResumeLayout(false);
             this.moduleFormContainer.PerformLayout();
             this.groupSaptamana.ResumeLayout(false);
