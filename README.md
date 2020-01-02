@@ -2,7 +2,12 @@
 
 Univeristy group project that was intended to help us organize as a team, settle a hirerachy in the team and distribute task to optimize efficiency.\
 The application is a windows client that helps users create an univerity schedule and optimize it.\
-It has drag and drop implementation and uses a SQL local database to store all the data. The project is still rough and incomplete so only bits maybe usefull at the moment of writing this update.
+* It has drag and drop implementation
+* Import data from .xlxs files
+* Export schedule as .pdf file
+* SQL local database to store all the data. 
+
+The project is still rough and incomplete so only bits maybe usefull at the moment of writing this update.
 
 ---
 ##### Old readme.md content
